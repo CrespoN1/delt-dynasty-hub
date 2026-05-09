@@ -30,37 +30,85 @@ export async function fetchSeasonByLeagueId(leagueId: string): Promise<SeasonDat
   const playoffWeekStart = Number(league.settings.playoff_week_start ?? 15);
   const lastWeek = playoffWeekStart + 3;
 
+  // Fetch all weeks of matchups + transactions in parallel
+  const weeks = Array.from({ length: lastWeek }, (_, i) => i + 1);
+  const [weekMatchups, weekTransactions, drafts] = await Promise.all([
+    Promise.all(
+      weeks.map((w) => get<SleeperMatchup[]>(`${API}/league/${leagueId}/matchups/${w}`))
+    ),
+    Promise.all(
+      weeks.map((w) =>
+        get<SleeperTransaction[]>(`${API}/league/${leagueId}/transactions/${w}`).catch(
+          () => [] as SleeperTransaction[]
+        )
+      )
+    ),
+    get<Array<{ draft_id: string }>>(`${API}/league/${leagueId}/drafts`),
+  ]);
+
   const matchupsByWeek: Record<number, SleeperMatchup[]> = {};
-  const weekResults = await Promise.all(
-    Array.from({ length: lastWeek }, (_, i) => i + 1).map(async (w) => {
-      const m = await get<SleeperMatchup[]>(`${API}/league/${leagueId}/matchups/${w}`);
-      return [w, m] as const;
-    })
-  );
-  for (const [w, m] of weekResults) {
+  weekMatchups.forEach((m, i) => {
+    const w = weeks[i];
     if (m.length && m.some((row) => row.points > 0)) matchupsByWeek[w] = m;
-  }
+  });
 
-  const drafts = await get<Array<{ draft_id: string }>>(`${API}/league/${leagueId}/drafts`);
-  const draftPicks: SleeperDraftPick[] = [];
-  for (const d of drafts) {
-    const picks = await get<SleeperDraftPick[]>(`${API}/draft/${d.draft_id}/picks`);
-    draftPicks.push(...picks);
-  }
+  const transactions: SleeperTransaction[] = weekTransactions.flat();
 
-  const transactions: SleeperTransaction[] = [];
-  for (let w = 1; w <= lastWeek; w++) {
-    try {
-      const txs = await get<SleeperTransaction[]>(
-        `${API}/league/${leagueId}/transactions/${w}`
-      );
-      transactions.push(...txs);
-    } catch {
-      // some weeks may 404 — skip
-    }
-  }
+  const draftPicks: SleeperDraftPick[] = (
+    await Promise.all(drafts.map((d) => get<SleeperDraftPick[]>(`${API}/draft/${d.draft_id}/picks`)))
+  ).flat();
 
   return { league, users, rosters, matchupsByWeek, draftPicks, transactions };
+}
+
+// Fast path for the cron: just the target week + bare-minimum metadata.
+// Skips draft picks (~50 calls saved) and only fetches one week of matchups+transactions.
+export async function fetchSeasonForWeek(
+  leagueId: string,
+  targetWeek: number
+): Promise<SeasonData> {
+  const [league, users, rosters, matchups, transactions] = await Promise.all([
+    get<SleeperLeague>(`${API}/league/${leagueId}`),
+    get<SleeperUser[]>(`${API}/league/${leagueId}/users`),
+    get<SleeperRoster[]>(`${API}/league/${leagueId}/rosters`),
+    get<SleeperMatchup[]>(`${API}/league/${leagueId}/matchups/${targetWeek}`),
+    get<SleeperTransaction[]>(`${API}/league/${leagueId}/transactions/${targetWeek}`).catch(
+      () => [] as SleeperTransaction[]
+    ),
+  ]);
+  const matchupsByWeek: Record<number, SleeperMatchup[]> = {};
+  if (matchups.length && matchups.some((m) => m.points > 0)) {
+    matchupsByWeek[targetWeek] = matchups;
+  }
+  return {
+    league,
+    users,
+    rosters,
+    matchupsByWeek,
+    draftPicks: [],
+    transactions,
+  };
+}
+
+// Detect the latest completed week without pulling 18 weeks of full matchup data.
+// Polls weeks backwards from `playoffWeekStart + 3` until it finds one where every roster has scored.
+export async function detectLatestCompleteWeek(
+  leagueId: string
+): Promise<{ league: SleeperLeague; week: number | null }> {
+  const league = await get<SleeperLeague>(`${API}/league/${leagueId}`);
+  const playoffWeekStart = Number(league.settings.playoff_week_start ?? 15);
+  const lastWeek = playoffWeekStart + 3;
+  // Bulk fetch all weeks in parallel (~18 calls, ~1-2s)
+  const weeks = Array.from({ length: lastWeek }, (_, i) => i + 1);
+  const all = await Promise.all(
+    weeks.map((w) => get<SleeperMatchup[]>(`${API}/league/${leagueId}/matchups/${w}`))
+  );
+  let latest: number | null = null;
+  for (let i = 0; i < weeks.length; i++) {
+    const m = all[i];
+    if (m.length && m.every((row) => row.points > 0)) latest = weeks[i];
+  }
+  return { league, week: latest };
 }
 
 // Slim players index — the cron route needs this for nicknames + names.

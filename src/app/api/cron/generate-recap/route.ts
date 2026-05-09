@@ -1,11 +1,15 @@
 import { NextRequest } from "next/server";
-import { fetchNflState, fetchSeasonByLeagueId, fetchSlimPlayers } from "@/lib/sleeper-fetch";
+import {
+  detectLatestCompleteWeek,
+  fetchSeasonForWeek,
+  fetchSlimPlayers,
+} from "@/lib/sleeper-fetch";
 import { generateRecap } from "@/lib/recap-generator";
 import { commitFile, getFileSha } from "@/lib/github";
 import { notifyRecapDropped } from "@/lib/notify";
 
 export const runtime = "nodejs";
-export const maxDuration = 300; // 5 min — recap generation can take ~30-60s
+export const maxDuration = 60; // Vercel Hobby tier cap
 
 const LEAGUE_ID = "1313673066445819904";
 const REPO_OWNER = "CrespoN1";
@@ -40,28 +44,19 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  // Determine target season + week
-  const state = await fetchNflState();
-  const season = await fetchSeasonByLeagueId(LEAGUE_ID);
-  const targetSeason = overrideYear ?? season.league.season;
-  const completedWeeks = Object.keys(season.matchupsByWeek)
-    .map((w) => Number(w))
-    .filter((w) => {
-      // Consider a week "completed" if all teams have non-zero points OR matchup is in past relative to NFL state
-      const matchups = season.matchupsByWeek[w];
-      return matchups.every((m) => m.points > 0);
-    })
-    .sort((a, b) => a - b);
-
+  // Determine target week — fast path: just probe weeks until we find the latest complete one
   let targetWeek: number;
-  if (overrideWeek) {
+  let targetSeason: string;
+  if (overrideWeek && overrideYear) {
     targetWeek = Number(overrideWeek);
+    targetSeason = overrideYear;
   } else {
-    const latestComplete = completedWeeks[completedWeeks.length - 1];
-    if (!latestComplete) {
-      return Response.json({ ok: true, skipped: "no completed weeks yet", state });
+    const probe = await detectLatestCompleteWeek(LEAGUE_ID);
+    targetSeason = probe.league.season;
+    if (!probe.week) {
+      return Response.json({ ok: true, skipped: "no completed weeks yet", season: probe.league.season });
     }
-    targetWeek = latestComplete;
+    targetWeek = probe.week;
   }
 
   const path = `data/recaps/${targetSeason}-w${String(targetWeek).padStart(2, "0")}.json`;
@@ -90,8 +85,17 @@ export async function GET(req: NextRequest) {
     existingSha = existing?.sha;
   }
 
-  // Fetch players + generate
-  const players = await fetchSlimPlayers();
+  // Fetch slim season (just this week) + players in parallel
+  const [season, players] = await Promise.all([
+    fetchSeasonForWeek(LEAGUE_ID, targetWeek),
+    fetchSlimPlayers(),
+  ]);
+  if (!season.matchupsByWeek[targetWeek]) {
+    return Response.json(
+      { ok: false, error: `Week ${targetWeek} has no scored matchups yet` },
+      { status: 400 }
+    );
+  }
   const t0 = Date.now();
   const { recap, usage } = await generateRecap({
     season,
