@@ -3,6 +3,7 @@ import {
   detectLatestCompleteWeek,
   fetchSeasonForWeek,
   fetchSlimPlayers,
+  findLeagueIdForSeason,
 } from "@/lib/sleeper-fetch";
 import { generateRecap } from "@/lib/recap-generator";
 import { commitFile, getFileSha } from "@/lib/github";
@@ -44,12 +45,21 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  // Determine target week — fast path: just probe weeks until we find the latest complete one
+  // Determine target week + which league_id to fetch
   let targetWeek: number;
   let targetSeason: string;
+  let targetLeagueId: string;
   if (overrideWeek && overrideYear) {
     targetWeek = Number(overrideWeek);
     targetSeason = overrideYear;
+    const found = await findLeagueIdForSeason(LEAGUE_ID, targetSeason);
+    if (!found) {
+      return Response.json(
+        { ok: false, error: `No league found for season ${targetSeason}` },
+        { status: 400 }
+      );
+    }
+    targetLeagueId = found;
   } else {
     const probe = await detectLatestCompleteWeek(LEAGUE_ID);
     targetSeason = probe.league.season;
@@ -57,6 +67,7 @@ export async function GET(req: NextRequest) {
       return Response.json({ ok: true, skipped: "no completed weeks yet", season: probe.league.season });
     }
     targetWeek = probe.week;
+    targetLeagueId = LEAGUE_ID;
   }
 
   const path = `data/recaps/${targetSeason}-w${String(targetWeek).padStart(2, "0")}.json`;
@@ -87,7 +98,7 @@ export async function GET(req: NextRequest) {
 
   // Fetch slim season (just this week) + players in parallel
   const [season, players] = await Promise.all([
-    fetchSeasonForWeek(LEAGUE_ID, targetWeek),
+    fetchSeasonForWeek(targetLeagueId, targetWeek),
     fetchSlimPlayers(),
   ]);
   if (!season.matchupsByWeek[targetWeek]) {

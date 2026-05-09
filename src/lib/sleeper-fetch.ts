@@ -90,6 +90,21 @@ export async function fetchSeasonForWeek(
   };
 }
 
+// Walk previous_league_id chain to find the league_id for a given season.
+export async function findLeagueIdForSeason(
+  currentLeagueId: string,
+  season: string
+): Promise<string | null> {
+  let id: string | null = currentLeagueId;
+  // Bound the walk so a circular chain doesn't loop forever
+  for (let i = 0; i < 32 && id; i++) {
+    const lg = await get<SleeperLeague>(`${API}/league/${id}`);
+    if (lg.season === season) return id;
+    id = lg.previous_league_id;
+  }
+  return null;
+}
+
 // Detect the latest completed week without pulling 18 weeks of full matchup data.
 // Polls weeks backwards from `playoffWeekStart + 3` until it finds one where every roster has scored.
 export async function detectLatestCompleteWeek(
