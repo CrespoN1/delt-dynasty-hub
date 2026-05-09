@@ -96,9 +96,9 @@ export async function findLeagueIdForSeason(
   season: string
 ): Promise<string | null> {
   let id: string | null = currentLeagueId;
-  // Bound the walk so a circular chain doesn't loop forever
-  for (let i = 0; i < 32 && id; i++) {
-    const lg = await get<SleeperLeague>(`${API}/league/${id}`);
+  for (let i = 0; i < 32; i++) {
+    if (!id) return null;
+    const lg: SleeperLeague = await get<SleeperLeague>(`${API}/league/${id}`);
     if (lg.season === season) return id;
     id = lg.previous_league_id;
   }
