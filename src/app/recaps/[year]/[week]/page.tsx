@@ -48,6 +48,23 @@ export default async function RecapPage({
   const teamByName = new Map<string, ReturnType<typeof teams.get>>();
   for (const [, t] of teams) teamByName.set(t.teamName.toLowerCase(), t);
 
+  // Compute movement deltas vs previous week (same season).
+  const prevRecap = Number(week) > 1 ? loadRecap(year, Number(week) - 1) : null;
+  const movementByTeam = new Map<string, number | null>();
+  if (recap.powerRankings) {
+    if (prevRecap?.powerRankings) {
+      const prevByTeam = new Map(
+        prevRecap.powerRankings.map((r) => [r.team.toLowerCase(), r.rank])
+      );
+      for (const r of recap.powerRankings) {
+        const prev = prevByTeam.get(r.team.toLowerCase());
+        movementByTeam.set(r.team.toLowerCase(), prev != null ? prev - r.rank : null);
+      }
+    } else {
+      for (const r of recap.powerRankings) movementByTeam.set(r.team.toLowerCase(), null);
+    }
+  }
+
   return (
     <main className="max-w-3xl mx-auto px-6 py-12">
       <div className="flex items-center justify-between">
@@ -81,6 +98,49 @@ export default async function RecapPage({
           />
         </div>
 
+        {recap.powerRankings && recap.powerRankings.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-sm uppercase tracking-[0.2em] text-white/40 mb-4">
+              Power Rankings
+            </h2>
+            <div className="card overflow-hidden">
+              {[...recap.powerRankings]
+                .sort((a, b) => a.rank - b.rank)
+                .map((r) => {
+                  const t = teamByName.get(r.team.toLowerCase());
+                  const move = movementByTeam.get(r.team.toLowerCase());
+                  return (
+                    <div
+                      key={r.rank}
+                      className="flex items-start gap-4 p-4 border-t border-white/5 first:border-t-0"
+                    >
+                      <div className="flex-shrink-0 w-8 text-2xl font-black text-white/80 tabular-nums">
+                        {r.rank}
+                      </div>
+                      <div className="flex-shrink-0 w-12 flex items-center justify-center">
+                        <MovementBadge move={move ?? null} />
+                      </div>
+                      {t?.avatar ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={t.avatar}
+                          alt=""
+                          className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                        />
+                      ) : (
+                        <div className="w-10 h-10 rounded-full bg-white/10 flex-shrink-0" />
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <div className="font-bold leading-snug">{r.team}</div>
+                        <div className="text-sm text-white/60 leading-snug mt-0.5">{r.blurb}</div>
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          </section>
+        )}
+
         <section className="card-glow p-6 mb-8">
           <div className="text-xs uppercase tracking-wider text-white/60 mb-2">
             Match of the Week
@@ -96,12 +156,14 @@ export default async function RecapPage({
           ))}
         </section>
 
-        <section className="card p-6 mb-8">
-          <div className="text-xs uppercase tracking-wider text-white/60 mb-2">
-            Power Rankings
-          </div>
-          <p className="text-white/80">{recap.powerRankingsShakeup}</p>
-        </section>
+        {!recap.powerRankings && recap.powerRankingsShakeup && (
+          <section className="card p-6 mb-8">
+            <div className="text-xs uppercase tracking-wider text-white/60 mb-2">
+              Power Rankings
+            </div>
+            <p className="text-white/80">{recap.powerRankingsShakeup}</p>
+          </section>
+        )}
 
         <section className="mb-12">
           <h2 className="text-sm uppercase tracking-[0.2em] text-white/40 mb-4">
@@ -136,5 +198,26 @@ export default async function RecapPage({
         </footer>
       </article>
     </main>
+  );
+}
+
+function MovementBadge({ move }: { move: number | null }) {
+  if (move == null) {
+    return <span className="text-white/30 text-xs font-medium">—</span>;
+  }
+  if (move === 0) {
+    return <span className="text-white/40 text-xs font-medium">·</span>;
+  }
+  if (move > 0) {
+    return (
+      <span className="text-emerald-400 text-xs font-bold inline-flex items-center gap-0.5">
+        ▲{move}
+      </span>
+    );
+  }
+  return (
+    <span className="text-rose-400 text-xs font-bold inline-flex items-center gap-0.5">
+      ▼{Math.abs(move)}
+    </span>
   );
 }

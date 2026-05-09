@@ -1,33 +1,94 @@
 {
-  "headline": "Jets' Juniors Drop a Deuce — Literally, 199 Points of Pure Domination",
-  "subhead": "Week 4 was a bloodbath: three matchups decided by 50+ points, and 226 Alpha left an entire fantasy team on the bench.",
-  "matchOfTheWeek": "LargestofRocks vs. Bo Nix Celli was the only matchup with a pulse, with Rocks squeaking by 7.78 thanks to Jayden Reed (27.1) and Jayden Daniels (25.0). Celli posted a league-best 97.8% lineup efficiency and STILL lost — then immediately panic-traded Chris Godwin and Chuba Hubbard for Khalil Herbert and Jonathan Mingo. Read that sentence again. He's going to read it every night before bed for the rest of the season.",
-  "powerRankingsShakeup": "Jets' Juniors and Put an AR to My Head are throwing 175+ point haymakers and look like the class of the league, while T swift's Baddies and 226 Alpha are speedrunning the lottery odds.",
-  "mainRecap": "Let's start with the obvious: Jets' Juniors hung 199.60 on Hot Cocks like it was a Madden game on rookie mode. Derrick Henry (35.9), Nico Collins (33.1), and Jordan Love (31.16) all went nuclear, and Wunder still left 22.2 Josh Downs points on the bench just to flex. Hot Cocks scored 147 — a winning total in any other week — and got curb-stomped by 52. Baker Mayfield's 28.88 and Tucker Kraft's 20.3 bench points are now just footnotes in someone else's highlight reel.\n\nMeanwhile, Put an AR to My Head dumped 178 on MassiveCocks, who managed a sad 118 and watched Justice Hill rot on the bench for 21.6. That's two MassiveCocks blowouts deep into the season — at this rate the team name is starting to feel aspirational.\n\nThe Olave Garden put 159 on T swift's Baddies behind Justin Fields (31.98) and Alvin Kamara (24.9). Tnicolle's Baddies have officially entered their Eras Tour: the Getting Smoked Era. 51-point loss, no notes.\n\nNow for the week's true crime: 226 Alpha. Szara scored 107.98 — last in the league — while leaving 53.34 points on the bench, including a 29.5-point D'Andre Swift detonation. The optimal lineup was 161.32. He would've beaten four teams. Instead he beat zero. That's not a lineup mistake, that's a felony.\n\nOnlyFants quietly handled The Good Ladds 133-118 thanks to a 33.6 from Kenneth Walker, and Stroud Boys put 137 on 226 Alpha's wounded corpse. Mig56 had no answer, Bjewett didn't need one.\n\nFour teams broke 145. Two teams couldn't break 110. The middle class is dead in Delt Dynasty.",
+  "headline": "Jets' Juniors Drop 199 and Half the League Forgets How to Set a Lineup",
+  "subhead": "Wunder dropped a damn near 200-burger, AR pantsed MassiveCocks by 60, and 226 Alpha benched their way into the basement.",
+  "matchOfTheWeek": "LargestofRocks 149.82 over Bo Nix Celli 142.04 was the only game this week that didn't feel like a hostage situation. Celli ran his lineup at 97.8% efficiency — basically a perfect game — and STILL lost by 8 because Jayden Daniels and Jayden Reed decided to cosplay as the Jaydens of Destruction for Rocks. Then, just to twist the knife, Celli traded Chris Godwin and Chuba Hubbard to the guy who just beat him for Khalil Herbert and Jonathan Mingo. Read that sentence again.",
+  "mainRecap": "Matt Wunder put up ONE HUNDRED NINETY-NINE POINT SIX. Derrick Henry went full Terminator for 35.9, Nico Collins added 33.1, Jordan Love chipped in 31, and Josh Downs rotted on the bench for 22 just to remind everyone Jets' Juniors is so loaded he can leave a 22-burger in the garage and still drop 200. Hot Cocks scored 147 — a number that wins most weeks — and got run off the field like a JV scout team. Baker Mayfield's 28.88 might as well have been a participation ribbon.\n\nMeanwhile, Kyle Dech took MassiveCocks behind the woodshed 178 to 118. When your team name is MassiveCocks and you score 118 in a SuperFlex league, you should be legally required to change it to ModestCocks until further notice. Justice Hill dropped 21.6 from the pine because Papi apparently sets his lineup with a Magic 8-Ball.\n\nThe Olave Garden hung 160 on T swift's Baddies, with Justin Fields — JUSTIN FIELDS — putting up 32 points like it's 2022 again. Tnicolle scored 108 and is officially the league's designated speed bump. Stroud Boys handled 226 Alpha, but the real story is Szara left 53.34 points on the bench, including a 29.5 from D'Andre Swift. Brother. BROTHER. You scored 107 with 161 sitting in your lap. That's not a lineup, that's a crime scene.\n\nOnlyFants survived The Good Ladds thanks to Kenneth Walker's 33.6, because of course Cubby is the one guy who rostered the Chiefs RB nobody saw coming. Mig's Ladds keep losing close, which in dynasty is just losing with extra steps. And shoutout to LargestofRocks for benching Dontayvion Wicks for 24.8 and STILL winning — the football gods clearly owe him something dark.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Jets’ Juniors",
+      "blurb": "Dropped 199.6 with a 22-point bench scratch — the rest of the league is playing for second."
+    },
+    {
+      "rank": 2,
+      "team": "Put an AR to My Head",
+      "blurb": "Goff cooking, defense humming, and a 60-point beatdown of MassiveCocks — Dech is operating on a different frequency."
+    },
+    {
+      "rank": 3,
+      "team": "The Olave Garden",
+      "blurb": "160 points and Justin Fields as your QB1 should be illegal, but Reegs is making it work."
+    },
+    {
+      "rank": 4,
+      "team": "LargestofRocks",
+      "blurb": "Won the closest game of the week AND fleeced Celli for Godwin and Hubbard — buy-low Hall of Famer."
+    },
+    {
+      "rank": 5,
+      "team": "Bo Nix Celli",
+      "blurb": "Ran a 97.8% efficient lineup, lost anyway, then made a trade that the rest of the league is still laughing about."
+    },
+    {
+      "rank": 6,
+      "team": "OnlyFants",
+      "blurb": "Kenneth Walker hit 33.6 and Cubby is one Drake London game from being scary."
+    },
+    {
+      "rank": 7,
+      "team": "Hot Cocks",
+      "blurb": "Scored 147 and got steamrolled — Tucker Kraft's 20.3 on the bench is the saddest part of an already sad Sunday."
+    },
+    {
+      "rank": 8,
+      "team": "Stroud Boys",
+      "blurb": "Beat the team that benched 53 points, which is like winning a footrace against a guy in flip-flops."
+    },
+    {
+      "rank": 9,
+      "team": "The Good Ladds",
+      "blurb": "Mig keeps losing by a touchdown and a half — the dynasty version of getting friend-zoned."
+    },
+    {
+      "rank": 10,
+      "team": "MassiveCocks",
+      "blurb": "118 points, lost by 60, and Justice Hill rode the pine for 21.6 — name doesn't match the production, Papi."
+    },
+    {
+      "rank": 11,
+      "team": "226 Alpha",
+      "blurb": "Left 53.34 points on the bench including a 29.5 from D'Andre Swift — Szara, please call your lineup, it's worried about you."
+    },
+    {
+      "rank": 12,
+      "team": "T swift’s Baddies",
+      "blurb": "108 points in a SuperFlex league is a cry for help — Tnicolle's roster is shakin' it off straight to the cellar."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Lineup Malpractice of the Year",
-      "team": "226 Alpha",
-      "blurb": "Left 53.34 points on the bench including a 29.5 D'Andre Swift — that's not a misclick, that's a manifesto."
-    },
-    {
-      "title": "The 'Scoreboard Doesn't Care' Award",
-      "team": "Bo Nix Celli",
-      "blurb": "97.8% lineup efficiency, 142 points, and an L — then immediately traded Godwin and Hubbard like a man who's seen things."
-    },
-    {
-      "title": "Beat the Brakes Off Belt",
+      "title": "King Kong Shit",
       "team": "Jets’ Juniors",
-      "blurb": "199.60 with 22 Josh Downs points still riding the pine — that's psychological warfare."
+      "blurb": "199.60 with Josh Downs napping on the bench — Wunder might not lose until November."
     },
     {
-      "title": "Eras Tour: Getting Smoked",
-      "team": "T swift’s Baddies",
-      "blurb": "108 points, lost by 51, and somehow that's not even the worst score of the week — congrats?"
+      "title": "Bench Coordinator of the Year",
+      "team": "226 Alpha",
+      "blurb": "53.34 points left in the holster, headlined by D'Andre Swift's 29.5 — the lineup was set by a Roomba."
+    },
+    {
+      "title": "Pyrrhic Victory Lap",
+      "team": "LargestofRocks",
+      "blurb": "Won by 8 and benched Dontayvion Wicks for 24.8 — the football gods personally protected this man."
+    },
+    {
+      "title": "Trade Deadline? Never Heard of Her",
+      "team": "Bo Nix Celli",
+      "blurb": "Sent Godwin and Chuba out for Khalil Herbert and Jonathan Mingo — somewhere a fantasy analyst spit out his coffee."
     }
   ],
   "season": "2024",
   "week": 4,
-  "generatedAt": "2026-05-09T16:30:39.302Z",
+  "generatedAt": "2026-05-09T19:05:11.025Z",
   "modelId": "claude-opus-4-7"
 }

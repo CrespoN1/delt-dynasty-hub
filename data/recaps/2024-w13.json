@@ -1,33 +1,94 @@
 {
-  "headline": "Week 13: Stroud Boys Bench 37 Points and Still Find a Way to Get Curb-Stomped",
-  "subhead": "Hot Cocks dropped a 43-point bomb on Houston's finest while Jerry Jeudy — yes, THAT Jerry Jeudy — went nuclear for 40.5.",
-  "matchOfTheWeek": "Jets' Juniors over Bo Nix Celli 159.72 to 154.62 in the closest fight that actually mattered. Celli got 35.2 from Brock Bowers, 26.1 from Caleb Williams, ran a 97.4% efficient lineup — basically played a perfect game — and still lost by 5. Wunder didn't win that game so much as Celli's roster ceiling did.",
-  "powerRankingsShakeup": "Hot Cocks and MassiveCocks are both flexing 160+ and looking like the scariest cocks in the league heading into the stretch. Put an AR to My Head and Stroud Boys are in full freefall — Kyle scored 119, Jewett scored 116, and neither can blame anyone but themselves.",
-  "mainRecap": "Let's start with the war crime. Hot Cocks 159.74, Stroud Boys 116.28 — a 43-point execution that somehow UNDERSELLS how badly Jewett shit the bed. Stroud Boys left 36.80 on the bench. Their optimal lineup was 153. They had Jonnu Smith drop a 26-burger and STILL got blown out because Adam Thielen put up 23.90 in street clothes. That's not a lineup decision, that's a hate crime against your own roster.\n\nMeanwhile in Cubby's house of horrors: OnlyFants 150, Put an AR to My Head 119, and the entire thing was powered by Jerry Jeudy going for FORTY POINTS. Jerry. Jeudy. In Cleveland. With Jameis Winston throwing him bombs. Kyle Dech got run over by a Browns receiver and now has to explain to his group chat that Pat Freiermuth scored 21.80 from his bench. Cubby's gonna act like he scouted this. He didn't. Nobody did.\n\nThe Good Ladds squeaked past T swift's Baddies 149-142, and Tnicolle is going to need a long shower because Jameis Winston put up 35.98 ON HER BENCH. That's the entire margin of the loss and then some. Mig won, but let's not pretend — Bryce Young scored 23.62 on his bench too. Both of these teams played fantasy football blindfolded and one of them just happened to trip into the end zone.\n\nMassiveCocks edged The Olave Garden 161-153 in a genuine slugfest where Patrick got 27.30 from Terry McLaurin and still came up short. 226 Alpha snuck past LargestofRocks by 4.60 despite Russell Wilson dropping 27.86 from szara's bench — and LargestofRocks got 28.64 from Jayden Daniels AND 27.60 from Trey McBride and STILL LOST. That's the most painful 134 anyone's ever scored.\n\nBo Nix Celli ran a 97.4% efficient lineup and lost. Wunder ran his usual chaos and won. Football is not a meritocracy.",
+  "headline": "Week 13: Jerry Jeudy Remembered He's In The NFL And So Did Hot Cocks",
+  "subhead": "Stroud Boys benched 36 points and still couldn't outscore a Pop Warner team, while Jeudy dropped a 40-piece on Put an AR to My Head's funeral.",
+  "matchOfTheWeek": "Jets' Juniors 159.72 vs Bo Nix Celli 154.62 was the only fight worth watching — Brock Bowers turned in a 35.2 burger and Caleb Williams added 26 and Celli STILL lost. Wunder's squad hit a 97% efficient Bo lineup over the head with a folding chair by five points. Somewhere Nick is staring at a Bowers box score wondering how the universe keeps finding new ways to mug him.",
+  "mainRecap": "Let's start with the war crime: Hot Cocks 159.74, Stroud Boys 116.28. BigD didn't just beat bjewett, he made him watch. Stroud Boys left 36.80 points on the bench — that's not a lineup mistake, that's a cry for help. Jonnu Smith goes for 26.3 and Adam Thielen drops 23.9 ON THE BENCH and your starting lineup still looks like a Week 4 waiver wire. Optimal would've been 153. You scored 116. Read a projection, my guy.\n\nOnlyFants put up 150 and it might as well have been 250 the way Kyle's team got fed into a woodchipper — 119.70 is criminal in a SuperFlex league, Dech. Jerry Jeudy went FORTY POINTS for Cubby. Forty. The same Jerry Jeudy you've been ignoring on the waiver wire since 2022. Pat Freiermuth rotting on Put an AR's bench for 21.8 was the cherry on a very sad sundae.\n\nT swift's Baddies lost by 7.44 to The Good Ladds while Jameis Winston dropped THIRTY-FIVE POINT NINE EIGHT on her bench. Tnicolle, that's the entire margin and a tip. Mig won despite Bryce Young (yes, that one) putting up 23.62 in street clothes — this league's QB management is a public health crisis. Russell Wilson also dumped 27.86 on Szara's bench, but 226 Alpha squeezed past LargestofRocks by 4.60 anyway thanks to David Njoku going full beast mode for 30.7. LargestofRocks had Jayden Daniels (28.64) AND Trey McBride (27.60) and still lost — that's a special kind of pain.\n\nMassiveCocks led the league with 161.84 and dispatched The Olave Garden by 8 despite Terry McLaurin's 27.3 — Patrickreegs played well and got smoked anyway, which is just the 2024 experience.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "MassiveCocks",
+      "blurb": "League-high 161.84 and the roster looks like it was built in a lab to ruin everyone's December."
+    },
+    {
+      "rank": 2,
+      "team": "Hot Cocks",
+      "blurb": "A 43-point beatdown of Stroud Boys is the kind of stat-padding that gets you a #2 seed and a restraining order."
+    },
+    {
+      "rank": 3,
+      "team": "OnlyFants",
+      "blurb": "Jerry Jeudy 40, Bucky Irving 27 — Cubby's hitting on lottery tickets while the rest of you are scratching expired ones."
+    },
+    {
+      "rank": 4,
+      "team": "The Olave Garden",
+      "blurb": "Scored 153 and lost, which is the universe's way of saying you peaked at the right time but in the wrong matchup."
+    },
+    {
+      "rank": 5,
+      "team": "Bo Nix Celli",
+      "blurb": "97.4% efficiency, 154 points, and an L — Celli is the league's most optimized loser."
+    },
+    {
+      "rank": 6,
+      "team": "Jets' Juniors",
+      "blurb": "Survived a 154-point Celli explosion by 5; the Jets' name is unfortunately not just for show some weeks."
+    },
+    {
+      "rank": 7,
+      "team": "The Good Ladds",
+      "blurb": "Josh Allen carried a roster that had Bryce Young dropping 23 in flip-flops on the bench."
+    },
+    {
+      "rank": 8,
+      "team": "T swift's Baddies",
+      "blurb": "Lost by 7.44 with a 35.98 Jameis Winston bench bomb — managerial malpractice with a cute logo."
+    },
+    {
+      "rank": 9,
+      "team": "226 Alpha",
+      "blurb": "Won by 4.6 and could've won by 32 if Russell Wilson wasn't holding hands with the bench."
+    },
+    {
+      "rank": 10,
+      "team": "LargestofRocks",
+      "blurb": "Two top-six starters and still lost by 4.6 — naming yourself after rocks finally tracking with the IQ readings."
+    },
+    {
+      "rank": 11,
+      "team": "Put an AR to My Head",
+      "blurb": "119 points in SuperFlex is the literal embodiment of your team name, Dech."
+    },
+    {
+      "rank": 12,
+      "team": "Stroud Boys",
+      "blurb": "Left 36.8 points on the bench in a 43-point loss — the only team that could lose to itself and still finish second."
+    }
+  ],
   "weeklyAwards": [
     {
       "title": "Bench Coach of the Year",
       "team": "Stroud Boys",
-      "blurb": "Left 36.80 on the bench in a 43-point loss — mathematically you could've won and still lost, which is somehow worse."
+      "blurb": "Optimal 153.08, scored 116.28 — a 36.8-point self-inflicted gunshot wound while Jonnu and Thielen watched from the sideline."
     },
     {
-      "title": "The Jameis Special",
-      "team": "T swift’s Baddies",
-      "blurb": "Benched a 35.98-point quarterback and lost by 7.44 — Jameis threw for everyone except his own fantasy manager."
-    },
-    {
-      "title": "Cope Hardest Award",
-      "team": "Bo Nix Celli",
-      "blurb": "97.4% lineup efficiency, Brock Bowers goes for 35, Caleb drops 26, and you still lost to Matt Wunder. Brutal."
-    },
-    {
-      "title": "Jerry F***ing Jeudy MVP",
+      "title": "Jeudy Resurrection Award",
       "team": "OnlyFants",
-      "blurb": "Cubby won by 30 because a Cleveland Brown caught 40 points of passes from Jameis Winston in the year of our lord 2024."
+      "blurb": "40.5 from Jerry Jeudy in 2024 is so absurd it should require a urine test."
+    },
+    {
+      "title": "Loudest Win Nobody Cares About",
+      "team": "Hot Cocks",
+      "blurb": "Beating Stroud Boys by 43 is like winning a footrace against a guy in a leg cast."
+    },
+    {
+      "title": "Bench QB Hall of Shame",
+      "team": "T swift's Baddies",
+      "blurb": "Jameis Winston went 35.98 on the bench in a 7-point loss — the bus and the bus driver, both missed."
     }
   ],
   "season": "2024",
   "week": 13,
-  "generatedAt": "2026-05-09T16:34:53.179Z",
+  "generatedAt": "2026-05-09T19:11:05.171Z",
   "modelId": "claude-opus-4-7"
 }

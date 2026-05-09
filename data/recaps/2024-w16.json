@@ -1,33 +1,94 @@
 {
-  "headline": "Week 16: Playoff Dreams Die Loud and Ugly",
-  "subhead": "Put an AR to My Head dropped a league-high 188.78, The Olave Garden hung 188 of their own, and 226 Alpha showed up to a knife fight with a spoon.",
-  "matchOfTheWeek": "OnlyFants 159.60 vs Bo Nix Celli 154.42 was the only matchup this week that didn't end with somebody googling 'how to fake my own death.' Justin Jefferson dropped a 36-burger for Cubby, Celli countered with whatever the hell Bo Nix Celli does, and the whole thing came down to a 5.18 margin while every other game was decided by the second quarter. Beautiful, tense, meaningless to half the league — chef's kiss.",
-  "powerRankingsShakeup": "Put an AR to My Head and The Olave Garden both broke 188 and are officially the two teams nobody wants to see next week, while 226 Alpha's 114-point pile of wet cardboard just got them lapped by every contender in the league.",
-  "mainRecap": "Let's start with KyleDech, because Put an AR to My Head just hung 188.78 on Hot Cocks and the Brian Thomas / Saquon stack is starting to look like a problem nobody asked for. BigD got 147 points and still lost by 41 — that's not a loss, that's a public service announcement about who not to draft against next year. Meanwhile The Olave Garden put up 188.50 of their own behind a 31-spot from De'Von Achane, and LargestofRocks scored 159 and STILL got buried by 29. Patrickreegs, you ran into a buzzsaw and brought a 36-point Jayden Daniels for nothing — and you also left Tank Dell rotting on your bench for 21.80, which is exactly the kind of decision-making that ends seasons.\n\nThe Good Ladds won by 38 and we still need to talk to Mig. You left THIRTY POINTS on the bench, including a 27-point Bryce Young game — Bryce. Young. The man who couldn't start over Andy Dalton in October just torched Carolina from your pine. Jonathan Taylor put up 39.80 and dragged your ass across the finish line while you sat there benching the most accidentally productive QB of the week. MassiveCocks got 122 points and Gus Edwards put up 20 from the bench — congrats, Papi, you found a new way to lose.\n\nT swift's Baddies cruised past Jets' Juniors 171-136, but Tnicolle benched a 23-point Chig Okonkwo, which is a sin against TE-needy Americans everywhere. Stroud Boys put 152 on 226 Alpha's 114 — Szara, James Conner went for 26 and you still couldn't crack 115. That's not a roster, that's a Wikipedia stub. Jets' Juniors, meanwhile, hit a perfect 100% lineup efficiency and still lost by 34 — Wunder, you optimized your way into a coffin. Sometimes the best move is admitting you don't have the horses.",
+  "headline": "Semifinal Slaughter: Three Teams Score 170+ While 226 Alpha Brings a Knife to a Nuke Fight",
+  "subhead": "Week 16 was the fantasy equivalent of a firing squad — Put an AR to My Head, The Olave Garden, and T swift's Baddies all hit cruise altitude while half the league got their teeth kicked in.",
+  "matchOfTheWeek": "OnlyFants 159.60 over Bo Nix Celli 154.42 was the only matchup with a pulse — Justin Jefferson dropped a 36.40 piano on Celli's head and Cubby still barely escaped by five. Everywhere else was a beatdown by 29+. If you wanted competitive football this week, you watched this game or you watched nothing.",
+  "mainRecap": "Put an AR to My Head dropped a league-high 188.78 on Hot Cocks and turned BigD's playoff hopes into a crime scene — Brian Thomas Jr. (28.2) and Saquon (27.0) didn't just win the matchup, they personally signed the death certificate. 41-point margin. Hot Cocks scored 147.78 and got run off the field; that's the cruelest kind of loss.\n\nThe Olave Garden put up 188.50 and Patrickreegs is officially the scariest man left in the bracket — Achane's 31 burgers torched LargestofRocks, who got 36.42 from Jayden Daniels AND 32.5 from Chuba Hubbard and STILL lost by 29. Oh, and Tank Dell rotted on your bench for 21.8. Read that back to yourself.\n\nT swift's Baddies cooked Jets' Juniors 171-136 behind Keenan Allen (29.1) and James Cook (27.6), though Tnicolle left Chig Okonkwo and his 23.6 on the pine — imagine winning by 35 and STILL leaving a TE explosion in the chamber. Wunder, meanwhile, ran 100% lineup efficiency and lost by 34. There is no god.\n\nThe Good Ladds dismantled MassiveCocks 161-122, but Mig left THIRTY POINTS on the bench including a 27.12 Bryce Young eruption — yes, that Bryce Young, the one nobody on Earth started. Papi countered with Gus Edwards rotting for 20.1. A real battle of decision-making giants.\n\nStroud Boys handled 226 Alpha 152-114 in what can only be described as Szara forgetting it was a playoff week — 114.34 is league-low, season-defining, send-help numbers. James Conner's 26.6 was basically a solo concert in an empty arena.\n\nAnd Jonathan Taylor went for 39.80 for The Good Ladds because of course he did.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Put an AR to My Head",
+      "blurb": "188.78, the highest score of the week, and Saquon-BTJ is the most terrifying stack still breathing — Kyle is the title favorite and it isn't close."
+    },
+    {
+      "rank": 2,
+      "team": "The Olave Garden",
+      "blurb": "Dropped 188.50 and made a team that got 69 combined points from Daniels and Hubbard look like a JV squad."
+    },
+    {
+      "rank": 3,
+      "team": "T swift's Baddies",
+      "blurb": "171 points, advanced to the next round, and somehow still left Chig Okonkwo's 23.6 on the bench like a psychopath."
+    },
+    {
+      "rank": 4,
+      "team": "The Good Ladds",
+      "blurb": "Jonathan Taylor went nuclear for 39.80 and Mig still managed to leave 30 points on the pine — talent is carrying you, not the brain."
+    },
+    {
+      "rank": 5,
+      "team": "OnlyFants",
+      "blurb": "Survived by 5.18 thanks to Jefferson's 36.40 — you advanced, but don't pretend that wasn't a near-death experience."
+    },
+    {
+      "rank": 6,
+      "team": "Stroud Boys",
+      "blurb": "Beat the league's lowest scorer by 38 — congrats on bullying a corpse, Bewett."
+    },
+    {
+      "rank": 7,
+      "team": "LargestofRocks",
+      "blurb": "Got 68 combined from Daniels and Hubbard, lost by 29, and benched a 21.8 Tank Dell — that's a roster crime."
+    },
+    {
+      "rank": 8,
+      "team": "Bo Nix Celli",
+      "blurb": "Lost a 154-point shootout by five points and now your season is a podcast — tough scenes."
+    },
+    {
+      "rank": 9,
+      "team": "Hot Cocks",
+      "blurb": "Scored 147 and got blown out by 41 — when the scoreboard insults you that hard, maybe it's time to retool."
+    },
+    {
+      "rank": 10,
+      "team": "Jets' Juniors",
+      "blurb": "Hit 100% lineup efficiency and lost by 34 — Wunder, the universe is personally bullying you."
+    },
+    {
+      "rank": 11,
+      "team": "MassiveCocks",
+      "blurb": "Lost by 38 with Gus Edwards' 20.1 marinating on the bench — Papi managed this lineup like he was on vacation."
+    },
+    {
+      "rank": 12,
+      "team": "226 Alpha",
+      "blurb": "114.34 in a playoff week is a hate crime against your own roster — Szara, just hand in the badge."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Highest Score, Lowest Mercy",
+      "title": "Nuke of the Week",
       "team": "Put an AR to My Head",
-      "blurb": "188.78 in week 16 is how you tell the league you're not interested in negotiating in the playoffs."
+      "blurb": "188.78 and a 41-point bludgeoning — Kyle didn't beat Hot Cocks, he evicted them."
     },
     {
-      "title": "The 'Won and Still Got Roasted' Trophy",
+      "title": "Bench Warmer Hall of Shame",
       "team": "The Good Ladds",
-      "blurb": "Left 30 points on the bench including a 27-point Bryce Young — Mig is the only man alive who could fumble a Jonathan Taylor 39-burger and still win."
+      "blurb": "Left 30.06 on the bench including a 27.12 Bryce Young — the only manager alive who could've started him and didn't."
     },
     {
-      "title": "Participation Ribbon, Stained",
+      "title": "Cruelest Loss Award",
+      "team": "Jets' Juniors",
+      "blurb": "Perfect 100% lineup, optimal start across the board, lost by 34.52 — Wunder, file a complaint with God."
+    },
+    {
+      "title": "No-Show of the Week",
       "team": "226 Alpha",
-      "blurb": "114.34 points, league-low, with a 26-point James Conner doing all the work — the rest of the lineup filed for unemployment."
-    },
-    {
-      "title": "Perfect Lineup, Perfectly Pointless",
-      "team": "Jets’ Juniors",
-      "blurb": "100% efficiency and a 34-point loss — Wunder ran the optimal lineup of a JV team."
+      "blurb": "Mustered 114.34 in a playoff matchup — Szara brought a Nerf gun to a war."
     }
   ],
   "season": "2024",
   "week": 16,
-  "generatedAt": "2026-05-09T16:36:20.510Z",
+  "generatedAt": "2026-05-09T19:13:00.756Z",
   "modelId": "claude-opus-4-7"
 }

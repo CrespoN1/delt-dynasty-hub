@@ -1,33 +1,94 @@
 {
-  "headline": "Week 1: Hot Cocks Out Early and Swinging",
-  "subhead": "BigD dropped 168 with a 30-burger riding the pine and somehow that's the most on-brand sentence in league history.",
-  "matchOfTheWeek": "Put an AR to My Head edging Bo Nix Celli 134-124 was the only matchup with a pulse all afternoon. Saquon went full glizzy mode for 33.2, Anthony Richardson actually completed passes for 27, and Celli still hung 124 in a loss — which somehow feels worse than getting blown out. Welcome to the season where you get out-QB'd by a guy whose roster is a coin flip every Sunday.",
-  "powerRankingsShakeup": "Hot Cocks announce themselves as the early Week 1 darling while The Good Ladds eat 40 despite a 31-point Josh Allen — sending Mig straight into the 'maybe SuperFlex is hard actually' tier. LargestofRocks quietly looks scary, MassiveCocks quietly does not.",
-  "mainRecap": "Let's start at the top because BigD will not shut up about it for six months otherwise: Hot Cocks dropped 168.10 on The Good Ladds, the league's first 40-point beatdown of the year, and the truly unhinged part is Isaiah Likely put up a THIRTY POINT SPIKE on his bench. You scored 168 with your TE1 in street clothes. Mig, meanwhile, got a 31-burger from Josh Allen and still lost by 40 — that's not a loss, that's a war crime. Frame the Allen box score, burn the rest.\n\nOver in the 'who left more points at home' category, Patrickreegs and The Olave Garden put on a clinic — 39.88 points on the bench, including a 24.4 from Jameson Williams. You started the wrong people in Week 1 of a dynasty league you've been prepping for since May. Therapy is cheaper than this hobby, Patrick.\n\nJets' Juniors quietly ran a 96.6% efficient lineup and stomped OnlyFants by 30, because Cubby decided to christen 2024 by being the lowest scorer in the entire league at 106.72. OnlyFants more like OnlyBenchwarmers. Mattwunder is going to spend the next 14 weeks pretending he's a tactical genius and not just the guy who beat the worst score of the week.\n\nLargestofRocks went for 149 behind a Jayden Reed 33-spot AND a Jayden Daniels 28 AND ALSO had J.K. Dobbins drop 22.9 from the bench — at some point this is just bragging. MassiveCocks ate it.\n\n226 Alpha rode a vintage Cooper Kupp 32 past Olave Garden, T Swift's Baddies survived Stroud Boys in a game where Lamar's 25 was basically the entire offense, and KyleDech reminded everyone that putting an AR to your head is occasionally a sound roster construction strategy. Occasionally.",
+  "headline": "Hot Cocks Out Early, Hard, and All Over The Good Ladds",
+  "subhead": "Week 1 kicked off with a 40-burger blowout, a Saquon resurrection in Philly, and Patrick leaving an entire CVS receipt of points on his bench.",
+  "matchOfTheWeek": "Put an AR to My Head edging Bo Nix Celli 134-124 was the only game with any heart rate variability all week. Saquon dropped 33.20 in his Eagles debut and Anthony Richardson chipped in 27 — meanwhile Kyle had Derek Carr riding pine with 21.30, meaning he could've won by 30 and still had room to talk shit. Nick lost a coin-flip shootout in Week 1 and somehow that already feels on-brand.",
+  "mainRecap": "BigD opened the season by treating The Good Ladds like a tackling dummy — 168.10 to 128.06, a 40-point demolition where Baker Mayfield (29.66), Joe Mixon (26.80), and Tyreek (26.00) all popped off, and Hot Cocks STILL left Isaiah Likely's 30.60 rotting on the bench. You scored 168 with the worst lineup decision of the week. Disgusting and impressive. Mig, meanwhile, got 31 from Josh Allen and still got bodied by 40 — that's a 'maybe dynasty isn't for me' opening act.\n\nLargestofRocks dropped 149.84 on MassiveCocks behind Jayden Reed's 33.10 and Jayden Daniels' 28.16, with J.K. Dobbins (22.90) sitting on the bench just for fun. Two Jaydens and a benched RB1 — Papi never had a chance.\n\nWunder smoked Cubby 137-106, hit 96.6% lineup efficiency (the only adult in the room this week), and sent OnlyFants home as the lowest scorer in the league. Chris, 106 points in a SuperFlex league is a misdemeanor.\n\n226 Alpha rode Cooper Kupp's 32 to a win over The Olave Garden, who pulled off the Patrickreegs Special: scored 118, had 158 sitting in his lineup, and benched Jameson Williams for 24.40. Reegs, you literally had the win in your locker room and forgot the key.\n\nT Swift's Baddies got Lamar's 25 and held off Jewett, whose Stroud Boys offense looked like it was still in training camp installs. Alec Pierce went for 21.50 on Tnicolle's bench too, because nobody in this league apparently knows how to set a starting lineup. Welcome to 2024 — half the league won, the other half is already filing complaints with the commish.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Hot Cocks",
+      "blurb": "168 points and a 30-burger left on the bench — BigD is the only person in the league who can be greedy AND wasteful in the same week."
+    },
+    {
+      "rank": 2,
+      "team": "LargestofRocks",
+      "blurb": "Two Jaydens, a 32-point spread, and Dobbins still in his back pocket — this roster is loaded and obnoxious."
+    },
+    {
+      "rank": 3,
+      "team": "Put an AR to My Head",
+      "blurb": "Saquon and A-Rich combined for 60 and Kyle still nearly got dragged by Bo Nix Celli — win's a win, but tighten up."
+    },
+    {
+      "rank": 4,
+      "team": "Jets' Juniors",
+      "blurb": "96.6% lineup efficiency in Week 1 means Wunder is either a robot or just hasn't logged off Sleeper since June."
+    },
+    {
+      "rank": 5,
+      "team": "226 Alpha",
+      "blurb": "Cooper Kupp went full 2021 and Szara cashed it for the W — congrats on beating the league's biggest self-saboteur."
+    },
+    {
+      "rank": 6,
+      "team": "T swift's Baddies",
+      "blurb": "Lamar carried, Alec Pierce sat, and Tnicolle still snuck out a win against the Stroud Boys carcass."
+    },
+    {
+      "rank": 7,
+      "team": "Bo Nix Celli",
+      "blurb": "125 points in a loss is the most Nick Celli way to start a season imaginable — moral victory, real defeat."
+    },
+    {
+      "rank": 8,
+      "team": "The Good Ladds",
+      "blurb": "Josh Allen drops 31 and you lose by 40 — Mig, the rest of your roster is doing pickleball stretches."
+    },
+    {
+      "rank": 9,
+      "team": "The Olave Garden",
+      "blurb": "Left 39.88 on the bench in Week 1 — Patrick, the lineup-setting tutorial pops up for a reason."
+    },
+    {
+      "rank": 10,
+      "team": "MassiveCocks",
+      "blurb": "117 points isn't terrible, but running into the Jayden Twins in Week 1 is just bad luck wearing a name tag."
+    },
+    {
+      "rank": 11,
+      "team": "Stroud Boys",
+      "blurb": "107 points in a SuperFlex league with C.J. as your namesake is a cry for help, Jewett."
+    },
+    {
+      "rank": 12,
+      "team": "OnlyFants",
+      "blurb": "Lowest score in the league, Week 1 — Cubby, the subscription model isn't paying out yet."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "The 'Bench Was Better Than Your Starters' Award",
-      "team": "Hot Cocks",
-      "blurb": "Won by 40, scored 168, and STILL had Isaiah Likely drop 30.6 in street clothes — pure BigD chaos."
-    },
-    {
-      "title": "Lineup Setting? Never Heard of Her",
+      "title": "Lineup Setting Hall of Shame",
       "team": "The Olave Garden",
-      "blurb": "Left 39.88 on the bench in Week 1 — Patrick, the app sends you push notifications for a reason."
+      "blurb": "Benched 39.88 points and Jameson Williams' 24-burger — Patrick scored 118 with a 158-point lineup just begging to be played."
     },
     {
-      "title": "Loudest 31-Point Loss in History",
-      "team": "The Good Ladds",
-      "blurb": "Got a 31-burger from Josh Allen and still got run by 40 — Mig, that roster is a sad clown painting."
+      "title": "Stat-Padder of the Week",
+      "team": "Hot Cocks",
+      "blurb": "168 points, a 40-point W, AND Likely's 30.60 on the pine — BigD bullied the league for sport."
     },
     {
-      "title": "Lowest Score, Highest Hopes",
+      "title": "Dead On Arrival",
       "team": "OnlyFants",
-      "blurb": "106.72 in a SuperFlex league with QBs out here hanging 30s — Cubby, the season is already on fire."
+      "blurb": "106.72 points and a 30-point loss — Cubby looked like he confused Week 1 with the preseason finale."
+    },
+    {
+      "title": "Heartbreaker Special",
+      "team": "Bo Nix Celli",
+      "blurb": "Drops 124, loses by 9, and the season's already trending toward 'so close, so often.'"
     }
   ],
   "season": "2024",
   "week": 1,
-  "generatedAt": "2026-05-09T16:29:17.095Z",
+  "generatedAt": "2026-05-09T19:03:15.672Z",
   "modelId": "claude-opus-4-7"
 }

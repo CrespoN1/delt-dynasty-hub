@@ -1,33 +1,94 @@
 {
-  "headline": "T Swift Drops a 202-Burger While Stroud Boys Drop Their Pants",
-  "subhead": "Week 3 featured a 200-point detonation, an 89-point execution, and Egbukkake leaving an entire second team rotting on the bench.",
-  "matchOfTheWeek": "Browning Out 109.52, QAmon 108.26 — a 1.26-point heart attack that probably aged @KyleDech a decade. Turf Toe Joe and the Tiny-Handed Vampire combined for a respectable showing, but @Patrickreegs squeaked it out in the kind of game where if one of your kickers sneezes the wrong way you lose. Both rosters looked mid; only one of them gets to pretend it didn't.",
-  "powerRankingsShakeup": "T swift's Baddies kicked the door off the hinges with 202 and announced themselves as the team to beat, while Stroud Boys are in freefall after a 92-point fart that had The Prodigal Son and Money Mill$ both AWOL.",
-  "mainRecap": "Let's start with the carnage. T swift's Baddies dropped TWO HUNDRED points on OnlyFants and it wasn't even her best lineup — Luther Burden left 19.8 on the pine. Jake Ferguson (27.70), Lamar (27.02), and Gibbs (26.90) ran a clinic while @ChrisCubby watched Mark Andrews put up 30.1 ON HIS BENCH. Cubby, you started the wrong tight end in a week your opponent dropped a deuce-hundo. That's not a loss, that's a hate crime.\n\nMeanwhile in the Christian McCalfinjury vs. Stroud Boys 'matchup,' @mattwunder hung 181.66 and beheaded @bjewett13 by 89.30. David Montgomery went for 29.4, and even with Dalton Kincaid wasting 20 on the bench it didn't matter — Stroud Boys mustered 92 points like it was 2003 standard scoring. Money Mill$ indeed.\n\nNow, the real comedy: Egbukkake. @szara scored 125.66 and his OPTIMAL was 206.56. That's 80.9 points left on the bench, including a 40.9-point Tre Tucker eruption (PRESS IN CASE OF EMERGENCY, SZARA, THAT WAS THE EMERGENCY) and Giant Hog HHH Henry going for 33. You had a league-winning week sitting next to the Gatorade and you started Erick None instead. Perc Hurts went for 29 and you still lost by 34 to Nut Olave Your Face, who ran a 100% efficient lineup behind 29.12 from the Nail Polish Enthusiast. @nickcelli being perfectly optimized while @szara benches a 200-point ceiling is the funniest split-screen of the year.\n\nElsewhere, The Good Ladds rode JT's 32.8 past Little Peckers despite Omarion Hampton's 24.9 for @7BigPapi7, who then traded away picks for Kayshon Boutte like it's still August. Rub My Chubb's Geno Smith (26.06) snuck past McBridesStrangeWhiteHock by 7.74 in a game nobody asked to watch.",
+  "headline": "T Swift Drops a 202-Burger While Stroud Boys Get Curb-Stomped Into the Taxi Squad",
+  "subhead": "Week 3 brought a 202-point nuke, an 89-point beatdown, a 1.26 paper cut, and Egbukkake leaving an entire team's worth of points on the pine.",
+  "matchOfTheWeek": "Browning Out 109.52 vs QAmon 108.26 — the closest game of the week and the only one that didn't feel like elder abuse. Kyle's squad got a 1.26-point heart attack courtesy of Tiny-Handed Vampire and ShAmon-Ra not quite being enough, while Patrick stumbled across the finish line like a man who forgot he was even playing. A win is a win, but nobody's printing this box score and framing it.",
+  "mainRecap": "Let's start with the war crime: T swift's Baddies hung 202 on OnlyFants. Lamar (27.02), Gibbs (26.90), and Jake Ferguson putting up 27.70 as a TIGHT END is the kind of weekend that makes the rest of the league check the waiver wire and consider therapy. Meanwhile Cubby's OnlyFants left Mark Andrews and his 30.10 rotting on the bench to lose by 77 — congrats, you found a way to make 124 points feel like an L within an L.\n\nThen Christian McCalfinjury took Stroud Boys behind the woodshed 181.66 to 92.36. Bjewett, my guy, 92 points in a SUPERFLEX league is a felony. Money Mill$ is not the answer. The Prodigal Son needs to come home with some actual points. Wunder dropped 181 and still left Dalton Kincaid's 20-spot benched — pure 'I'm so deep I can afford to be careless' energy.\n\nNow let's talk about Egbukkake, the most painful box score of the year so far. Szara scored 125, lost by 34 to Nut Olave Your Face, and left EIGHTY POINTS on the bench. Tre Tucker dropped 40.90 with 'Press in case of emergency' literally tattooed on his nickname and you didn't press it. Giant Hog HHH Henry posted 33 from the pine while Erick None did Erick None things in your lineup. That's not a lineup decision, that's a hate crime against yourself. Perc Hurts went for 29 and it didn't even matter.\n\nNickcelli meanwhile ran a perfect 100% efficient lineup — Nail polish enthusiast painted up 29.12 and Big Penix got the win. The Good Ladds squeaked past Little Peckers behind a 32.80 Jonathan Taylor explosion while Omarion Hampton wasted 24.90 in a loss — Unc couldn't save him. And Rub My Chubb rode Geno Smith of all people (26.06, what year is it) past McBride's WhiteHock by 7.74. Geno Smith winning you fantasy games in 2025 is the kind of thing you don't tell your kids about.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "T swift’s Baddies",
+      "blurb": "Hung 202 with Ferguson going nuclear at TE — you're the scariest team in the league and you didn't even need Luther Burden's 19.80 off the bench."
+    },
+    {
+      "rank": 2,
+      "team": "Christian McCalfinjury",
+      "blurb": "181 points with Kincaid's 20 benched is just rude — Wunder is bullying the league with a roster named after an injury."
+    },
+    {
+      "rank": 3,
+      "team": "Nut Olave Your Face",
+      "blurb": "100% lineup efficiency and a 34-point W — the only manager in the league who actually opens his app before kickoff."
+    },
+    {
+      "rank": 4,
+      "team": "The Good Ladds",
+      "blurb": "Jonathan Taylor went supernova and Mig still only won by 6.98 — start praying the Jaydens hit soon."
+    },
+    {
+      "rank": 5,
+      "team": "Rub My Chubb",
+      "blurb": "Geno Smith is your QB1 right now and you're 2-1, which says everything about the rest of this league."
+    },
+    {
+      "rank": 6,
+      "team": "Browning Out",
+      "blurb": "Won by 1.26 and looked like he was gonna throw up doing it — a W is a W, Patrick, take your Pepto."
+    },
+    {
+      "rank": 7,
+      "team": "QAmon",
+      "blurb": "ShAmon-Ra and Tiny-Handed Vampire showed up and you still lost by a point and change — brutal."
+    },
+    {
+      "rank": 8,
+      "team": "McBridesStrangeWhiteHock",
+      "blurb": "121 points and a loss to Geno Smith is the most LargestOfRocks outcome possible."
+    },
+    {
+      "rank": 9,
+      "team": "Egbukkake",
+      "blurb": "Left 80.90 on the bench and still cracked 125 — imagine what could happen if Szara learned what 'Start' means."
+    },
+    {
+      "rank": 10,
+      "team": "Little Peckers ",
+      "blurb": "Hampton went for 24.90, Unc did Unc things, and you still lost — at least you traded for Kayshon Boutte, the patron saint of nothing."
+    },
+    {
+      "rank": 11,
+      "team": "OnlyFants",
+      "blurb": "Lost by 77 with Mark Andrews dropping 30 on the bench — Cubby, lineups are due BEFORE the games start."
+    },
+    {
+      "rank": 12,
+      "team": "Stroud Boys",
+      "blurb": "92.36 in a SuperFlex league is malpractice — Money Mill$ ain't paying any bills."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Bench Coordinator of the Year",
+      "title": "The Mushroom Cloud",
+      "team": "T swift’s Baddies",
+      "blurb": "202 points and three different starters over 26 — this wasn't fantasy football, this was a public execution."
+    },
+    {
+      "title": "Bench Cuck of the Week",
       "team": "Egbukkake",
-      "blurb": "Left 80.9 points on the bench and somehow the optimal lineup (206.56) would've still only been the second-highest score this week — the universe is laughing at you, szara."
+      "blurb": "80.90 points on the bench including a 40-piece from Tre Tucker — Szara, the nickname literally TELLS you when to press the button."
     },
     {
-      "title": "Public Execution Award",
+      "title": "Participation Trophy",
       "team": "Stroud Boys",
-      "blurb": "92.36 points in a SuperFlex league is a cry for help, and Christian McCalfinjury answered it with a 89-point curb-stomp."
+      "blurb": "92.36 points in week 3 of a SuperFlex league should come with a wellness check from the commissioner."
     },
     {
-      "title": "100% Galaxy Brain",
-      "team": "Nut Olave Your Face",
-      "blurb": "Perfect lineup, 159.92, Nail Polish Enthusiast cooking — Nick is the only manager this week who didn't sabotage himself."
-    },
-    {
-      "title": "Trade Deadline Panic Button (3 weeks early)",
-      "team": "Little Peckers ",
-      "blurb": "Lost by 7, then immediately swapped picks for Kayshon Boutte — Unc would never."
+      "title": "Heartbeat Away",
+      "team": "QAmon",
+      "blurb": "Lost by 1.26 — somewhere a single Joe Flacco incompletion is ruining Kyle's entire week."
     }
   ],
   "season": "2025",
   "week": 3,
-  "generatedAt": "2026-05-09T16:38:51.730Z",
+  "generatedAt": "2026-05-09T19:16:21.237Z",
   "modelId": "claude-opus-4-7"
 }

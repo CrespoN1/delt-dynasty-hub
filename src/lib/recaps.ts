@@ -7,8 +7,11 @@ export type Recap = {
   headline: string;
   subhead: string;
   matchOfTheWeek: string;
-  powerRankingsShakeup: string;
+  /** Legacy field from the v1 schema — kept optional for already-generated recaps. */
+  powerRankingsShakeup?: string;
   mainRecap: string;
+  /** v2 schema: 12-team weekly power rankings. */
+  powerRankings?: { rank: number; team: string; blurb: string }[];
   weeklyAwards: { title: string; team: string; blurb: string }[];
   generatedAt: string;
   modelId: string;

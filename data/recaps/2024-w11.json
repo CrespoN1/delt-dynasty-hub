@@ -1,33 +1,94 @@
 {
-  "headline": "Kyle Drops a 215 and Everyone Else Should Apologize",
-  "subhead": "Put an AR to My Head pistol-whipped 226 Alpha by 71 while the rest of the league was busy leaving Taysom Hill on the bench.",
-  "matchOfTheWeek": "The Olave Garden 161, Bo Nix Celli 139 — and the real story is that Patrick left 60.92 points on his bench, including a 46-point Taysom Hill nuke, and STILL won by 22. Imagine being so rich you can flush a top-3 weekly score down the toilet and still cover the spread. Meanwhile Celli got 37.8 from Brock Bowers and 28.7 from his own namesake QB and somehow lost — then traded away Bo Nix the same week, which is the most Bo Nix Celli thing that's ever happened.",
-  "powerRankingsShakeup": "Put an AR to My Head just announced themselves as the team nobody wants to see in round one, while 226 Alpha is in freefall with Stafford rotting on the bench for 27.8. Stroud Boys posting the league low while Jonnu Smith drops 31 is some pure cosmic punishment.",
-  "mainRecap": "Let's start with the carnage in Newark or wherever Szara hides his roster: 215 to 143, a 71-point beatdown so violent the commissioner should've stepped in with a towel. Kyle ran 95.3% lineup efficiency — basically perfect — with Amon-Ra dropping 38.7, Goff hanging 34.5 on his own receiver, and Saquon casually adding 33.8. And the cherry on top? Szara had Matthew Stafford and his 27.8 points sitting on the pine like a healthy scratch. You started the wrong QB in a SuperFlex, my guy. That's a fireable offense.\n\nOver in the Olave Garden, Patrick won by 22 while leaving SIXTY points on the bench. Taysom Hill went thermonuclear for 46.52 and Patrick had him riding pine behind some guy who scored a buck fifty. If you'd started him optimally you would've put up 222 and we'd be writing sonnets. Instead you're the Worst Lineup of the Week winner of a game you won. Incredible.\n\nLargestofRocks handled The Good Ladds 144-118 thanks to Breece Hall's 31, while Mig had Noah Gray's 20.3 collecting dust. OnlyFants quietly cooked Stroud Boys, who posted the league-low 108 despite Jonnu Smith randomly turning into Gronk for a day. Bjewett, your TE outscored half your starting lineup — read that again.\n\nHot Cocks edged MassiveCocks in the battle of the phallic franchises 157-141, Joe Mixon going for 35.3 to settle the size debate. Tee Higgins put up 29.8 in a losing effort because that's just MassiveCocks' brand.\n\nAnd Jets' Juniors smoked T swift's Baddies by 38 while Tnicolle had Jameis Winston and his 26.6 points benched — somehow not even the dumbest QB decision of the week. Wunder also added Derek Carr in a trade, which is a sentence I refuse to acknowledge further.",
+  "headline": "Kyle Drops a Nuke, Olave Garden Wins by Accident, and the Bo Nix Swap Heard 'Round Delt Dynasty",
+  "subhead": "Week 11 featured a 215-point clinic, a 60-point bench fart, and a trade so cosmically dumb it altered the standings.",
+  "matchOfTheWeek": "Put an AR to My Head dropped 215.06 on 226 Alpha and it wasn't even a game — it was a war crime with 95.3% lineup efficiency. Amon-Ra (38.7), Goff (34.58), and Saquon (33.8) all went nuclear while Szara watched Matthew Stafford rot on his bench for 27.8 points. The 71.22-point margin is the kind of result that should come with grief counseling and a FEMA application.",
+  "mainRecap": "Let's start with Kyle, because nothing else in Week 11 matters quite as much as a man putting up 215 points and his entire Lions stack going supernova on the same Sunday. Amon-Ra cooked, Goff carved, Saquon stomped, and 226 Alpha got reduced to a stain. Szara, you scored 143.84 — a perfectly respectable number — and lost by 71. There is no scheme, no waiver, no prayer that fixes this. Stafford going for 27.8 on your bench is just God laughing at you.\n\nThen there's The Olave Garden, who won 161.72 to 139.72 and STILL left 60.92 points on the bench, headlined by Taysom Hill posting a 46.52 from the pine. Patrick, you scored 222.64 in your sleep and benched it — that's not a lineup, that's a fumble in cleats. Even better: you literally just traded FOR Bo Nix and he hung 28.78 on his former owner. Speaking of which — Bo Nix Celli, you traded away the guy in your team name, got Brock Bowers' 37.8-point monster game, and still lost. Chris Olave better be worth it because right now it looks like you swapped a Ferrari for a scratch-off.\n\nElsewhere, Hot Cocks survived MassiveCocks in a battle for the most legally questionable team names, with Mixon's 35.3 just barely outrunning Tee Higgins' 29.8. LargestofRocks rolled the Good Ladds behind Breece Hall (31.1), while Mig wonders why he started anyone not named Noah Gray (20.3 on the bench, woof). Stroud Boys posted the league's lowest score (108.54) and somehow Jonnu Smith outscored half their starters with 31.1 — Jewett, your team is literally one tight end and a prayer. T swift's Baddies left Jameis Winston's 26.6 on the bench because of course they did, and Jets' Juniors celebrated their playoff push by trading for… Derek Carr. Mattwunder, buddy. This is a SuperFlex league, not a hostage negotiation.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Put an AR to My Head",
+      "blurb": "Hung 215 with 95% efficiency — Kyle isn't running a fantasy team, he's running a lab experiment on human suffering."
+    },
+    {
+      "rank": 2,
+      "team": "The Olave Garden",
+      "blurb": "Won by 22 while leaving 60 on the bench, which is somehow both terrifying and completely on-brand."
+    },
+    {
+      "rank": 3,
+      "team": "Hot Cocks",
+      "blurb": "Mixon's 35.3 carried you past your dong-named rival; enjoy the W before someone notices the roster."
+    },
+    {
+      "rank": 4,
+      "team": "LargestofRocks",
+      "blurb": "Breece Hall ate, you won by 26, and you still found a way to bench 21 points of Zach Ertz — peak Rocks behavior."
+    },
+    {
+      "rank": 5,
+      "team": "Jets' Juniors",
+      "blurb": "38-point win over the Baddies looks great until you remember you traded actual assets for Derek Carr."
+    },
+    {
+      "rank": 6,
+      "team": "Bo Nix Celli",
+      "blurb": "37.8 from Bowers, a fresh Olave in the building, and still an L because you traded the guy in your team name — poetic."
+    },
+    {
+      "rank": 7,
+      "team": "OnlyFants",
+      "blurb": "Quietly dropped 132 and dispatched Stroud Boys; the most invisible 23-point win in league history."
+    },
+    {
+      "rank": 8,
+      "team": "MassiveCocks",
+      "blurb": "Tee Higgins gave you 29.8 and you still lost the Battle of the Phallic Names — heartbreaking."
+    },
+    {
+      "rank": 9,
+      "team": "The Good Ladds",
+      "blurb": "118 points and Noah Gray hung 20 in street clothes — Mig, this is a coaching issue."
+    },
+    {
+      "rank": 10,
+      "team": "T swift's Baddies",
+      "blurb": "Lost by 38 with Jameis cooking 26.6 on your bench; the Era ended approximately three weeks ago."
+    },
+    {
+      "rank": 11,
+      "team": "Stroud Boys",
+      "blurb": "League-low 108 with Jonnu Smith doing 30% of the work — the rest of the roster is on a milk carton."
+    },
+    {
+      "rank": 12,
+      "team": "226 Alpha",
+      "blurb": "Lost by 71 with Stafford's 27.8 on the bench; the only Alpha in this name is the one in 'Alpha Centauri,' which is where this season needs to be launched."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Nuke of the Week",
+      "title": "Scorched Earth Award",
       "team": "Put an AR to My Head",
-      "blurb": "215.06 in a SuperFlex league is just disrespect — Kyle didn't beat 226 Alpha, he evicted him."
+      "blurb": "215 points, 95.3% efficiency, and a 71-point W — Kyle didn't win a matchup, he filed a war crimes report."
     },
     {
-      "title": "Bench Warmer Hall of Fame",
+      "title": "Bench Crime of the Century",
       "team": "The Olave Garden",
-      "blurb": "Won by 22 with 60.92 points rotting on the bench, including a 46-burger from Taysom Hill — efficiency is for poors."
+      "blurb": "Taysom Hill posted 46.52 from the pine and Patrick still high-fived himself for winning."
     },
     {
-      "title": "Identity Crisis Award",
-      "team": "Bo Nix Celli",
-      "blurb": "Lost despite 37.8 from Bowers and 28.7 from Bo Nix, then traded Bo Nix away — at this point change the team name to Chris Olave Celli."
+      "title": "Trade Deadline Galaxy Brain",
+      "team": "Jets' Juniors",
+      "blurb": "In a SuperFlex league, you traded real value for Derek Carr — somewhere a fantasy analyst is weeping."
     },
     {
-      "title": "Basement Dweller",
-      "team": "Stroud Boys",
-      "blurb": "League-low 108 while your TE goes for 31 — the rest of your roster filed a missing persons report."
+      "title": "L of the Week",
+      "team": "226 Alpha",
+      "blurb": "Scored 143 and lost by 71 with 27.8 from Stafford rotting on the bench — the most expensive nap in league history."
     }
   ],
   "season": "2024",
   "week": 11,
-  "generatedAt": "2026-05-09T16:33:57.072Z",
+  "generatedAt": "2026-05-09T19:09:49.786Z",
   "modelId": "claude-opus-4-7"
 }

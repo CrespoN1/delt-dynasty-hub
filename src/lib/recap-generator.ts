@@ -17,6 +17,7 @@ CORE RULES:
 - Vary tone across teams. Don't repeat the same joke shape twice in one recap.
 - Punchy. No "in conclusion" filler. No corporate sportscaster voice.
 - Each manager appears at least once across the recap.
+- Power rankings: rank ALL 12 teams. Order should reflect overall team strength right now (record, point totals, recent form, roster quality), not just this week's score. Top of list is rank 1 (best). Each team gets a 1-sentence savage take that's specific to their week or their season arc — no generic filler.
 
 OUTPUT: A single JSON object matching this exact schema. NO markdown fences, NO commentary outside the JSON.
 
@@ -24,20 +25,25 @@ OUTPUT: A single JSON object matching this exact schema. NO markdown fences, NO 
   "headline": "string — savage attention-grabbing title for the week",
   "subhead": "string — one sentence setting up the week's big story",
   "matchOfTheWeek": "string — 2-3 sentences on the most interesting matchup",
-  "powerRankingsShakeup": "string — 1-2 sentences on who's rising/falling",
   "mainRecap": "string — 200-400 words, the meat of the article, multi-team roasting",
+  "powerRankings": [
+    { "rank": 1, "team": "string — exact team name from context", "blurb": "string — 1 savage sentence about why they're here" },
+    ... ALL 12 teams, ranked 1-12 ...
+  ],
   "weeklyAwards": [
     { "title": "string — short award name", "team": "string — exact team name from context", "blurb": "string — 1 sentence savage" },
     ... 4 awards total ...
   ]
 }`;
 
+export type PowerRanking = { rank: number; team: string; blurb: string };
+
 export type RecapJson = {
   headline: string;
   subhead: string;
   matchOfTheWeek: string;
-  powerRankingsShakeup: string;
   mainRecap: string;
+  powerRankings: PowerRanking[];
   weeklyAwards: { title: string; team: string; blurb: string }[];
 };
 

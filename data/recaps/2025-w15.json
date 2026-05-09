@@ -1,33 +1,94 @@
 {
-  "headline": "BROWNING OUT POURS 186 ON THE LADDS WHILE KYLE PITTS REMEMBERS HE'S A TOP-5 PICK",
-  "subhead": "Week 15 was a bloodbath, a tight-end resurrection, and a reminder that Tnicolle benches like she's allergic to points.",
-  "matchOfTheWeek": "McBridesStrangeWhiteHock survived T swift's Baddies by 7.12 in the only matchup that wasn't decided by halftime. Trey McBride dropping 43.40 was the entire ballgame — meanwhile Tnicolle left Kirk Cousins and his 26.92 rotting on the bench like leftovers in a frat house fridge. Optimal lineup would've scored 168.44. She lost by 7.",
-  "powerRankingsShakeup": "Rub My Chubb is suddenly cooking at 97.3% efficiency and looks like a real problem heading into playoffs, while The Good Ladds got pantsed for 42 and are quietly imploding right when it matters.",
-  "mainRecap": "Where to begin. Patrickreegs and Browning Out hung 186.78 on Mig56 — the highest score of the week — with Bo Nix going for 29 and Tony Pollard adding ANOTHER 18.20 from the bench just to twist the knife. The Good Ladds countered with Travis Etienne's 31.5 and then promptly benched 120% Kyler for 21.56. Mig, you literally nicknamed the man, USE HIM. Jacoby Brissett is sitting on your couch outscoring half the starting QBs in this league.\n\nOnlyFants got a 44-burger from Trevor Lawrence and bullied Egbukkake by 28. Szara's squad — featuring The Mascot, QB1.02, and a small army of nicknamed scrubs — managed 117.60, which is what happens when 'WR1' Tillman and Erick None show up like their names suggest. Brutal week to be a Patriot stack.\n\nRub My Chubb absolutely curb-stomped Little Peckers by 48.70. BigD ran a 97.3% efficient lineup; 7BigPapi7 ran 117.58 and the lowest score in the league. Unc was not enough this week. Nothing was.\n\nMcBride's squad squeaked by Tnicolle in the only competitive game, and we already covered that disaster. Elsewhere, Stroud Boys got the performance of the week from KYLE FREAKING PITTS (51.10 — yes, fifty-one) plus 30 from The Prodigal Son and 29 from Darren Waller off the waiver gods. Bjewett wasn't even playing this week and still won the scoreboard.\n\nQAmon got 41 from ShAmon-Ra and still left Troy Franklin's 20.80 on the bench — Kyle, you good? Christian McCalfinjury benched Mike Evans for 19.20 because of course he did, the team name is the strategy. And Nut Olave Your Face got Mustard's 29.5 in what was presumably a bye week mercy because nickcelli had nowhere to spend it.",
+  "headline": "Semifinal Slaughterhouse: Browning Out and Rub My Chubb Curb-Stomp Their Way Into the Final",
+  "subhead": "Two 40-burgers, one TE going full Megatron, and T Swift leaving an entire QB on the bench in a 7-point loss — playoff football, baby.",
+  "matchOfTheWeek": "McBridesStrangeWhiteHock survived T swift's Baddies by 7.12, which sounds dramatic until you realize Tnicolle benched Kirk Cousins for 26.92 points and left 41.12 total on the pine. Trey McBride literally posted 43.40 to justify the team name existing, while T Swift played the role of guy who brings a knife to a gunfight and then leaves the knife in the car. Closest game of the week, but only because the loser actively sabotaged himself.",
+  "mainRecap": "Welcome to the semifinals, where Browning Out reminded everyone what a 186.78 looks like and The Good Ladds got lapped by 41.90 like they were running a 5K against a Ferrari. Mig56 had Travis Etienne pop for 31.5, and STILL left 120% Kyler (Brissett) sitting on the bench with 21.56 points he desperately needed. That's not a lineup decision, that's a confession. Bo Nix dropped 29.08, Tony Pollard wasted 18.20 on Patrickreegs's bench, and Browning Out still hung 186 — the rich get richer.\n\nOver in the other bloodbath, Rub My Chubb hit 97.3% lineup efficiency and turned Little Peckers into Even Littler Peckers, 166.28 to 117.58. BigD1234567 played the perfect game; 7BigPapi7 played like a man trying to lose on purpose to get a top draft pick that doesn't exist in dynasty. Unc Aaron Jones could not save him. Nothing could.\n\nOnlyFants rode Trevor Lawrence's 44.30 to bury Egbukkake 146-117.60, which means szara's collection of nicknames — Erick None, Insta Drop, WR1 Tillman — finally lived up to their billing at the worst possible moment. The Mascot couldn't carry the offense and Perc Hurts apparently forgot it was December.\n\nMeanwhile, in the cheap seats, Stroud Boys' bjewett watched Kyle Pitts catch fire for FIFTY-ONE POINTS, plus Darren Waller dropping 29 like it's 2020, plus The Prodigal Son adding 30.10 — a 110-point trio of corpses, ghosts, and rookies — and it didn't matter because his team isn't playing for anything. ShAmon-Ra went for 41.40 for QAmon and KyleDech also has nothing to do but stare at Troy Franklin's 20.80 rotting on the bench. Mattwunder benched Mike Evans for 19.20 in a game he wasn't even playing in. Spiritually, everyone lost something this week.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Rub My Chubb",
+      "blurb": "97.3% lineup efficiency and a 48-point beatdown — BigD is playing chess while the rest of the league is eating the pieces."
+    },
+    {
+      "rank": 2,
+      "team": "Browning Out",
+      "blurb": "186.78 with Tony Pollard's 18 rotting on the bench is borderline disrespectful to the sport."
+    },
+    {
+      "rank": 3,
+      "team": "OnlyFants",
+      "blurb": "Trevor Lawrence finally remembered he was drafted #1 overall, and Cubby is one win from a ring."
+    },
+    {
+      "rank": 4,
+      "team": "McBridesStrangeWhiteHock",
+      "blurb": "Trey McBride dropped 43.4 to single-handedly justify the franchise name and the playoff seed."
+    },
+    {
+      "rank": 5,
+      "team": "T swift's Baddies",
+      "blurb": "Posted 127, left 41 on the bench, and benched a 26-point QB — losing by 7 was karma issuing an itemized receipt."
+    },
+    {
+      "rank": 6,
+      "team": "The Good Ladds",
+      "blurb": "Got beat by 41 and benched Brissett for 21 — Mig somehow turned 'Jayden 1, 2, and 3' into Jayden Zero."
+    },
+    {
+      "rank": 7,
+      "team": "Stroud Boys",
+      "blurb": "Kyle Pitts goes for 51, Waller adds 29, The Prodigal Son chips in 30, and it's worth zero playoff dollars — peak bjewett."
+    },
+    {
+      "rank": 8,
+      "team": "Nut Olave Your Face",
+      "blurb": "Mustard cooked for 29.5 in a game that meant nothing; Big Cock Brock and Big Penix watched from the couch."
+    },
+    {
+      "rank": 9,
+      "team": "QAmon",
+      "blurb": "ShAmon-Ra puts up 41.4 in a meaningless week while Troy Franklin's 20.8 collects dust — Kyle's season in one sentence."
+    },
+    {
+      "rank": 10,
+      "team": "Egbukkake",
+      "blurb": "117.6 in a playoff game with The Mascot and Perc Hurts is how dynasties die — quietly, and with Erick None active."
+    },
+    {
+      "rank": 11,
+      "team": "Christian McCalfinjury",
+      "blurb": "Benching Mike Evans for 19.2 in Week 15 is a fitting capstone to the McCalfinjury Experience."
+    },
+    {
+      "rank": 12,
+      "team": "Little Peckers ",
+      "blurb": "Lowest score, biggest blowout victim — the team name has officially become a scouting report."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Bench Coach of the Year",
-      "team": "T swift’s Baddies",
-      "blurb": "Lost by 7, left 41 on the bench, including a 27-point Kirk Cousins — somewhere a fantasy analyst is crying."
+      "title": "Bench Coordinator of the Year",
+      "team": "T swift's Baddies",
+      "blurb": "Lost by 7.12 with 41.12 stapled to the bench — Cousins put up 26.92 in street clothes."
     },
     {
-      "title": "Tight End Renaissance Award",
-      "team": "Stroud Boys",
-      "blurb": "Kyle Pitts 51, Darren Waller 29 — bjewett accidentally built the 2021 preseason wet dream."
-    },
-    {
-      "title": "Mercy Rule Violation",
+      "title": "Big Dick Energy Award",
       "team": "Rub My Chubb",
-      "blurb": "97.3% efficient and a 48-point win over Little Peckers — BigD didn't beat them, he processed them."
+      "blurb": "97.3% efficiency and a 48-point demolition — the only team that actually showed up to play playoff football."
     },
     {
-      "title": "Nickname, Don't Bench Him",
-      "team": "The Good Ladds",
-      "blurb": "120% Kyler dropped 21.56 from the bench while Mig lost by 42 — the joke writes itself, then starts itself, apparently."
+      "title": "Wasted Greatness Trophy",
+      "team": "Stroud Boys",
+      "blurb": "Kyle Pitts: 51. Waller: 29. Henderson: 30. Playoff relevance: 0."
+    },
+    {
+      "title": "Welcome To The Final Boss",
+      "team": "Browning Out",
+      "blurb": "186.78 in a semifinal and Bo Nix is genuinely cooking — somebody check on Patrickreegs's neighbors."
     }
   ],
   "season": "2025",
   "week": 15,
-  "generatedAt": "2026-05-09T16:44:28.483Z",
+  "generatedAt": "2026-05-09T19:24:57.082Z",
   "modelId": "claude-opus-4-7"
 }

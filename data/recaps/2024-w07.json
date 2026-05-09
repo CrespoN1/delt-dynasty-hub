@@ -1,33 +1,94 @@
 {
-  "headline": "Hot Cocks Bust a 166-Point Nut and Stroud Boys Coach From the Bench",
-  "subhead": "Week 7 was a shootout up top, a coma in Olave Garden, and a masterclass in lineup malpractice down in Stroud's basement.",
-  "matchOfTheWeek": "Hot Cocks 166.68, Put an AR to My Head 155.96 — over 322 combined points and the loser still gets clowned. BigD rode Baker Mayfield's 29 and Joe Mixon's 26.4 like he was double-parked, while KyleDech got 26.7 from Saquon AND 25.2 from Sun God and STILL couldn't close. Imagine dropping 156 and going home empty-handed — that's a Tuesday morning hangover with no Gatorade in the fridge.",
-  "powerRankingsShakeup": "T swift's Baddies and OnlyFants are flexing like they own the deed to the league, while 226 Alpha just got dragged behind a pickup truck and The Olave Garden put up a 78 that wouldn't win a JV girls' game.",
-  "mainRecap": "Let's start with the crime scene in Stroud Boys' lineup. Bjewett scored 100.58 and BEAT MassiveCocks, which is the only reason he's not getting a wellness check, because he left FIFTY-SIX POINTS on his bench. Jonnu Smith dropped 26.1 in street clothes. Javonte Williams ALSO dropped 26.1 in street clothes. The optimal lineup was 157.18. You had two different 26-point bombs rotting on the pine and still won — congrats, you're the guy who wins blackjack while folding a 20.\n\nOnlyFants meanwhile took 226 Alpha to the woodshed 147-111, and Szara's pain was double-stuffed: David Njoku went nuclear for 28.6 in a LOSS, and Russell Wilson put up 24.86 points sitting on the bench like he was waiting for a bus. That's a 24-point QB you didn't start in SUPERFLEX. Read that sentence again and go touch grass.\n\nT swift's Baddies cooked LargestofRocks behind Lamar's 34.44 and Gibbs' 32 — a 66-point 1-2 punch that's frankly unfair. LargestofRocks's consolation prize? Rachaad White posting 29.1 on the bench. Tnicolle also benched Tank Bigsby for 23.8, because winning by 16 wasn't disrespectful enough.\n\nThe Good Ladds squeaked past Bo Nix Celli by 8 in the closest game of the week, and Nickcelli ran the most efficient lineup in the league at 98.7% — the football equivalent of getting an A+ on the test and still failing the class. Brock Bowers went for 24.3 and it didn't matter.\n\nJets' Juniors beat The Olave Garden in a game that should be illegal to broadcast — 88 to 78, a combined 166 that Hot Cocks scored by himself. Patrickreegs, my man, 78 points is a halftime score. And shoutout to MassiveCocks for getting outscored by Stroud's BENCH alone. That's a special kind of awful.",
+  "headline": "Hot Cocks Bust 166, Stroud Boys Bust a Nut on Their Own Bench",
+  "subhead": "Week 7 delivered a 322-point shootout, a 78-point face-plant, and one manager somehow leaving a top-3 score on the pine while still winning.",
+  "matchOfTheWeek": "Hot Cocks 166.68 vs Put an AR to My Head 155.96 was the kind of game that makes the rest of the league feel poor. Saquon went for 26.7, Amon-Ra dropped 25.2, and Kyle still lost because Baker Mayfield decided to be Patrick Mahomes for an afternoon and Joe Mixon added 26.4 on top. 322 combined points and the loser is sitting in his car questioning every life decision.",
+  "mainRecap": "Let's start with the crime scene in Stroud Boys' lineup. BJ scored 100.58, won his game against MassiveCocks, and somehow left 56.60 points on the bench — that's not a lineup, that's a hostage situation. Jonnu Smith (26.1) and Javonte Williams (26.1) were both rotting in the cooler while BJ trotted out warm bodies. Optimal score: 157.18. Congrats on the W, you absolute coward — you beat 7BigPapi7's 83.98, which is the fantasy equivalent of beating your little cousin in 1v1.\n\nMeanwhile T swift's Baddies smashed LargestofRocks behind a Lamar Jackson (34.44) and Jahmyr Gibbs (32.0) detonation, and LargestofRocks somehow still hit 120 because Breece went for 26.1. The catch? Rachaad White put up 29.1 on the bench. Two managers in one week leaving 25+ point RBs on the pine — get a damn lineup-setting reminder app, gentlemen.\n\nOnlyFants curb-stomped 226 Alpha by 35.58, and Cubby didn't even need to sweat — Szara's David Njoku went nuclear for 28.60 and it didn't matter, especially because Russell Wilson dropped 24.86 from the bench like a guy paying for dinner with monopoly money. That's a full-on managerial L, Szara.\n\nThe Good Ladds edged Bo Nix Celli 120.82 to 112.72 in the closest game of the week, and Celli's 98.7% lineup efficiency is the saddest stat on this page — peak optimization, still lost. Brock Bowers went 24.3 for nothing.\n\nJets' Juniors and The Olave Garden played a game so ugly it should be illegal — 88 to 78, the lowest score of the week courtesy of Patrickreegs, who apparently confused his lineup with his grocery list. Derrick Henry's 25.2 carried Wunder to a win in what felt like a Thursday night JV scrimmage.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Hot Cocks",
+      "blurb": "166.68 points and a Baker Mayfield/Joe Mixon double-dong — the league's actual problem right now."
+    },
+    {
+      "rank": 2,
+      "team": "T swift’s Baddies",
+      "blurb": "Lamar and Gibbs combined for 66.44 and Tank Bigsby still left 23.8 on the bench — terrifyingly deep."
+    },
+    {
+      "rank": 3,
+      "team": "OnlyFants",
+      "blurb": "147 points in a 35-point blowout and Cubby looks like he hasn't broken a sweat all year."
+    },
+    {
+      "rank": 4,
+      "team": "Put an AR to My Head",
+      "blurb": "155.96 in a loss is the most Kyle Dech thing imaginable — elite roster, cursed schedule."
+    },
+    {
+      "rank": 5,
+      "team": "The Good Ladds",
+      "blurb": "Won the closest game of the week and you know Mig is going to talk about it until Christmas."
+    },
+    {
+      "rank": 6,
+      "team": "Bo Nix Celli",
+      "blurb": "98.7% lineup efficiency and still lost — Celli is min-maxing his way to a wildcard heartbreak."
+    },
+    {
+      "rank": 7,
+      "team": "LargestofRocks",
+      "blurb": "Lost by 15 with Rachaad White (29.1) eating sunflower seeds on the bench — self-inflicted."
+    },
+    {
+      "rank": 8,
+      "team": "Jets’ Juniors",
+      "blurb": "Won with 88 points, which is less a victory and more an OSHA violation."
+    },
+    {
+      "rank": 9,
+      "team": "Stroud Boys",
+      "blurb": "Left 56.6 points on the bench, won anyway — the fantasy gods owed BJ one big-time."
+    },
+    {
+      "rank": 10,
+      "team": "226 Alpha",
+      "blurb": "Njoku goes for 28.6, Russ drops 24.86 from the bench, and Szara still gets blown out by 35 — impressively bad."
+    },
+    {
+      "rank": 11,
+      "team": "MassiveCocks",
+      "blurb": "83.98 points against a guy who left 56 on his bench — that's not bad luck, that's a roster problem."
+    },
+    {
+      "rank": 12,
+      "team": "The Olave Garden",
+      "blurb": "78.06 points and lost to a team that scored 88 — Patrickreegs is currently cooking unlimited breadsticks of failure."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Bench Coach of the Year",
+      "title": "Bench Coordinator of the Year",
       "team": "Stroud Boys",
-      "blurb": "Left 56.6 points on the pine, won anyway, and somehow still doesn't deserve to be happy about it."
+      "blurb": "56.6 points left on the bench in a WIN — BJ is so allergic to optimization he should see a doctor."
     },
     {
-      "title": "Loudest 156-Point Loss",
-      "team": "Put an AR to My Head",
-      "blurb": "Saquon and Sun God combined for 51.9 and Kyle still got cooked by a guy whose team is literally called Hot Cocks."
+      "title": "Highest Score, Loudest Mouth",
+      "team": "Hot Cocks",
+      "blurb": "166.68 points and a Baker Mayfield 29-burger — BigD will be insufferable in the group chat for at least 11 days."
     },
     {
-      "title": "Did You Forget the App Existed?",
-      "team": "226 Alpha",
-      "blurb": "Russell Wilson scored 24.86 from your bench in a SuperFlex league — that's not a lineup mistake, that's a felony."
-    },
-    {
-      "title": "Powerpoint of Pain",
+      "title": "Try Harder Award",
       "team": "The Olave Garden",
-      "blurb": "78.06 points. My grandma's bingo card scored higher and she's been dead since March."
+      "blurb": "78.06 points is the kind of score that gets your dynasty license revoked."
+    },
+    {
+      "title": "Perfect Lineup, Perfect Pain",
+      "team": "Bo Nix Celli",
+      "blurb": "98.7% efficiency, Brock Bowers 24.3, and a loss — Celli got everything right except the final score."
     }
   ],
   "season": "2024",
   "week": 7,
-  "generatedAt": "2026-05-09T16:32:01.994Z",
+  "generatedAt": "2026-05-09T19:07:07.055Z",
   "modelId": "claude-opus-4-7"
 }

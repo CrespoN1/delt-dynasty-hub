@@ -1,33 +1,94 @@
 {
-  "headline": "Week 2: Taylor Swift Wrote a Breakup Song About The Good Ladds",
-  "subhead": "T swift's Baddies dropped 173, MassiveCocks dropped trou, and Mig left enough on his bench to win the league average.",
-  "matchOfTheWeek": "Put an AR to My Head squeaked past OnlyFants by 11.28 in the only matchup that didn't feel like a hostage video. DK Metcalf went nuclear for 28.90 to bail Kyle out, while Derek Carr quietly dropped 22.82 from the bench — meaning Kyle won AND mismanaged his roster in the same breath. Cubby, taking an L while scoring 117 is a uniquely OnlyFants experience.",
-  "powerRankingsShakeup": "T swift's Baddies and The Olave Garden are launching into the stratosphere while MassiveCocks and The Good Ladds are speed-running the Bender Bowl. Two weeks in and Mig already looks like he's drafting for 2026.",
-  "mainRecap": "Let's start with the crime scene: The Good Ladds 100.00. A clean, round, embarrassing hundo. Mig, you scored a Kyler Murray 28.54 and STILL got curb-stomped by 73 because you left Hunter Henry's 22.90 rotting on the bench like leftovers in a frat house fridge. Optimal lineup was 137.80 — you missed by 37 points and the playoffs by about three weeks of this nonsense. T swift's Baddies didn't even need to try; James Cook (28.5) and Davante (26) just showed up and clocked out.\n\nMeanwhile in The Olave Garden, Patrick rode Alvin Kamara's 44-burger to 154.80 and STILL benched De'Von Achane and his 29.50. You scored 154 with one hand tied behind your back and Achane handcuffed in the trunk. MassiveCocks, on the other side of that beating, mustered 93.34 — Malik Nabers put up 28.70 and the rest of the roster collectively whispered. Papi, the team name is doing a lot of heavy lifting right now.\n\nStroud Boys posted a league-best 97.9% efficiency behind Marvin Harrison's 29, which is the nerdiest flex in the league but congrats Bjewett, you finally read the start/sit column. Hot Cocks ate it for 33. LargestofRocks beat 226 Alpha by 37 while leaving FORTY-THREE bench points between Quentin Johnston and Sam Darnold — imagine starting a Darnold/QJ stack in 2024 and being mad you didn't. Szara, Jalen Hurts went for 24.82 and you still got smoked; that's a roster problem, not a bad week.\n\nJets' Juniors handled Bo Nix Celli 151-134 in a game where Chris Godwin's 24.70 wasn't enough to save Nick from himself. Welcome to 0-2 watch, gentlemen. The bottom is getting crowded.",
+  "headline": "Week 2: Tnicolle Drops a 173 Bomb While Mig Forgets He's in a League",
+  "subhead": "T swift's Baddies hung a buck-seventy-three on The Good Ladds and somehow that wasn't even the most embarrassing thing Mig did this week.",
+  "matchOfTheWeek": "Put an AR to My Head squeaked by OnlyFants 129-117 in the only game that didn't end with somebody crying into their waiver wire. DK Metcalf went for 28.9 and Kyle still left 22.82 from Derek Carr rotting on the pine — imagine winning a coin flip with your QB2 outscoring half the league from the bench. Cubby loses by 11 and gets nothing but a participation sticker.",
+  "mainRecap": "Let's start with the crime scene at 100 Good Ladds Lane. Mig put up a flat 100.00 — like he was scared to round up — while leaving 37.80 points on the bench, including a 22.9 from Hunter Henry he apparently forgot existed. Kyler Murray dropped 28.54 for him and it didn't matter because Tnicolle was across the field detonating a 173.32 nuke behind James Cook (28.5) and Davante Adams (26). That's not a loss, that's a hate crime by 73.32.\n\nMeanwhile in The Olave Garden, Patrick rode Alvin Kamara's absolutely deranged 44-spot to a 154.80 beatdown of MassiveCocks, who mustered a league-low 93.34 despite Malik Nabers going for 28.7. Papi, your stud WR went off and you still got embarrassed by a guy whose bench had De'Von Achane casually dropping 29.50. Patrick won by 61 and STILL had the worst manager move of the week. Bench Achane again, coward.\n\nStroud Boys posted the best lineup efficiency of the week at 97.9% — Marvin Harrison's 29 doing heavy lifting — and sent Hot Cocks home 149-116. BigD, your team is named Hot Cocks and you scored 116, do the math.\n\nLargestofRocks rolled 226 Alpha 140-103, which sounds great until you realize he left Quentin Johnston (22.1) AND Sam Darnold (20.92) on his bench. Dude won by 37 with 43 points stapled to the pine. Szara, Jalen Hurts went for 24.82 and your supporting cast still showed up like it was a fire drill.\n\nJets' Juniors handled Bo Nix Celli 151-134 behind Nico Collins' 27.5, and Celli's Chris Godwin 24.7 was the only thing keeping him from being a Week 2 cautionary tale. Wunder looking dangerous, Nick looking like a guy who drafted his team name first and his roster second.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "T swift's Baddies",
+      "blurb": "Hung 173 with Cook and Adams cooking — the rest of the league should consider forfeiting now and saving the gas money."
+    },
+    {
+      "rank": 2,
+      "team": "The Olave Garden",
+      "blurb": "Kamara's 44-burger was so loud you forgot Patrick benched a 29.5 from Achane like a complete psychopath."
+    },
+    {
+      "rank": 3,
+      "team": "Stroud Boys",
+      "blurb": "97.9% lineup efficiency and MHJ going nuclear — Jewett is the only guy in this league who reads his own roster."
+    },
+    {
+      "rank": 4,
+      "team": "Jets' Juniors",
+      "blurb": "151 points and a Nico Collins explosion has Wunder sneakily 2-0 while nobody's looking."
+    },
+    {
+      "rank": 5,
+      "team": "LargestofRocks",
+      "blurb": "Won by 37 and somehow left 43 points on the bench between Q-John and Darnold — imagine the ceiling if you actually tried."
+    },
+    {
+      "rank": 6,
+      "team": "Put an AR to My Head",
+      "blurb": "Survived OnlyFants by 11 with Derek Carr's 22.82 collecting splinters — the W counts but the process is criminal."
+    },
+    {
+      "rank": 7,
+      "team": "Bo Nix Celli",
+      "blurb": "134 points is a respectable L, but naming your team after Bo Nix is its own kind of self-harm."
+    },
+    {
+      "rank": 8,
+      "team": "OnlyFants",
+      "blurb": "Cubby put up 117 in a loss — close enough to feel the heartbreak, far enough to stay mid."
+    },
+    {
+      "rank": 9,
+      "team": "Hot Cocks",
+      "blurb": "116 points and got rolled — your team name is doing more work than your flex."
+    },
+    {
+      "rank": 10,
+      "team": "226 Alpha",
+      "blurb": "Hurts dropped 24.82 and the rest of the roster was on a milk carton — Szara needs a search party."
+    },
+    {
+      "rank": 11,
+      "team": "MassiveCocks",
+      "blurb": "93.34 is the lowest score of the week even WITH Nabers going for 28.7 — that's an indictment of every other lineup slot."
+    },
+    {
+      "rank": 12,
+      "team": "The Good Ladds",
+      "blurb": "Scored exactly 100, lost by 73, and benched 37.8 points — a Mig hat trick of misery."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "The 'I Paid for the Whole Bench' Award",
-      "team": "The Good Ladds",
-      "blurb": "Left 37.80 on the pine in a 73-point loss — Hunter Henry was screaming from the sideline and Mig had AirPods in."
-    },
-    {
-      "title": "Most Points Ever Scored In A Pillow Fight",
+      "title": "Manslaughter of the Week",
       "team": "T swift's Baddies",
-      "blurb": "173.32 against a team that scored a buck flat — you beat a JV squad, calm the parade down."
+      "blurb": "73.32-point margin is less a fantasy win and more grounds for a restraining order."
     },
     {
-      "title": "Kamara Carry Special",
+      "title": "Bench Warmer Hall of Shame",
       "team": "The Olave Garden",
-      "blurb": "Alvin Kamara dropped 44 and Achane dropped 29.50 on the bench — Patrick won by 61 and somehow still cost himself points."
+      "blurb": "Won by 61 and STILL benched a 29.5 from Achane — Patrick is allergic to optimal lineups."
     },
     {
-      "title": "Lowest Cocks On The Board",
+      "title": "Round Number Award",
+      "team": "The Good Ladds",
+      "blurb": "Scored a perfect 100.00 like he was trying to hit a bowling score, not win a fantasy game."
+    },
+    {
+      "title": "Workplace Safety Violation",
       "team": "MassiveCocks",
-      "blurb": "93.34 is not 'massive,' Papi — that's a soft open at best."
+      "blurb": "Lowest score of the week at 93.34 — Papi's lineup needs OSHA on speed dial."
     }
   ],
   "season": "2024",
   "week": 2,
-  "generatedAt": "2026-05-09T16:29:45.435Z",
+  "generatedAt": "2026-05-09T19:03:53.923Z",
   "modelId": "claude-opus-4-7"
 }

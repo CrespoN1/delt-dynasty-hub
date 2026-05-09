@@ -1,33 +1,94 @@
 {
-  "headline": "Week 13: McCalfinjury Drops a 170-Burger While Stroud Boys Find New Ways to Suck",
-  "subhead": "A week of beatdowns, bench tragedies, and one matchup that somehow involved Davis Mills again.",
-  "matchOfTheWeek": "Christian McCalfinjury hung 170.96 on The Good Ladds and made it look like a bye week. Jordan Love (25.76) and Zach Ertz dropping a 25.6 from the tight end position is the kind of variance that makes Mig stare at the ceiling at 2am — especially with GOAT Young casually banking 22.54 on his bench. Mig had Jaydon 3, Jayden 1, and Jayden 2 all suited up and STILL got Jayden Done.",
-  "powerRankingsShakeup": "McCalfinjury kicks the door in as a legit contender, while Stroud Boys (89.74, league-low) are speedrunning their way to a top-3 pick. The Prodigal Son ain't walking through that door, bro.",
-  "mainRecap": "Let's start at the top, because Rub My Chubb's A.J. Brown went full Madden cheat code with 35.20 and BigD walked over T swift's Baddies like a Vegas bachelor party. Tnicolle, you can't win when Marcus FREAKING MARIOTA puts up 24.26 on your bench. That's not a lineup decision, that's a hate crime against yourself.\n\nNut Olave Your Face beat QAmon by 32 and somehow this is the saddest win of the week. Nick left 50.32 points on the bench — Adonai Mitchell (24.2) and Tyrod Taylor (21.28) watching Mustard and Big Cock Brock do all the work while two starters napped. You're 91% efficiency away from being unbeatable and 100% of the way to being your own worst enemy. Meanwhile QAmon's 96.68 was carried by absolutely no one — Turf Toe Joe couldn't outrun this loss, ShAmon-Ra was just Amon-Mid, and the Tiny-Handed Vampire stayed in the coffin. Kyle, your team name has more juice than your starters.\n\nBrowning Out smoked Egbukkake behind Jameson Williams (26.9), though Patrick somehow benched a 22.6 from Terry McLaurin — bro, that's your guy, what are we doing. Szara meanwhile rolled out Erick None, Insta Drop, and Poopoo Atwell and is shocked he scored 122. The Mascot can only carry so much.\n\nMcBridesStrangeWhiteHock survived OnlyFants by 7.28 thanks to a vintage Trey McBride 26.2 and CeeDee Lamb showing up. Cubby got 29.4 from Rashee Rice and still lost — that's gotta sting like a bad Tinder match.\n\nAnd then there's Little Peckers vs Stroud Boys, the lowest-scoring game of the week, a 101-to-89 slap fight that Mahomes (29.44) personally dragged across the finish line. Bjewett, when Money Mill$ is your offensive identity, the season's already a wrap. Unc came through. He always does.",
+  "headline": "Week 13: McCalfinjury Drops a 170-Burger and the League Files a Police Report",
+  "subhead": "Christian McCalfinjury just put up a number that should require a urine test while half the league forgot what week it was.",
+  "matchOfTheWeek": "McBridesStrangeWhiteHock vs OnlyFants was the only game where anyone broke a sweat — a 7.28-point knife fight where Trey McBride (26.2) and CeeDee Lamb (24.2) just barely outran Rashee Rice's 29.4. Cubby brought a 130-spot and still lost because his roster forgot it's playoff push season. Rocks survives by the skin of his teeth and somehow climbs the standings while everyone pretends that was impressive.",
+  "mainRecap": "Let's start with the crime scene: Christian McCalfinjury hung 170.96 on The Good Ladds, with Jordan Love (25.76) and ZACH ERTZ (25.60 — yes, that Zach Ertz, somehow still alive) leading the charge at 91% lineup efficiency. Wunder ran the most optimized lineup of the year while Mig watched GOAT Young drop 22.54 on his bench because he started Brissett-flavored vibes instead. Jayden 1, Jayden 2, Jayden 3 — pick a Jayden, any Jayden, just not the one that wins you the week.\n\nNickcelli put up 129 and STILL left 50.32 points on the bench — Adonai Mitchell (24.2) and Tyrod Taylor (21.28) rotting next to the Gatorade cooler while Mustard (30.3) and Big Cock Brock (24.3) carried him past QAmon. Imagine being the only manager with a 179-point optimal lineup and still finding a way to look like a clown. Meanwhile Kyle's QAmon room — King Unc, Turf Toe Joe, ShAmon-Ra, the whole carnival — mustered 96.68. The Tiny-Handed Vampire couldn't even bite back.\n\nBrowning Out put 147 on Egbukkake and Szara's nicknamed zoo (The Mascot, Perc Hurts, Press In Case of Emergency) still couldn't crack 123. Patrick also benched Terry McLaurin for 22.6 because of course he did, and won by 25 anyway — that's the kind of week where you just nod and walk away.\n\nRub My Chubb rode A.J. Brown's 35.2-point eruption past T Swift's Baddies, who were busy watching Marcus Mariota — MARCUS MARIOTA — drop 24.26 from the pine. Tnicolle, you started the wrong QB. Marcus Mariota. Read that back.\n\nAnd in the Sad Bowl, Little Peckers squeaked past Stroud Boys 101 to 89 in a game so ugly the NFL almost flexed it out. Mahomes went for 29.44 and the rest of Papi's roster combined for 72. Bjewett's Stroud Boys posted the week's lowest score because Money Mill$ apparently can't even cover his own name's spread.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Christian McCalfinjury",
+      "blurb": "170.96 with Zach Ertz as a co-lead — this is either the best team in the league or the most haunted, and right now nobody cares which."
+    },
+    {
+      "rank": 2,
+      "team": "Rub My Chubb",
+      "blurb": "A.J. Brown went nuclear for 35.2 and BigD just keeps quietly stacking wins while everyone else live-tweets their own funerals."
+    },
+    {
+      "rank": 3,
+      "team": "Browning Out",
+      "blurb": "Benched 22.6 from Scary Terry and still hung 147 — that's a problem for the rest of the bracket."
+    },
+    {
+      "rank": 4,
+      "team": "McBridesStrangeWhiteHock",
+      "blurb": "Trey McBride is single-handedly funding this playoff run; the rest of the roster is basically a GoFundMe."
+    },
+    {
+      "rank": 5,
+      "team": "Nut Olave Your Face",
+      "blurb": "Mustard and Big Cock Brock dropped 54 combined and Nick STILL left 50 points benched — imagine the ceiling if he learned how lineups work."
+    },
+    {
+      "rank": 6,
+      "team": "OnlyFants",
+      "blurb": "130 points and a loss is the most OnlyFants thing Cubby could've done this week."
+    },
+    {
+      "rank": 7,
+      "team": "The Good Ladds",
+      "blurb": "GOAT Young rotted on the bench for 22.54 in a 41-point loss — Mig collects Jaydens like Pokémon and starts none of the right ones."
+    },
+    {
+      "rank": 8,
+      "team": "Egbukkake",
+      "blurb": "The Mascot, Perc Hurts, and HHH Henry couldn't crack 123; Szara's nicknames are doing more work than his starters."
+    },
+    {
+      "rank": 9,
+      "team": "QAmon",
+      "blurb": "Started King Unc, Turf Toe Joe, AND ShAmon-Ra and scored 96 — that's a stable of QBs and a barn fire all at once."
+    },
+    {
+      "rank": 10,
+      "team": "T swift’s Baddies",
+      "blurb": "Benched Marcus Mariota for 24.26 in a 22-point loss; Taylor's writing a breakup album about her own lineup decisions."
+    },
+    {
+      "rank": 11,
+      "team": "Little Peckers ",
+      "blurb": "Mahomes 29, everyone else combined: a wet fart — Papi won and somehow looked worse doing it."
+    },
+    {
+      "rank": 12,
+      "team": "Stroud Boys",
+      "blurb": "89.74 is the kind of score that makes The Prodigal Son want to leave again."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Bench Coach of the Year",
-      "team": "Nut Olave Your Face",
-      "blurb": "Won by 32 and still left 50.32 on the bench — Nick is the only man who can win a fight and lose a tooth doing it."
-    },
-    {
-      "title": "Why Did You Even Show Up Award",
-      "team": "Stroud Boys",
-      "blurb": "89.74 points in a SuperFlex league is not a lineup, it's a cry for help."
-    },
-    {
-      "title": "Marcus Mariota Memorial Bench Trophy",
-      "team": "T swift’s Baddies",
-      "blurb": "Starting a QB who scored less than Mariota in 2025 is a felony in 49 states."
-    },
-    {
-      "title": "Beat the Brakes Off Em",
+      "title": "Drop the Mic, Drop the League",
       "team": "Christian McCalfinjury",
-      "blurb": "170.96 at 91% efficiency — Matt finally remembered he had a fantasy team and immediately ruined Mig's weekend."
+      "blurb": "170.96 and 91% efficiency — Wunder cooked the entire kitchen and salted the earth."
+    },
+    {
+      "title": "Bench Warmer of the Week",
+      "team": "Nut Olave Your Face",
+      "blurb": "50.32 points on the pine in a WIN is a level of self-sabotage we should study in a lab."
+    },
+    {
+      "title": "You Started WHO?",
+      "team": "T swift’s Baddies",
+      "blurb": "Marcus Mariota dropped 24.26 from the bench in a 22-point loss — say his name out loud and feel the pain."
+    },
+    {
+      "title": "Participation Trophy",
+      "team": "Little Peckers ",
+      "blurb": "Won with 101.88 against the league's worst score; don't pop champagne, pop a Tums."
     }
   ],
   "season": "2025",
   "week": 13,
-  "generatedAt": "2026-05-09T16:43:26.285Z",
+  "generatedAt": "2026-05-09T19:23:29.383Z",
   "modelId": "claude-opus-4-7"
 }

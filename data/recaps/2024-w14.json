@@ -1,33 +1,94 @@
 {
-  "headline": "Week 14: The Cocks Came Out Swinging and Everyone Else Got Slapped",
-  "subhead": "Six matchups, five blowouts, and one Largest of Rocks coaching crime that should be investigated by the league office.",
-  "matchOfTheWeek": "The Olave Garden squeaked past LargestofRocks 159.96 to 154.60 in the only game that didn't feel like a public execution. Puka Nacua dropped 41.8 to keep Patrickreegs alive, while LargestofRocks left a buffet of 28.86 points rotting on the bench — including Drew Lock's 15.98 and Quentin Johnston's 15.80. Sam Darnold goes for 34.58 and you still find a way to lose by five because you started the wrong half of your roster.",
-  "powerRankingsShakeup": "Hot Cocks just dropped a 190-burger and announced themselves as the team nobody wants to see in round one. Stroud Boys and T swift's Baddies are in free-fall — 173 and 190 dropped on their heads in the same week is not a coincidence, that's a diagnosis.",
-  "mainRecap": "Hot Cocks put up 190.42 and made T swift's Baddies look like a JV scrimmage. Ja'Marr Chase 45.1, Tyreek Hill 28.1 — BigD didn't just win, he sent a 50-point ransom note to the rest of the bracket. Tnicolle, 140 isn't bad, it just doesn't matter when the other guy is auditioning for a Madden cover.\n\nThe Good Ladds rode Josh Allen's 51.88-point monster game to a 173.74 demolition of Stroud Boys. Bjewett, your team is named Stroud Boys and you got cooked by a guy who started Isaac Guerendo. Read that sentence again. Allen threw for 4 TDs and ran for 2 and Mig was just along for the ride hitting refresh and giggling.\n\nPut an AR to My Head dumped 164 on Jets' Juniors, who managed the league-low 117.60 for the second-worst showing of the night. Wunder, your starting lineup got out-scored by Kyle's bench WR — Jalen McMillan went for 21.9 in street clothes. That's not a fantasy team, that's a participation trophy with a logo.\n\n226 Alpha handled MassiveCocks 165 to 130, though szara left Matthew Stafford's 20.8 on the pine because apparently we're not playing to win championships, we're playing to feel things. Still, a W is a W when 7BigPapi rolls out a 130-spot.\n\nBo Nix Celli quietly ran 98.7% lineup efficiency — the cleanest start/sit job of the week — and beat OnlyFants 135 to 117 behind Zach Charbonnet's 38.3. Cubby got 32 from Jefferson and still lost, which is the OnlyFants brand at this point: pay the premium, get the disappointment.",
+  "headline": "Week 14: The Hot Cocks Drop a 190-Burger and Nobody's Safe",
+  "subhead": "Six teams won, six teams got buried, and Jets' Juniors bricked a 117 like it was Week 1 again.",
+  "matchOfTheWeek": "Olave Garden vs LargestofRocks was the only game with a pulse, decided by 5.36 points after Puka Nacua dumped 41.80 on Patrickreegs's behalf. The kicker? LargestofRocks left 28.86 points on the bench — Drew Lock and Quentin Johnston combined for 31+ in street clothes while the active lineup waved goodbye to a winnable game. That's not losing. That's losing with footnotes.",
+  "mainRecap": "Hot Cocks dropped 190.42 and turned T swift's Baddies into a charity stream. Ja'Marr Chase went full nuclear with 45.10, Tyreek chipped in 28.10, and Tnicolle got to spend the afternoon watching her team get curb-stomped by 50. That's not a matchup, that's a hostage situation.\n\nThe Good Ladds rode Josh Allen's 51.88-point Voltron impression to a 173-point thrashing of Stroud Boys. Bjewett, your team is named after a quarterback and you got out-QB'd by 30. Isaac Guerendo posted 26.80 like he's been doing this for years. Mig is cooking.\n\nPut an AR to My Head hung 164 on Jets' Juniors and Jordan Addison went off for 39.30 — and somehow Kyle STILL left 21.90 points of Jalen McMillan on the bench. You won by 46, dude, but optimal-you was running up the score like a JV coach with daddy issues. Meanwhile Wunder's squad scored 117.60, the literal lowest in the league, in a week where Sam Darnold dropped 34. Read that again.\n\n226 Alpha handled MassiveCocks by 35 despite Szara benching a 20.80 Stafford performance — which is impressive efficiency for a guy who left a top-3 QB week chilling. 7BigPapi7, you put up 130 in a SuperFlex league. That's a punt.\n\nBo Nix Celli quietly ran the most efficient lineup of the week (98.7%) and Zach Charbonnet went 38.30 to bury OnlyFants. Cubby got 32 from JJ and still lost — when Jefferson can't save you, nothing can.\n\nAnd Olave Garden squeaked by while leaving Juwan Johnson's 17 on the pine. A win's a win, Reegs, but stop benching touchdowns at a TE-premium position.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Hot Cocks",
+      "blurb": "190 points, Chase and Tyreek both eating, and the rest of the league filing restraining orders."
+    },
+    {
+      "rank": 2,
+      "team": "The Good Ladds",
+      "blurb": "Josh Allen put up 51 and Mig is starting to look like the guy nobody wants to draw in Round 1."
+    },
+    {
+      "rank": 3,
+      "team": "226 Alpha",
+      "blurb": "Won by 35 with a starting QB on the bench going for 20 — terrifying depth, questionable decision-making."
+    },
+    {
+      "rank": 4,
+      "team": "Put an AR to My Head",
+      "blurb": "Hung 164 on the worst team in the league this week — calm down, Achilles."
+    },
+    {
+      "rank": 5,
+      "team": "The Olave Garden",
+      "blurb": "Survived by 5 thanks to Puka, but the bench is screaming louder than the win column."
+    },
+    {
+      "rank": 6,
+      "team": "Bo Nix Celli",
+      "blurb": "98.7% efficient and still only beat OnlyFants by 18 — peak surgical mediocrity, if mediocrity could win."
+    },
+    {
+      "rank": 7,
+      "team": "LargestofRocks",
+      "blurb": "Lost a 5-point game while leaving 29 on the bench — congrats, you played yourself."
+    },
+    {
+      "rank": 8,
+      "team": "OnlyFants",
+      "blurb": "Got 32 from Jefferson and still lost; when your superstar shows up and you don't, you ARE the problem."
+    },
+    {
+      "rank": 9,
+      "team": "Stroud Boys",
+      "blurb": "Got out-QB'd by 30 in a SuperFlex league named after a QB — the irony writes itself."
+    },
+    {
+      "rank": 10,
+      "team": "MassiveCocks",
+      "blurb": "130 points in SuperFlex is a participation trophy with extra steps."
+    },
+    {
+      "rank": 11,
+      "team": "T swift's Baddies",
+      "blurb": "Lost by 50, which technically isn't a loss, that's just witnessing a crime."
+    },
+    {
+      "rank": 12,
+      "team": "Jets' Juniors",
+      "blurb": "Lowest score in the league in Week 14 — the Jets brand is fully operational."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Scoreboard Arsonist",
-      "team": "Hot Cocks",
-      "blurb": "190.42 is not a score, it's a felony — Chase and Hill turned BigD's matchup into a crime scene."
+      "title": "Crime Scene of the Week",
+      "team": "T swift's Baddies",
+      "blurb": "50.28-point loss while the opponent's WR1 alone outscored half your starting lineup."
     },
     {
       "title": "Bench Coach of the Year",
       "team": "LargestofRocks",
-      "blurb": "Lost by 5.36 with 28.86 points stapled to the bench — Drew Lock and Quentin Johnston watched the L from the sideline like everyone else."
+      "blurb": "Lost by 5 with 28.86 points sitting on the bench — Drew Lock and Quentin Johnston are filing for back pay."
     },
     {
-      "title": "Why Are You Here Award",
+      "title": "Stat-Padder Supreme",
+      "team": "The Good Ladds",
+      "blurb": "Josh Allen's 51.88 was less of a fantasy performance and more of a hate crime against Stroud Boys."
+    },
+    {
+      "title": "Loudest Whimper",
       "team": "Jets' Juniors",
-      "blurb": "117.60 points and a 46-point loss — Wunder's lineup looked like it was filled out by a taxi squad with the flu."
-    },
-    {
-      "title": "Cardiac Garden",
-      "team": "The Olave Garden",
-      "blurb": "Puka's 41.8 bailed out a roster that left Juwan Johnson's 17 on the bench — survived a coin flip and called it a win."
+      "blurb": "Lost by 46 AND finished as the week's lowest scorer — the Wunder double-dip nobody wanted."
     }
   ],
   "season": "2024",
   "week": 14,
-  "generatedAt": "2026-05-09T16:35:21.851Z",
+  "generatedAt": "2026-05-09T19:11:40.189Z",
   "modelId": "claude-opus-4-7"
 }

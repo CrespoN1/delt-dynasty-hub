@@ -1,33 +1,94 @@
 {
-  "headline": "T-Swift's Baddies Drop a Deuce-Thirteen, 226 Alpha Drops Trou",
-  "subhead": "Week 5 was less a slate of football games and more a series of public executions, with three teams clearing 180 and one team forgetting it was playing.",
-  "matchOfTheWeek": "LargestofRocks 123.88 vs Put an AR to My Head 114.56 — the only matchup that didn't end in war crimes. Largest left 34.62 points on the bench including a 22-point Daniel Jones game (yes, that sentence happened in 2024) and STILL won, which tells you everything about the AR offense this week. Kyle, putting the gun to your own head was the only correct read.",
-  "powerRankingsShakeup": "T Swift's Baddies just dropped 213 and are officially the scariest team in the league; 226 Alpha is in freefall after posting a league-low 114 in a week where the average was somewhere near a Big 12 final score.",
-  "mainRecap": "Let's start at the top because Tnicolle just put 213.28 on the board and we need to talk about it. Kirk Cousins (35), Lamar (33), Drake London (33) — and she STILL left a 22-point Alec Pierce on the bench like it was nothing. That's not a fantasy lineup, that's a flex. Szara, brother, 114 points and you got beat by 99. Your team didn't lose, it filed a missing persons report.\n\nOver in degenerate-ville, Hot Cocks hung 183 on OnlyFants behind Ja'Marr Chase's 41.30 nuke — and BigD somehow STILL left 44 combined points on the bench between Tucker Kraft (26.8) and Isaiah Likely (17.8). You won by 40 and it should've been 80. Cubby, Garrett Wilson went for 29 and you still got bodied — when your WR1 ghosts you AND your league-leader still cooks, that's just the universe telling you to log off.\n\nBo Nix Celli posted 185 with 100% lineup efficiency, which is the most insufferable stat line possible. Brock Bowers 27, DJ Moore 27, and Celli walking around like he's Bill Belichick. Meanwhile MassiveCocks put up 120 and got run off the field — Tee Higgins dropped 29 and it was the football equivalent of bringing a knife to a drone strike.\n\nThe Good Ladds quietly handled Jets' Juniors 157-131 thanks to Darnell freaking Mooney going for 31.50 as a Giant, a sentence that should not exist in any timeline. Wunder, your juniors got tutored.\n\nAnd Olave Garden squeaked past Stroud Boys 142-133 on the back of Burrow's 34.78. Bjewett, you lost by nine in a week where six teams scored 140+. The bar is on the floor and you brought a limbo stick.",
+  "headline": "Week 5: Tnicolle Drops a Bicentennial on 226 Alpha",
+  "subhead": "T Swift's Baddies hung 213, Bo Nix Celli ran a perfect lineup, and Szara got publicly executed in front of the entire league.",
+  "matchOfTheWeek": "T Swift's Baddies 213.28, 226 Alpha 114.00. Tnicolle ran out Kirk Cousins (35.36), Lamar (33.42), and Drake London (33.40) and STILL left Alec Pierce's 22.4 on the pine — the kind of week where you score a hundred-burger and your bench could've beaten half the league too. Szara meanwhile watched Jalen Tolbert drop 21.7 from his bench while his starters mailed in 114, which is less a fantasy lineup and more a cry for help.",
+  "mainRecap": "Let's start at the top: Bo Nix Celli put up 185 on MassiveCocks and posted a 100% optimal lineup, which is the fantasy equivalent of running the table at beer pong while sober. Brock Bowers (27.7) and DJ Moore (27.5) carried the freight and Papi's MassiveCocks got Tee Higgins'd into oblivion at 120.98. Cute team name, soft team output.\n\nHot Cocks dropped 183 on OnlyFants thanks to Ja'Marr Chase going full supernova for 41.3 — and somehow BigD STILL left 26.8 from Tucker Kraft and 17.8 from Isaiah Likely on the bench. You scored 183 with two TEs benched cooking 44 points. That's not a flex, that's a confession. Cubby's OnlyFants put up 142 with Garrett Wilson dropping 29 and it didn't matter — when the other guy's WR1 doubles up your WR1, you go home and rethink everything.\n\nThe Good Ladds handled Jets' Juniors 157-131 behind a 31.5 from Darnell Mooney, of all people. Mig is winning games on Giants receivers in 2024 and Wunder can't do a thing about it. The Olave Garden squeaked past Stroud Boys 142-133 because Joe Burrow went for 34.78 — Patrickreegs basically subcontracted his win to Cincinnati's offense and Bjewett's Stroud Boys are now living the cruel irony of being a team named after a QB who can't crack the top 10.\n\nAnd then there's the LargestofRocks special: beat KyleDech by 9.32 while leaving 34.62 points on the bench, including Daniel Jones for 22 freakin' points. You had Danny Dimes cooking and started someone else. That's a war crime. Put an AR to My Head deserved better — fitting team name for the week he just had.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "T swift’s Baddies",
+      "blurb": "213 points and the bench could've won too — Tnicolle is running a fantasy cartel right now."
+    },
+    {
+      "rank": 2,
+      "team": "Bo Nix Celli",
+      "blurb": "100% lineup efficiency and a 64-point beatdown — Celli is the only one in this league who reads his own waiver wire."
+    },
+    {
+      "rank": 3,
+      "team": "Hot Cocks",
+      "blurb": "Dropped 183 with 44 bench points wasted, which means the ceiling is genuinely terrifying if BigD ever learns to set a lineup."
+    },
+    {
+      "rank": 4,
+      "team": "The Good Ladds",
+      "blurb": "Winning games with Darnell Mooney as your WR1 is either genius or witchcraft and I'm not ruling either out."
+    },
+    {
+      "rank": 5,
+      "team": "The Olave Garden",
+      "blurb": "Joe Burrow is the only reason Patrickreegs isn't writing apology texts in the group chat."
+    },
+    {
+      "rank": 6,
+      "team": "OnlyFants",
+      "blurb": "142 is a perfectly fine score in any week that isn't this one — Cubby ran into the buzzsaw and bled out."
+    },
+    {
+      "rank": 7,
+      "team": "MassiveCocks",
+      "blurb": "Tee Higgins went off for 29 and Papi still got steamrolled by 64 — the name's the loudest thing about this roster."
+    },
+    {
+      "rank": 8,
+      "team": "Stroud Boys",
+      "blurb": "Named after a quarterback, currently being carried by everyone except quarterbacks — Bjewett's identity crisis continues."
+    },
+    {
+      "rank": 9,
+      "team": "Jets’ Juniors",
+      "blurb": "Wunder's squad is doing exactly what the name implies: aggressively mid with brief moments of false hope."
+    },
+    {
+      "rank": 10,
+      "team": "LargestofRocks",
+      "blurb": "Won by 9 with 34 points stapled to the bench — congrats, you beat the worst-managed lineup of the week with the second-worst."
+    },
+    {
+      "rank": 11,
+      "team": "Put an AR to My Head",
+      "blurb": "Kyle's team name is starting to read less like a joke and more like a weekly status update."
+    },
+    {
+      "rank": 12,
+      "team": "226 Alpha",
+      "blurb": "Lowest score of the week, biggest blowout victim of the week, and Jalen Tolbert lit the bench on fire — Szara, please blink twice if you need help."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Nuke of the Week",
+      "title": "Nuke from Orbit",
+      "team": "T swift’s Baddies",
+      "blurb": "213.28 points and a 99-point margin — Tnicolle didn't beat Szara, she filed a missing persons report on him."
+    },
+    {
+      "title": "Lineup Whisperer",
+      "team": "Bo Nix Celli",
+      "blurb": "100% optimal lineup is the rarest achievement in fantasy and Celli did it while dropping 185 — disgusting behavior."
+    },
+    {
+      "title": "Bench Coach of the Year",
       "team": "Hot Cocks",
-      "blurb": "Ja'Marr Chase 41.30 — and BigD still left 44 on the bench because greatness is wasted on the careless."
+      "blurb": "Won by 40 and STILL benched 44 points across Tucker Kraft and Isaiah Likely — BigD is allergic to free money."
     },
     {
-      "title": "Crime Scene Award",
-      "team": "226 Alpha",
-      "blurb": "Lost by 99.28 and left a 21-point Jalen Tolbert benched — Szara coached this one from the parking lot."
-    },
-    {
-      "title": "Cooked With What She Had",
-      "team": "T swift's Baddies",
-      "blurb": "213.28 with two QBs over 33 and Drake London going supernova — Tnicolle is officially the league boogeyman."
-    },
-    {
-      "title": "Won Anyway, Idiot",
+      "title": "Danny Dimes Disrespect Award",
       "team": "LargestofRocks",
-      "blurb": "Left 34.62 on the bench including a 22-point Daniel Jones — escaped Kyle by the skin of his teeth and the grace of God."
+      "blurb": "Sat Daniel Jones for 22.08 points and won by 9 — the most Largest-of-Rocks thing imaginable."
     }
   ],
   "season": "2024",
   "week": 5,
-  "generatedAt": "2026-05-09T16:31:06.780Z",
+  "generatedAt": "2026-05-09T19:05:50.714Z",
   "modelId": "claude-opus-4-7"
 }

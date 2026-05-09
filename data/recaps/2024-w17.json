@@ -1,33 +1,94 @@
 {
-  "headline": "Week 17: Championship Weekend And Szara Shows Up With A Wet Sock",
-  "subhead": "Four winners punched playoff-shaped tickets while 226 Alpha left a buffet on the bench and called it a meal.",
-  "matchOfTheWeek": "Hot Cocks vs. LargestofRocks was the only game with a pulse — 10.10 points of sweat. Baker Mayfield went full pirate for 34.56 and BigD ran a 94.8% efficient lineup like an actual adult. Meanwhile LargestofRocks got 36.30 from Trey McBride AND 32.78 from Jayden Daniels and STILL lost because Zach Ertz was rotting on the bench for 28.20. Imagine starting two top-3 scorers at their position and choking — that's a LargestofRocks signature dish.",
-  "powerRankingsShakeup": "Put an AR to My Head looks like a buzzsaw heading into next year after dropping 173.52, while 226 Alpha plummets straight through the floor and into the parking garage with a 79.76 that included seventy. point. nine. zero. on the bench.",
-  "mainRecap": "Let's start with the crime scene: Szara, my brother in Christ, you scored 79.76 and your optimal lineup was 150.66. That's not a lineup mistake, that's a hostage situation. You left 70.90 points on the pine — including 25.90 from Michael Pittman — and somehow still showed up Sunday like you were trying. 226 Alpha didn't lose a matchup, he lost a bet with himself.\n\nMassiveCocks bullied Bo Nix Celli 170.30 to 153.92 on the back of Tee Higgins (40.10) and Malik Nabers (36.10), which is a cute story until you notice Celli had Marvin Mims dropping 30.20 ON HIS BENCH. Nick, you named the team after a QB and still can't read a waiver wire. That's a special kind of self-own.\n\nOnlyFants smacked The Good Ladds 167.34 to 149.52 because Brock Purdy decided to remember he's good (32.28), and Mig got to spend Championship Sunday watching Cubby celebrate. Devastating visual.\n\nPut an AR to My Head put an AR to The Olave Garden's head — 173.52 to 155.14 — and the funniest part is Patrick got 36.98 from Joe Burrow and STILL got curb-stomped by 18. When your franchise QB throws for 400 and you lose by three scores, the problem isn't the QB, it's everything else you've assembled around him like a Build-A-Bear with no stuffing.\n\nAnd shoutout to T swift's Baddies for leading the league with 175.98 in a week he didn't even have a matchup that mattered — Drew Lock and DeVonta Smith carrying like it's a side quest, while Ricky Pearsall (28.70) and Alec Pierce (24.20) sat on the bench like a $300 bottle of wine at a Chili's. Tnicolle, you're scoring 175 in exhibition mode. Touch grass.",
+  "headline": "Championship Hangover: Week 17 Was a Bloodbath and Szara Forgot Football Was Today",
+  "subhead": "Four winners, eight losers, and one 226 Alpha lineup that looked like it was set by a Magic 8-Ball.",
+  "matchOfTheWeek": "Put an AR to My Head dropped 173.52 on The Olave Garden, which would've been a clean execution if Patrick's Joe Burrow hadn't gone full nuclear for 36.98 in a losing effort. Olave Garden put up 155.14 — a number that wins most weeks and loses this one by nearly 20. Kyle didn't just beat you, he made Burrow's monster line a footnote.",
+  "mainRecap": "Let's start with the war crime: 226 Alpha scored 79.76 while leaving 70.90 points on the bench. Szara, my guy, you literally had a 150.66 optimal lineup and you chose violence — against yourself. Michael Pittman put up 25.90 in street clothes on your bench while your starting roster looked like a CVS receipt. That's not a lineup, that's a cry for help.\n\nMassiveCocks rode Tee Higgins (40.10) and Malik Nabers (36.10) to a 170.30 nuke that buried Bo Nix Celli, who somehow stuffed Marvin Mims and his 30.20 points onto the bench like a guy hiding a bottle from his wife. Celli, you had the win sitting right there in your reserves and you watched it rot. That's a 16-point loss that should've been a 14-point W.\n\nOnlyFants put up 167.34 behind a Brock Purdy resurrection tour (32.28) and sent The Good Ladds home with 149.52 and a participation ribbon. Mig, putting up 149 and still losing is the most Good Ladds thing imaginable.\n\nHot Cocks squeaked past LargestofRocks 159-149 with 94.8% lineup efficiency — basically the only person in the league this week who knew what day it was. Meanwhile LargestofRocks got 36.30 from Trey McBride AND 32.78 from Jayden Daniels and STILL lost, mostly because Zach Ertz dropped 28.20 on the bench. Two elite scores wasted. Brutal.\n\nAnd then there's T swift's Baddies — league-high 175.98 points... in a week with no matchup that mattered for them, apparently, because Ricky Pearsall (28.70) and Alec Pierce (24.20) both ate pine. Tnicolle scored the most points in the league and somehow still managed to leave 50+ on the bench. That's a flex and a self-own in the same breath.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Put an AR to My Head",
+      "blurb": "173.52 in a must-win and Kyle is suddenly the scariest team alive heading into the playoff picture."
+    },
+    {
+      "rank": 2,
+      "team": "MassiveCocks",
+      "blurb": "Tee Higgins and Malik Nabers combined for 76.20 and the rest of the roster just had to not trip on the way to the bus."
+    },
+    {
+      "rank": 3,
+      "team": "T swift's Baddies",
+      "blurb": "Highest score in the league and it didn't even matter — peak 'rich guy crying in a Ferrari' energy."
+    },
+    {
+      "rank": 4,
+      "team": "OnlyFants",
+      "blurb": "Cubby's been quietly cooking and a 167-burger on The Good Ladds is the loudest he's been all year."
+    },
+    {
+      "rank": 5,
+      "team": "Hot Cocks",
+      "blurb": "94.8% lineup efficiency in a week everyone else was huffing glue — BigD is playing a different sport."
+    },
+    {
+      "rank": 6,
+      "team": "The Olave Garden",
+      "blurb": "Burrow drops 36.98 and you still lose — the unlimited breadsticks couldn't save this one."
+    },
+    {
+      "rank": 7,
+      "team": "LargestofRocks",
+      "blurb": "Got 69+ from McBride and Daniels, lost anyway, and Zach Ertz watched 28 points evaporate from the sideline."
+    },
+    {
+      "rank": 8,
+      "team": "Bo Nix Celli",
+      "blurb": "Marvin Mims dropped 30.20 on your bench and you lost by 16 — Nick, that's a math problem with one answer and it's 'you suck at this.'"
+    },
+    {
+      "rank": 9,
+      "team": "Stroud Boys",
+      "blurb": "Bye-week silence is the loudest commentary on this roster right now."
+    },
+    {
+      "rank": 10,
+      "team": "Jets' Juniors",
+      "blurb": "Mike Evans put up 29.70 and it's the only sentence worth writing about Wunder this week."
+    },
+    {
+      "rank": 11,
+      "team": "The Good Ladds",
+      "blurb": "149.52 and a loss — you're the human embodiment of 'so close yet so far.'"
+    },
+    {
+      "rank": 12,
+      "team": "226 Alpha",
+      "blurb": "Left 70.90 points on the bench in Week 17 of a dynasty league — Szara, did you know we were playing?"
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Bench Coach of the Year",
+      "title": "Lineup Malpractice of the Year",
       "team": "226 Alpha",
-      "blurb": "Left 70.90 points on the bench — Szara basically benched himself out of the season finale."
+      "blurb": "A 79.76 score with a 150.66 optimal — Szara filed his lineup like it was a tax extension he never meant to submit."
+    },
+    {
+      "title": "Bench Warmer Hall of Fame",
+      "team": "Bo Nix Celli",
+      "blurb": "Marvin Mims went for 30.20 in street clothes while Celli lost by 16 — the receipts are framed and on the wall."
     },
     {
       "title": "Loud Loser Award",
-      "team": "The Olave Garden",
-      "blurb": "Got 36.98 from Burrow and still ate an 18-point L — Patrick's roster is one star and eleven stowaways."
+      "team": "LargestofRocks",
+      "blurb": "Two top-7 starters in the entire league this week and still walked off the field a loser."
     },
     {
-      "title": "Cocky Winner Energy",
-      "team": "Hot Cocks",
-      "blurb": "94.8% lineup efficiency and a 10-point squeaker — celebrate quietly, you beat a guy whose bench outscored half the league."
-    },
-    {
-      "title": "Meaningless Points King",
-      "team": "T swift's Baddies",
-      "blurb": "Led the league at 175.98 with another 50+ on the bench — congrats on winning a week nobody asked you to play."
+      "title": "Cold-Blooded Killer",
+      "team": "Put an AR to My Head",
+      "blurb": "Hung 173 on Olave Garden and treated Burrow's 36.98 like an inconvenience."
     }
   ],
   "season": "2024",
   "week": 17,
-  "generatedAt": "2026-05-09T16:36:47.547Z",
+  "generatedAt": "2026-05-09T19:13:36.782Z",
   "modelId": "claude-opus-4-7"
 }

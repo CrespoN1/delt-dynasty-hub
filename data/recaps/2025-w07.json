@@ -1,33 +1,94 @@
 {
-  "headline": "T Swift Drops a 204-Burger While QAmon Sets His Bench on Fire",
-  "subhead": "Week 7 featured a 50-point massacre, an 0.86-point heart attack, and the most expensive bench in fantasy history.",
-  "matchOfTheWeek": "Nut Olave Your Face squeaked past Stroud Boys 141.88 to 141.02 in a game decided by a single Madison Beer's side piece scramble. Justin Herbert dropped 29.9 to drag Nick across the line, while bjewett13 is somewhere refreshing the box score wondering which decimal point ruined his week. The Prodigal Son will not save you from a 0.86 loss, my guy.",
-  "powerRankingsShakeup": "T Swift's Baddies just hung 204.54 and announced themselves as a problem, while QAmon's 'fantasy team' is now legally classified as a bench-warming charity. McBride's Hock keeps quietly stacking dub.",
-  "mainRecap": "Let's start with the war crime. T Swift's Baddies put up TWO HUNDRED AND FOUR POINTS on QAmon — Gibbs went for 36.8, DeVonta added 33.3, and Tnicolle hit 96.7% lineup efficiency just to twist the knife. Meanwhile, KyleDech is the proud manager of the most cursed bench in league history: Oronde Gadsden (32.9), Jaxson Dart-killer Joe Flacco aka King Unc (25.98), and Legettey Bear (24.2) all rotting on the pine for a combined 67.64 wasted points. You scored 153.76 and STILL got smoked by 50. The optimal lineup was 221.40. Read that again. You'd have beaten everyone in the league by 17 if you could just press the start button correctly. MUUUUUUUTH dropped 30.6 and it didn't matter because the rest of your lineup card was written in crayon.\n\nLittle Peckers welcomed Aaron Jones to the squad and immediately dropped 144 on OnlyFants, who clocked the league-low 108.22 because ChrisCubby refuses to admit his roster is a Pinterest board. Christian McCalfinjury rode CMC's 39.1 to a 26-point beatdown of Rub My Chubb — though Matt also left Jaxson Dart (29.42) AND Dalton Schultz (23.3) on the bench. Bro you won by 26, you could've won by 78. Speaking of Chubb, Ja'Marr Chase went nuclear for 38.1 and BigD still lost. Welcome to dynasty.\n\nThe Good Ladds handled Browning Out behind Jonathan Taylor's 34.2, even though Patrick's Bo Nix went absolute supernova for 39.96 in a losing effort. Mig also flipped picks for Kimani Vidal because Jaydon 3 wasn't enough Jaydons apparently. And McBride's Hock rode his namesake Trey McBride (34.4) to 159.96 over Egbukkake, where szara's Herbert's Butt Buddy posted 28.9 and Erick None lived up to the nickname.",
+  "headline": "T Swift's Baddies Drop a 204-Burger While QAmon Benches an Entire Playoff Team",
+  "subhead": "Week 7 served up a 50-point ass-kicking, an 0.86 heart attack, and a manager who left 67 points rotting on his bench like forgotten leftovers.",
+  "matchOfTheWeek": "Nut Olave Your Face squeaked past Stroud Boys by 0.86 — the football equivalent of slipping on a banana peel and accidentally winning the lottery. Madison Beer's side piece dropped 29.9 to drag Nick across the line while Stroud Boys watched their season tilt on a single garbage-time stat correction. Somewhere bjewett13 is still staring at the box score whispering 'one more yard.'",
+  "mainRecap": "T Swift's Baddies didn't play a fantasy game this week, they staged a public execution. 204.54 points. Two-oh-four. Gibbs went for 36.8, DeVonta Smith hung 33.3, and Tnicolle hit 96.7% lineup efficiency just to be a dick about it. QAmon, meanwhile, scored 153.76 — a number that wins most weeks — and still got beat by 50 because Kyle decided to run a fantasy clinic in HOW NOT TO SET A LINEUP. Oronde Gadsden (32.9), Jaxson Dart… wait wrong team — Joe Flacco aka King Unc (25.98), and Legettey Bear (24.2) all rotted on the pine. 67.64 bench points. Kyle, brother, just let the auto-set do it next time. Then he traded Kimani Vidal for picks like he's tanking a season he's somehow still alive in.\n\nChristian McCalfinjury beat Rub My Chubb behind a vintage 39.1 from the actual McCaffrey, but Matt also left Jaxson Dart's 29.42 AND Dalton Schultz's 23.3 on the bench — a combined 52 points of 'I forgot I had a phone.' BigD's only consolation: Ja'Marr Chase went full nuclear with 38.1 in a losing effort. Cool, enjoy the moral victory.\n\nLittle Peckers curb-stomped OnlyFants by 36, then immediately went and traded for Unc (Aaron Jones) because apparently 144 wasn't enough. ChrisCubby's 108 was the lowest score of the week — OnlyFants is starting to feel less like a team name and more like a content warning.\n\nMcBridesStrangeWhiteHock outdueled Egbukkake 159-149 in a track meet where Trey McBride finally justified the team name with 34.4. Szara got 28.9 from Herbert's Butt Buddy and STILL lost — the Mascot couldn't bail him out this time.\n\nThe Good Ladds handled Browning Out despite Bo Nix dropping 39.96 in a losing effort, because Jonathan Taylor said 'fine, I'll do it myself' for 34.2. Patrick, your QB went supernova and you still lost by 15. That's a special kind of pain.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "T swift’s Baddies",
+      "blurb": "204.54 with 96.7% efficiency is the kind of week that gets you investigated by the league office."
+    },
+    {
+      "rank": 2,
+      "team": "McBridesStrangeWhiteHock",
+      "blurb": "Dropped 159 and the team's namesake actually showed up — finally a week where the URL matches the result."
+    },
+    {
+      "rank": 3,
+      "team": "Christian McCalfinjury",
+      "blurb": "Won by 26 with 52 bench points — Matt's playing chess, the rest of you are playing checkers and losing."
+    },
+    {
+      "rank": 4,
+      "team": "Little Peckers ",
+      "blurb": "Curb-stomped a tomato can for 144 then went out and bought Unc — tell me you're going for it without telling me."
+    },
+    {
+      "rank": 5,
+      "team": "Nut Olave Your Face",
+      "blurb": "Won by less than a point and somehow Big Penix didn't even play — the universe owes Stroud Boys an apology."
+    },
+    {
+      "rank": 6,
+      "team": "The Good Ladds",
+      "blurb": "Quietly rolling — JT goes for 34, Kimani Vidal swung in via trade, and nobody's noticed Mig is 'cooking.'"
+    },
+    {
+      "rank": 7,
+      "team": "Egbukkake",
+      "blurb": "149 points and a loss is gross, almost as gross as starting Erick None over basically anyone else."
+    },
+    {
+      "rank": 8,
+      "team": "QAmon",
+      "blurb": "Scored 153 AND lost by 50 AND left 67 on the bench — Kyle is speedrunning every type of fantasy heartbreak in one week."
+    },
+    {
+      "rank": 9,
+      "team": "Stroud Boys",
+      "blurb": "Lost by 0.86 — somewhere Money Mill$ is laughing in a Houston bar that doesn't exist anymore."
+    },
+    {
+      "rank": 10,
+      "team": "Browning Out",
+      "blurb": "Bo Nix hangs 40 and you still lose by 15 — the team name is becoming a documentary."
+    },
+    {
+      "rank": 11,
+      "team": "Rub My Chubb",
+      "blurb": "Ja'Marr put up 38 and BigD still got cooked, then traded for Carson Wentz like that's gonna fix anything."
+    },
+    {
+      "rank": 12,
+      "team": "OnlyFants",
+      "blurb": "108 points, lowest in the league, subscriber count plummeting — content has officially gone stale."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Bench Cohen Memorial Trophy",
+      "title": "Bench Coach of the Year",
       "team": "QAmon",
-      "blurb": "Left 67.64 points on the bench in a 50-point loss — that's not a lineup, that's a hostage situation."
+      "blurb": "67.64 points on the bench is not a lineup, it's a hostage situation — Gadsden, King Unc, and Legettey Bear all watched their team lose by 50 in HD."
     },
     {
-      "title": "Participation Ribbon",
-      "team": "Browning Out",
-      "blurb": "Bo Nix went for 39.96 and Patrick still found a way to lose by 15 — congrats on the moral 0-fer."
-    },
-    {
-      "title": "Demolition Derby Champ",
+      "title": "204 Club",
       "team": "T swift’s Baddies",
-      "blurb": "204.54 points is less a fantasy score and more a felony charge in 38 states."
+      "blurb": "When you put up two bills with 96.7% efficiency, the only correct response from the league is to stop scheduling you."
     },
     {
-      "title": "Decimal Point Dynasty",
-      "team": "Nut Olave Your Face",
-      "blurb": "Won by 0.86. Don't celebrate, just go change your underwear."
+      "title": "40-Burger, Zero Sympathy",
+      "team": "Browning Out",
+      "blurb": "Bo Nix dropped 39.96 and Patrick still found a way to lose by 15 — that's a wasted nuke."
+    },
+    {
+      "title": "Pyrrhic Victory Tour",
+      "team": "Rub My Chubb",
+      "blurb": "Ja'Marr Chase 38.1 in a loss, then trades for Carson Wentz — BigD is two moves into a five-step plan toward irrelevance."
     }
   ],
   "season": "2025",
   "week": 7,
-  "generatedAt": "2026-05-09T16:40:48.493Z",
+  "generatedAt": "2026-05-09T19:19:14.111Z",
   "modelId": "claude-opus-4-7"
 }

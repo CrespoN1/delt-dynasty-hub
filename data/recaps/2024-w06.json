@@ -1,33 +1,94 @@
 {
-  "headline": "LargestofRocks Drops a 187 and Stroud Boys Drop Their Pants",
-  "subhead": "Week 6 was a beatdown buffet — six wins, six different flavors of pain, and one bench so loaded it could've won the matchup by itself.",
-  "matchOfTheWeek": "OnlyFants squeaked past The Olave Garden 148.96 to 144.72, a 4-point heart attack that probably aged Patrickreegs about six years. Meanwhile Jets' Juniors edged 226 Alpha by 2.18 — a game szara lost from the bench, where DeMario Douglas (21.2) and Romeo Doubs (19.9) sat watching like it was a Netflix special. That's 41 points of regret on the pine, Sam. Forty. One.",
-  "powerRankingsShakeup": "LargestofRocks just put up a 187 and screamed 'come get me.' MassiveCocks and Stroud Boys are both speed-running the basement — combined 190 points between them, which is three points fewer than LargestofRocks alone.",
-  "mainRecap": "Let's start with the carnage. LargestofRocks hung 187.96 on Stroud Boys, who responded with a limp 103.24 and a apology email. Chris Godwin went full nuclear with 35.5, the lineup hit 96% efficiency, and bjewett13 is currently Googling 'how to fake an injury for the rest of the season.' An 84-point loss isn't a matchup, it's a hostage situation.\n\nOver in the swamp of sadness, MassiveCocks scored 87.06 — the lowest of the week — while leaving FIFTY-FOUR points on the bench. Evan Engram dropped 23.2 in street clothes (your clothes). 7BigPapi7, the optimal lineup was 141.16. You didn't lose to T swift's Baddies, you lost to your own start/sit button. Tnicolle just had to show up and collect.\n\nPut an AR to My Head got AR'd by The Good Ladds 129-90, and the kicker? Tyrone Tracy posted 22.7 on Mig56's bench. The Good Ladds won by 38 with a starter playing JV. Cole Kmet went for 26.5 at TE — Kyle, you got cooked by a Bears tight end. Read that sentence again.\n\nHot Cocks lit up Bo Nix Celli 172.88-140.38 in the week's biggest shootout. Baker Mayfield (28.9), Mixon (27.2), and Kittle (25.3) — BigD's lineup was a buffet. Caleb Williams hung 29.64 in a losing effort, and Bijan added 25.5, which means nickcelli scored 140 and STILL got smoked. Brutal.\n\nJets' Juniors got 26.6 from Jordan Love and 25.2 from Derrick Henry and still only beat 226 Alpha by two. mattwunder, take the W and don't ask questions. And shoutout to The Good Ladds and 226 Alpha for swapping Etienne and Pittman mid-week — one of you's gonna look like a genius and one of you's gonna get this paragraph dedicated to you in November.",
+  "headline": "LargestofRocks Drops 188, MassiveCocks Drop Their Pants",
+  "subhead": "Week 6 had one team set the league on fire and another forget which players to actually start.",
+  "matchOfTheWeek": "Jets' Juniors squeaked by 226 Alpha 128.34 to 126.16 in a game decided by literal pocket lint. Szara left DeMario Douglas (21.2) AND Romeo Doubs (19.9) on the bench in a TWO-POINT loss — 41 points of wideouts watching from the couch. Wunder didn't win this game so much as Szara handed it to him gift-wrapped with a bow.",
+  "mainRecap": "LargestofRocks didn't play a fantasy game this week, he played 2K on rookie mode. 187.96 points, 96% lineup efficiency, Chris Godwin going full nuclear for 35.5, and Stroud Boys getting curb-stomped by 84.72. Jewett scored 103 and somehow that was the SECOND most embarrassing thing to happen to him this week. Get this man a mercy rule.\n\nMeanwhile, MassiveCocks turned in the performance of the year — for a JV team. 87.06 points with 54 points rotting on the bench. Evan Engram dropped 23.2 in street clothes while whoever you started at TE contributed roughly the GDP of a parking meter. T Swift's Baddies didn't even need to try and still hung 135 on you. Tnicolle showed up with a sandwich and you forgot to bring a plate.\n\nHot Cocks went full Florida Man on Bo Nix Celli, riding Baker Mayfield (28.9), Mixon (27.2), and Kittle (25.3) to a 172-point beatdown. Nickcelli got 29.6 from Caleb Williams and 25.5 from Bijan and STILL lost by 32 — that's the fantasy equivalent of bringing a bazooka to a gunfight and getting nuked.\n\nThe Good Ladds drilled Put an AR to My Head 129 to 90, with Cole Kmet of all people going for 26.5 at TE. Kyle, your team scored 90 points in a SuperFlex league. That's not a lineup, that's a hostage situation. Goff put up 25 and got zero help — you're paying for a penthouse and living in the stairwell.\n\nOnlyFants survived The Olave Garden by 4.24 in the only game of the week that wasn't decided by halftime, and Mig completed the trade-and-win combo by snagging Travis Etienne mid-victory lap. Szara countering with Michael Pittman is like trading a Honda for a slightly older Honda.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "LargestofRocks",
+      "blurb": "188 points and 96% efficiency — the only criticism is that he made the rest of the league look like a JUCO showcase."
+    },
+    {
+      "rank": 2,
+      "team": "Hot Cocks",
+      "blurb": "Three guys over 25 points and a 172 burger — BigD is cooking and the kitchen smells illegal."
+    },
+    {
+      "rank": 3,
+      "team": "T swift's Baddies",
+      "blurb": "Quietly dropped 135 and lapped MassiveCocks by 48 without breaking a sweat or a nail."
+    },
+    {
+      "rank": 4,
+      "team": "The Good Ladds",
+      "blurb": "Cole Kmet hung 26 and Mig stole Etienne in the same week — somebody check this man's browser history for insider info."
+    },
+    {
+      "rank": 5,
+      "team": "OnlyFants",
+      "blurb": "Survived Olave Garden by a breadstick, but a W is a W when you're scrapping for playoff seeding."
+    },
+    {
+      "rank": 6,
+      "team": "The Olave Garden",
+      "blurb": "145 points and still lost — the most heartbreaking salad bar in the league."
+    },
+    {
+      "rank": 7,
+      "team": "Jets' Juniors",
+      "blurb": "Won by 2.18 because Szara forgot to start half his bench, not because Wunder did anything special."
+    },
+    {
+      "rank": 8,
+      "team": "Bo Nix Celli",
+      "blurb": "Caleb and Bijan combined for 55 and you still lost by 32 — the supporting cast is staging a walkout."
+    },
+    {
+      "rank": 9,
+      "team": "226 Alpha",
+      "blurb": "Left 41 points of WRs on the bench in a 2-point loss, then traded for Pittman like that solves anything."
+    },
+    {
+      "rank": 10,
+      "team": "Put an AR to My Head",
+      "blurb": "90 points in SuperFlex is the fantasy equivalent of forfeiting and asking for the participation trophy."
+    },
+    {
+      "rank": 11,
+      "team": "Stroud Boys",
+      "blurb": "103 points against a buzzsaw — Jewett's season is starting to smell like a gym bag in July."
+    },
+    {
+      "rank": 12,
+      "team": "MassiveCocks",
+      "blurb": "Optimal lineup was 141, started 87 — the name's MassiveCocks but the lineup management is microscopic."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Highest Score, Lowest Mercy",
+      "title": "Demolition Derby MVP",
       "team": "LargestofRocks",
-      "blurb": "187.96 with 96% efficiency — this wasn't a fantasy lineup, this was a war crime."
+      "blurb": "An 84-point beatdown with 96% efficiency — bro just cheat-coded Week 6."
     },
     {
-      "title": "Bench Press Champion",
+      "title": "Bench Warmer of the Year",
       "team": "MassiveCocks",
-      "blurb": "Left 54.10 on the bench including a 23-point Engram — your optimal lineup would've won by 30, but here we are."
+      "blurb": "54 points on the pine including a 23-burger from Engram — start your studs, my guy."
     },
     {
-      "title": "Scored 140 and Still Lost",
+      "title": "Wasted Effort Trophy",
       "team": "Bo Nix Celli",
-      "blurb": "Caleb dropped 29 and Bijan dropped 25 and nickcelli still got run off the field by 32 — sometimes the universe just hates you."
+      "blurb": "140 points, two studs over 25, and a loss by 32 — that's just unlucky and dumb at the same time."
     },
     {
-      "title": "Two-Point Houdini",
-      "team": "Jets’ Juniors",
-      "blurb": "Won by 2.18 against a guy who benched 41 points of WRs — accept the W, log off, don't make eye contact."
+      "title": "Squeaker of the Week",
+      "team": "Jets' Juniors",
+      "blurb": "Won by 2.18 thanks entirely to 226 Alpha's lineup malpractice — cash the check, don't ask questions."
     }
   ],
   "season": "2024",
   "week": 6,
-  "generatedAt": "2026-05-09T16:31:34.559Z",
+  "generatedAt": "2026-05-09T19:06:28.409Z",
   "modelId": "claude-opus-4-7"
 }

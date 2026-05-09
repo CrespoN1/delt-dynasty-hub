@@ -1,33 +1,94 @@
 {
-  "headline": "Olave Garden Serves a Five-Course Ass-Whooping While Bo Nix Celli Forgets to Show Up",
-  "subhead": "Week 9 was a bloodbath — six wins by 28+ points, zero competitive games, and one team that scored less than a JV soccer match.",
-  "matchOfTheWeek": "The Olave Garden didn't just beat Hot Cocks, he hung 187.14 on him with a starting lineup that read like a Sunday Night Football promo — Burrow (30.14), Achane (32.10), Zay Flowers (29.70), Kelce (29.00), AND Kamara (27.50). Hot Cocks ran his lineup at 98% efficiency and STILL got steamrolled by 62. When you're optimal and still losing by a touchdown per quarter, that's not a loss — that's a public service announcement.",
-  "powerRankingsShakeup": "The Olave Garden and 226 Alpha both dropped 170+ and look like the actual class of the league, while Bo Nix Celli is plummeting toward the basement after a 89.50 that genuinely should be investigated by league officials.",
-  "mainRecap": "Let's start with Bo Nix Celli, who put up 89.50 points in a SuperFlex league. Eighty. Nine. Point. Five. That's not a fantasy score, that's a credit score in 2009. Justin Herbert dropped 19.48 on your bench while you trotted out lineup decisions that would get a 12-year-old kicked out of his first Yahoo league. Then you traded picks for nothing while Hot Cocks robbed you blind of Brian Robinson. Cool week, champ.\n\nThe Good Ladds deserve their own circle of hell. You scored 112.46 and left 44.38 on the bench — including Demarcus Robinson going for 27.4 in the same week your starters were collectively getting waterboarded by 226 Alpha's 174.92. Szara didn't even need Hurts' 29.90 to win, he could've started his backup kicker and still cleared you.\n\nLargestofRocks won by 58, which sounds great until you realize DeAndre Hopkins (28.6), Daniel Jones (24.36), and Quentin Johnston (22.0) combined for 75 points ON THE BENCH. You beat OnlyFants while leaving an entire second starting lineup in the garage. OnlyFants got 30 from Garrett Wilson and still lost by 60 — congrats Cubby, your WR1 is a one-man band and the rest of your roster is tambourines.\n\nStroud Boys squeaked by Put an AR to My Head in the \"closest\" game of the week, which was still a 28-point margin because Jaxon Smith-Njigba decided to drop a 37-burger. Kyle got 32.9 from Saquon and still couldn't crack 100 — you're starting to look like a guy who drafted one good player and called it a roster.\n\nMassiveCocks beat Jets' Juniors behind Mike Gesicki of all people putting up 29.5 at TE. Mattwunder, when Gesicki is the league-winner, the simulation has officially broken.\n\nT Swift's Baddies cruised past the Bo Nix corpse without breaking a sweat. Don't get cocky Tnicolle — you beat a team that scored less than most kickers' fantasy points combined this season.",
+  "headline": "Week 9: The Massacre at Six Different Addresses",
+  "subhead": "Not a single matchup decided by less than 28 points — this wasn't a slate, it was a war crime tribunal.",
+  "matchOfTheWeek": "The Olave Garden didn't just beat Hot Cocks, they served them a 187-point tasting menu while Hot Cocks were still buttering their bread. Burrow, Achane, Kamara, Kelce, AND Zay Flowers all in one lineup is borderline illegal in 38 states. The funniest part? Hot Cocks ran a 98% efficient lineup — the most clinically optimized loss of the year.",
+  "mainRecap": "Week 9 wasn't competitive football, it was a public stoning. Six matchups, zero finishes inside 28 points, and the league collectively wondering if the schedule generator has a vendetta.\n\nLet's start at the bottom of the toilet, where Bo Nix Celli put up a stately 89.50 — a number so embarrassing it should be illegal in a SuperFlex league. Justin Herbert dropped 19.48 on your bench, Nick. Did you forget you have a QB slot? Two of them? Meanwhile you're trading away picks for nothing, just rearranging deck chairs on a yacht that never left the harbor.\n\nLargestofRocks won by 59 and still has the audacity to be the week's most negligent GM. DeAndre Hopkins (28.6), Daniel Jones (24.36), AND Quentin Johnston (22) — that's 75 points rotting on your bench while you put up 179. Imagine being THIS rich and this stupid simultaneously. OnlyFants got steamrolled despite Garrett Wilson going for 30; Cubby, your WR1 is begging for help and you're sending in JAGs.\n\nThe Good Ladds deserve their own circle of hell — losing by 62 to 226 Alpha while leaving 44.38 points on the bench, headlined by Demarcus Robinson going for 27.4 in street clothes. Mig, Hurts dropped 29.90 on Szara's side and your guys were busy losing the matchup AND the lineup-setting contest. 226 Alpha is just rolling now.\n\nStroud Boys squeaked out the \"closest\" game of the week (28 points lol) thanks to JSN's 37-burger, while Put an AR to My Head wasted a 32.9 from Saquon. Kyle, you got a Saquon ceiling game and still couldn't crack 100 — that's a special kind of malpractice. T swift's Baddies hung 151 on Bo Nix to remind everyone they exist, and MassiveCocks rode a 29.5 from Mike Gesicki, of all people, to handle Jets' Juniors. Mattwunder, your team got Geseckied. Process that.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "The Olave Garden",
+      "blurb": "187 points with five different starters over 27 — Patrick is running a cheat code and the rest of you are playing on Hard."
+    },
+    {
+      "rank": 2,
+      "team": "226 Alpha",
+      "blurb": "Hurts goes for 29.90 and Szara wins by 62 — this team is quietly the most terrifying roster in the league."
+    },
+    {
+      "rank": 3,
+      "team": "LargestofRocks",
+      "blurb": "Won by 59 with 75 points on the bench, which means the ceiling is somewhere in low Earth orbit."
+    },
+    {
+      "rank": 4,
+      "team": "MassiveCocks",
+      "blurb": "When Mike freaking Gesicki is your league-winner of the week, the football gods clearly owe you favors."
+    },
+    {
+      "rank": 5,
+      "team": "T swift’s Baddies",
+      "blurb": "Dropped 151 on the league's saddest team — a flex, but the kind you do in a mirror alone."
+    },
+    {
+      "rank": 6,
+      "team": "Stroud Boys",
+      "blurb": "JSN went full nuclear for 37 and bjewett still only mustered 127 — win is a win, but the supporting cast is auditioning for community theater."
+    },
+    {
+      "rank": 7,
+      "team": "Jets’ Juniors",
+      "blurb": "132 points is a respectable number that meant absolutely nothing this week — welcome to fantasy football."
+    },
+    {
+      "rank": 8,
+      "team": "OnlyFants",
+      "blurb": "Garrett Wilson hung 30 and Cubby still got buried by 59 — your WR1 deserves witness protection."
+    },
+    {
+      "rank": 9,
+      "team": "Hot Cocks",
+      "blurb": "98% lineup efficiency and a 62-point loss is the fantasy equivalent of acing the test on the wrong day."
+    },
+    {
+      "rank": 10,
+      "team": "The Good Ladds",
+      "blurb": "Lost by 62 with 44 points on the bench — Mig set the lineup with a coin flip and the coin landed on its side."
+    },
+    {
+      "rank": 11,
+      "team": "Put an AR to My Head",
+      "blurb": "Saquon dropped 32.9 and you couldn't reach triple digits — Kyle, the AR is starting to look like the practical option."
+    },
+    {
+      "rank": 12,
+      "team": "Bo Nix Celli",
+      "blurb": "89 points in a SuperFlex league while Herbert sat on the bench — Nick is trading picks like a man trying to outrun a fire he started."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Did You Even Set a Lineup?",
-      "team": "Bo Nix Celli",
-      "blurb": "89.50 in SuperFlex with Herbert rotting on the bench — this is a war crime against fantasy football."
-    },
-    {
-      "title": "Bench Mob All-Stars",
-      "team": "LargestofRocks",
-      "blurb": "Hopkins, D-Jones, and Q-Johnston combined for 75 bench points and you STILL won by 58 — imagine if you actually tried."
-    },
-    {
-      "title": "Olive Branch of Destruction",
+      "title": "Buffet Champion 🍝",
       "team": "The Olave Garden",
-      "blurb": "Five starters over 27 points and a 187-burger — Patrickreegs is cooking and the rest of the league is on the menu."
+      "blurb": "187.14 points and four starters in the league's top 10 — the kitchen never closed."
     },
     {
-      "title": "44 Points in the Glove Compartment",
+      "title": "Bench Hall of Fame 🪑",
+      "team": "LargestofRocks",
+      "blurb": "Hopkins, D-Jones, and Q-Johnston combined for 75 points in street clothes — congrats on the most expensive nap in league history."
+    },
+    {
+      "title": "Lineup Malpractice Award ⚖️",
       "team": "The Good Ladds",
-      "blurb": "Demarcus Robinson dropped 27.4 on your bench while you got dragged behind 226 Alpha's truck for 62 points."
+      "blurb": "Left 44.38 points on the bench in a 62-point loss — you needed a lawyer, not a lineup."
+    },
+    {
+      "title": "Saddest Box Score 💀",
+      "team": "Bo Nix Celli",
+      "blurb": "89.50 in SuperFlex with Herbert benched — even the trade machine is filing a restraining order."
     }
   ],
   "season": "2024",
   "week": 9,
-  "generatedAt": "2026-05-09T16:33:00.003Z",
+  "generatedAt": "2026-05-09T19:08:27.601Z",
   "modelId": "claude-opus-4-7"
 }

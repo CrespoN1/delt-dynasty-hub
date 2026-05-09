@@ -1,33 +1,94 @@
 {
-  "headline": "PLAYOFF WEEK 1: AR Drops a 200-Burger and Tay-Tay's Baddies Get Heartbroken by 3",
-  "subhead": "Two teams cleared 197 points in the same matchup and one of them still went home — meanwhile MassiveCocks brought a knife to a gunfight and forgot the knife.",
-  "matchOfTheWeek": "Put an AR to My Head 200.74, T swift's Baddies 197.64. Davante Adams hung a 42.8 and Lamar dropped 36 and Tnicolle still lost — because leaving DeVonta Smith (28) AND Jalen Coker (21) on the bench in a 3-point loss is the kind of lineup decision that gets statues built of Jared Goff (41.06) in your honor. Kyle Dech survived a 200-point shootout by the width of a Jalen McMillan target share. Brutal cinema.",
-  "powerRankingsShakeup": "AR is now the scariest team alive heading into the semis with a 200-spot, while OnlyFants got curb-stomped by 32 and is officially booking tee times. T swift's Baddies somehow drop despite scoring the second-most points in the league — playoff math is a cruel god.",
-  "mainRecap": "Let's start with the corpse. MassiveCocks scored 92.40. NINETY-TWO. In Week 15. With Drake Maye and his 18.48 rotting on the bench. You left 56.74 points on your pine, my guy — that's not a lineup, that's a hostage situation. Optimal was 149, you scored 92, and somewhere @7BigPapi7 is still trying to figure out which flex slot Drake Maye goes in. Mercifully, you weren't even in the playoffs to ruin them.\n\nOver in the actual carnage, Stroud Boys took OnlyFants behind the woodshed 145-112. Aaron Rodgers dusted off the ayahuasca and posted 30 — Cubby, you ran into a buzzsaw and got 32-point dumpstered in round one. Pack the darkness retreat, season's over.\n\n226 Alpha put up 155 on The Good Ladds despite Josh Allen going full Konami code for 41.28. Mig, your QB outscored entire rosters and you still lost by 23 — that's a special kind of pain. James Conner reminding everyone he exists with 30.8 was the dagger.\n\nThe Olave Garden quietly handled Jets' Juniors 152-137. Mike Evans dropped 36.9 for Wunder and it didn't matter because Patrick had the kind of balanced beatdown that doesn't need a hero. Jets' Juniors: thanks for playing, see you in the consolation bracket where dreams go to die.\n\nAnd then the main event. AR vs Baddies, 398 combined points, decided by a field goal. Goff 41, ARSB 37, Brian Thomas 32 — Kyle's lineup was a cheat code. Tnicolle countered with Davante's 42.8 and Lamar's 36 and STILL benched 49 points of WR production. You don't lose that game by 3 — you lose it on Sunday morning when you set the lineup. Davante Adams in a Rams jersey is the most cursed thing I've typed all year.",
+  "headline": "AR to the Head, Bullet to the Bracket: 200-Point Shootout Saves the Quarterfinals",
+  "subhead": "Put an AR to My Head and T swift's Baddies combined for 398 points in a game decided by a missed extra point's worth of margin, while OnlyFants got curb-stomped into the offseason.",
+  "matchOfTheWeek": "Put an AR to My Head 200.74, T swift's Baddies 197.64. Goff (41), ARSB (37) and Brian Thomas (32) put up a video game line for Kyle, but Davante Adams (42.80) and Lamar (36.10) damn near hauled Tnicolle out of the grave by themselves. The dagger? DeVonta Smith dropping 28 on T swift's bench while Jalen Coker wasted another 21 next to him — a 49-point couch party that turned a coin flip into a funeral.",
+  "mainRecap": "Welcome to the playoffs, where the lineups are juiced and the bench decisions decide your season. Kyle's 200.74 was the highest output of the year for him and he STILL almost blew it because Jalen McMillan dropped 18.5 in street clothes. Tnicolle has to be in the fetal position right now — you score 197.64, get 42 from Davante and 36 from Lamar, and lose by a field goal because you couldn't figure out that DeVonta Smith was going to play football on Sunday. Forty-nine points on the bench in a 3-point loss. That's not a tough beat, that's a war crime against your own roster.\n\nMeanwhile, OnlyFants got dragged behind the woodshed by Stroud Boys 145-112, with Aaron Rodgers of all people putting up 30 to send Cubby into the consolation bracket where he belongs. Bjewett gets to keep dancing. The Olave Garden handled Jets' Juniors 152-137 despite Mike Evans going full nuclear (36.9) for Wunder — Patrick advances, Matt goes home wondering why he benched anyone who scored more than a sandwich.\n\n226 Alpha rolled The Good Ladds 155-131 in a game where Josh Allen put up 41 and it didn't matter because Mig's supporting cast apparently went Christmas shopping. James Conner cooking for 30 in December? Szara is dangerous.\n\nAnd in the consolation pit of despair, MassiveCocks posted a league-worst 92.40 while leaving 56.74 on the bench — including an 18.48 from Drake Maye. Papi, your optimal lineup was 149. You started the wrong human beings at a historic clip. Hot Cocks left 23 points of Bateman rotting on the pine. Even the losers can't lose right.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Put an AR to My Head",
+      "blurb": "Dropped 200 in a playoff game and somehow that was the SCARY win — Goff/ARSB/BTJ is a cheat code, even if Kyle keeps benching points like he hates money."
+    },
+    {
+      "rank": 2,
+      "team": "T swift's Baddies",
+      "blurb": "Lost by 3 with 49 on the bench — the most talented team in the league is also the dumbest, and yes, both of those things can be true."
+    },
+    {
+      "rank": 3,
+      "team": "The Olave Garden",
+      "blurb": "Quietly punching tickets and putting up 152 — Patrick is the guy at the party nobody notices until he's the last one standing."
+    },
+    {
+      "rank": 4,
+      "team": "226 Alpha",
+      "blurb": "James Conner hit 30 in December which violates several laws of physics, but Szara is rolling into the semis like he planned this."
+    },
+    {
+      "rank": 5,
+      "team": "Stroud Boys",
+      "blurb": "Got 30 from Aaron Rodgers in 2024 and used it to bury OnlyFants — let that absurdity wash over you."
+    },
+    {
+      "rank": 6,
+      "team": "The Good Ladds",
+      "blurb": "41 from Josh Allen and still lost by 23 — Mig, your QB carried the team to the gates of Mordor and then the rest of the roster sat down."
+    },
+    {
+      "rank": 7,
+      "team": "Jets' Juniors",
+      "blurb": "Mike Evans went for 37 and it bought you a 15-point loss and a winter of regret — congrats on the participation trophy."
+    },
+    {
+      "rank": 8,
+      "team": "Bo Nix Celli",
+      "blurb": "96.7% lineup efficiency in a week that didn't matter — nailing the parking job after you've already missed the wedding."
+    },
+    {
+      "rank": 9,
+      "team": "Hot Cocks",
+      "blurb": "Baker dropped 29 and you still let 23 points of Bateman rot on the bench — that's not a team, that's a hostage situation."
+    },
+    {
+      "rank": 10,
+      "team": "LargestofRocks",
+      "blurb": "Quiet as a fart in church this week — fitting for a season that ended somewhere around Halloween."
+    },
+    {
+      "rank": 11,
+      "team": "OnlyFants",
+      "blurb": "Got blowtorched by 32 in a playoff game — Cubby, the bracket has an exit and you found it face-first."
+    },
+    {
+      "rank": 12,
+      "team": "MassiveCocks",
+      "blurb": "Scored 92, left 56 on the bench, started everyone except the guys who scored — Papi posted an optimal of 149 and chose violence against himself."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Lineup War Crime",
+      "title": "Bench Crime of the Century",
+      "team": "T swift's Baddies",
+      "blurb": "DeVonta Smith (28) and Jalen Coker (21) combined for 49 bench points in a 3-point playoff loss — Tnicolle, you didn't lose, you outsourced it."
+    },
+    {
+      "title": "Lineup Arsonist of the Week",
       "team": "MassiveCocks",
-      "blurb": "Left 56.74 on the bench in a 92-point performance — that's not mismanagement, that's sabotage."
+      "blurb": "Scored 92.40 with an optimal of 149.14 — leaving 56 points on the bench is a personality, not an accident."
     },
     {
-      "title": "Bench Coach of the Year",
-      "team": "T swift’s Baddies",
-      "blurb": "Lost by 3 with 49 points of DeVonta Smith and Jalen Coker watching from the sideline in street clothes."
+      "title": "He Tried, Bless Him",
+      "team": "The Good Ladds",
+      "blurb": "Josh Allen put up 41 and still got bounced by 23 — Mig, your QB is screaming for help and the rest of your roster has noise-cancelling headphones."
     },
     {
-      "title": "200 Club Initiation",
-      "team": "Put an AR to My Head",
-      "blurb": "Goff, ARSB, and BTJ combined for 110 — Kyle posted the only 200-burger of the week and barely escaped alive."
-    },
-    {
-      "title": "Cocky Winner Alert",
+      "title": "Quarterfinal Curb Stomp",
       "team": "Stroud Boys",
-      "blurb": "Beat OnlyFants by 33 thanks to Aaron Rodgers having a vision quest — congrats on slaying the lamb, the wolves are next round."
+      "blurb": "Beat OnlyFants by 32 with 30 points from Aaron Rodgers in the year of our Lord 2024 — somewhere a Jets fan is throwing a remote."
     }
   ],
   "season": "2024",
   "week": 15,
-  "generatedAt": "2026-05-09T16:35:52.507Z",
+  "generatedAt": "2026-05-09T19:12:24.055Z",
   "modelId": "claude-opus-4-7"
 }

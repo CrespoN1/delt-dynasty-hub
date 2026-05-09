@@ -1,33 +1,94 @@
 {
-  "headline": "Ja'Marr Chase Drops 55, Hot Cocks Drops Pants",
-  "subhead": "Week 10 was a bloodbath — three teams lost by 40+ and Put an AR to My Head finally found a use for the trigger.",
-  "matchOfTheWeek": "Hot Cocks didn't just beat LargestofRocks, they performed an autopsy. 173.68 with 100% lineup efficiency, anchored by a 55-burger from Ja'Marr Chase, while LargestofRocks left 39 points rotting on the bench like groceries in a hot car. Will Levis and Rachaad White combined for 38 points in street clothes — congrats on starting the wrong half of your roster.",
-  "powerRankingsShakeup": "Hot Cocks and The Olave Garden are flexing like they own the deed to the league, while Put an AR to My Head is currently the title of an autobiography. LargestofRocks is freefalling with the worst lineup-setting performance of the week.",
-  "mainRecap": "Where do we even start. 226 Alpha hung 149 on Bo Nix Celli and it still felt merciful — Bijan went for 29.4 and MVS dropped a random 25.9 for Celli and he STILL got beat by 43. When your RB1 and a Cowboys WR ghost combine for 55 and you lose by two scores, the problem is the other six guys you trotted out. Meanwhile Russell Wilson put up 19 on Szara's bench and nobody cared because Hurts went for 30 anyway. That's champagne-problem energy.\n\nThe Olave Garden put Put an AR to My Head out of its misery 150-98, with Burrow (33.72) and Kelce (24.40) doing the heavy lifting. Kyle, buddy — Derek Carr scored 20.46 on your bench. DEREK. CARR. The man who's been benched in real life was beating your starters. That's a special kind of pain.\n\nThe Good Ladds rode Kyler Murray's 28.74 to take down MassiveCocks, who continue to live up to a name that promises more than it delivers. T swift's Baddies snuck past OnlyFants behind a vintage 32.9 from Lamar — Cubby came within 16 but couldn't close, which is on-brand.\n\nJets' Juniors and Stroud Boys played the ugliest game of the week, a 118-98 slap fight where Calvin Ridley (25.4) was the only person who showed up with a pulse. Stroud Boys left John Metchie and his 18.4 on the bench — starting a Texans receiver who isn't Metchie right now is a war crime. Bjewett, you good?\n\nAnd LargestofRocks. 161.5 optimal, 122.3 actual. Chuba went OFF for 24.9 and you still found a way to hand Hot Cocks a 51-point win because you couldn't decide which QB to start. Pick a guy. Any guy. Close your eyes.",
+  "headline": "Week 10: Ja'Marr Chase Personally Files A Restraining Order Against The Rest Of The League",
+  "subhead": "Hot Cocks dropped 173, Olave Garden hung a 50-burger, and Put an AR to My Head finally pulled the trigger on their own season.",
+  "matchOfTheWeek": "Hot Cocks 173.68 vs LargestofRocks 122.32 should've been competitive — Largest dropped 122 and STILL got bodied by 51. Why? Because Ja'Marr Chase put up 55.40 by himself, which is more than half of what AR's entire roster scored. Oh, and Largest left 39.18 on the bench with Will Levis and Rachaad White rotting in street clothes — the only thing more efficient than Hot Cocks' 100% lineup was Largest's commitment to self-sabotage.",
+  "mainRecap": "Let's start where the carnage started: Ja'Marr Chase went thermonuclear for 55.40 and Hot Cocks posted a perfect 100% efficiency 173.68, which is the fantasy equivalent of dunking on a 7-year-old and then stealing his lunch money. Meanwhile LargestofRocks scored 122 — a winning number in most weeks — and still got curb-stomped by 51 because he benched a 19-point Will Levis and a 19-point Rachaad White. Bro, you had the optimal score of 161 sitting in your pocket and chose violence against yourself.\n\nOver in Sadness Corner, Put an AR to My Head mustered a league-low 98.18 while Derek Carr dropped 20.46 on his bench. KyleDech, you're not just losing — you're losing CREATIVELY. The Olave Garden hung 150.72 on him with Burrow (33.72) and Kelce (24.40) doing Burrow-and-Kelce things, and Patrick didn't even need to break a sweat.\n\n226 Alpha smoked Bo Nix Celli 149-106 behind Hurts' 30.68, though Celli at least got 29.40 from Bijan and a random 25.90 MVS spike that nobody saw coming, including MVS's own quarterback. The Good Ladds rode Kyler's 28.74 to a 128-107 win over MassiveCocks, because of course Mig found the one week Kyler decides to remember he's an MVP. T Swift's Baddies edged OnlyFants 130-113 behind Lamar's 32.90 — Cubby, your team is good and you still can't beat the Swifties, that's gotta sting.\n\nAnd in the Sleepy Bowl of the Week, Jets' Juniors beat Stroud Boys 118-98 in a game so aesthetically offensive it should've been blacked out locally. Calvin Ridley's 25.40 was the only thing keeping Wunder's win from being deeply embarrassing. Stroud Boys, meanwhile, left Metchie's 18.40 on the bench — fitting punishment for naming your team after the QB you can't even start anymore.",
+  "powerRankings": [
+    {
+      "rank": 1,
+      "team": "Hot Cocks",
+      "blurb": "100% lineup efficiency, 173 points, and a Ja'Marr Chase that's currently auditioning for the Hall of Fame — BigD is operating on a different frequency."
+    },
+    {
+      "rank": 2,
+      "team": "The Olave Garden",
+      "blurb": "Burrow + Kelce + a 52-point blowout — Patrick is quietly stacking dubs while everyone else fights over scraps."
+    },
+    {
+      "rank": 3,
+      "team": "T swift’s Baddies",
+      "blurb": "Lamar Jackson keeps printing 30-burgers and Tnicolle keeps cashing them — annoyingly consistent, like the music she's named after."
+    },
+    {
+      "rank": 4,
+      "team": "The Good Ladds",
+      "blurb": "Mig wins the week Kyler Murray decides to be elite again — pure cosmic luck wrapped in a 128-point bow."
+    },
+    {
+      "rank": 5,
+      "team": "226 Alpha",
+      "blurb": "Beat Celli by 43 with Hurts going off, but left Russell Wilson's 19 on the bench because nobody actually trusts Russell Wilson, including szara."
+    },
+    {
+      "rank": 6,
+      "team": "OnlyFants",
+      "blurb": "Cubby scored 113 and still lost — the team is good, the timing is cursed, and Week 10 was just confirmation."
+    },
+    {
+      "rank": 7,
+      "team": "Jets’ Juniors",
+      "blurb": "Won the ugliest game of the week with a 118-spot and Calvin Ridley duct-taping the lineup together."
+    },
+    {
+      "rank": 8,
+      "team": "MassiveCocks",
+      "blurb": "107 against The Good Ladds isn't embarrassing, but it isn't winning football either — stuck in fantasy purgatory."
+    },
+    {
+      "rank": 9,
+      "team": "Bo Nix Celli",
+      "blurb": "Bijan and a random MVS eruption couldn't save Celli from a 43-point sledgehammer to the face."
+    },
+    {
+      "rank": 10,
+      "team": "LargestofRocks",
+      "blurb": "Scored 122 and lost by 51 with 39 points on the bench — a masterclass in how to be both unlucky AND bad at this."
+    },
+    {
+      "rank": 11,
+      "team": "Stroud Boys",
+      "blurb": "98 points, Metchie rotting on the bench, and a team name that gets sadder every week C.J. plays."
+    },
+    {
+      "rank": 12,
+      "team": "Put an AR to My Head",
+      "blurb": "League-low 98 points, Derek Carr dropping 20 on the bench, and a 52-point loss — Kyle, the team name is becoming a cry for help."
+    }
+  ],
   "weeklyAwards": [
     {
-      "title": "Ja'Marr Chase Was Here",
+      "title": "Nuke From Orbit",
       "team": "Hot Cocks",
-      "blurb": "55.40 from one WR and 100% lineup efficiency — BigD basically cheated without the cheating part."
+      "blurb": "173.68 with 100% efficiency and a 55-point Ja'Marr Chase eruption — this wasn't a win, this was a war crime."
     },
     {
-      "title": "Bench Coach of the Year",
+      "title": "Bench Warlord",
       "team": "LargestofRocks",
-      "blurb": "39 points left on the pine in a 51-point loss is the kind of self-own they teach in business school."
+      "blurb": "Left 39.18 on the pine including a 19-point Levis AND a 19-point Rachaad — coaching malpractice in HD."
     },
     {
-      "title": "Lowest Pulse Detected",
+      "title": "Please Stop, He's Already Dead",
+      "team": "The Olave Garden",
+      "blurb": "Hung 150 on the league's lowest scorer in a 52-point beatdown that bordered on bullying."
+    },
+    {
+      "title": "Team Name Of The Week",
       "team": "Put an AR to My Head",
-      "blurb": "98 points, last place scoring, and Derek Carr outscoring your actual starters — name has never been more accurate."
-    },
-    {
-      "title": "Cocky-Energy Award",
-      "team": "226 Alpha",
-      "blurb": "Won by 43 and still left a 19-point Russ on the bench — Szara is just bullying lineups for sport now."
+      "blurb": "98 points, a 52-point loss, and Derek Carr on the bench — Kyle, the name is starting to sound less like a joke and more like a plan."
     }
   ],
   "season": "2024",
   "week": 10,
-  "generatedAt": "2026-05-09T16:33:27.549Z",
+  "generatedAt": "2026-05-09T19:09:06.398Z",
   "modelId": "claude-opus-4-7"
 }
