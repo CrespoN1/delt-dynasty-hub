@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.env*.local
+.vercel
+*.log
+.DS_Store
+data/players.json
+data/season_*.json
+data/seasons.json
+.env.local
+.claude/scheduled_tasks.lock

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html, body {
+    background: #0a0a0a;
+    color: #fafafa;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background:
+      radial-gradient(ellipse at top left, rgba(249,115,22,0.15), transparent 60%),
+      radial-gradient(ellipse at bottom right, rgba(168,85,247,0.12), transparent 55%),
+      #0a0a0a;
+  }
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+  }
+  .card-glow {
+    background: linear-gradient(135deg, rgba(249,115,22,0.18), rgba(168,85,247,0.12));
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 1rem;
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #a855f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
