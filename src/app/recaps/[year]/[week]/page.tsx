@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { loadAllRecaps, loadRecap } from "@/lib/recaps";
 import { loadSeason } from "@/lib/data";
 import { buildTeamMeta } from "@/lib/awards";
+import { ShareButton } from "@/components/ShareButton";
 
 export function generateStaticParams() {
   return loadAllRecaps().map((r) => ({ year: r.season, week: String(r.week) }));
@@ -24,9 +25,17 @@ export default async function RecapPage({
 
   return (
     <main className="max-w-3xl mx-auto px-6 py-12">
-      <Link href="/recaps" className="text-white/40 hover:text-white/80 text-sm">
-        ← All Recaps
-      </Link>
+      <div className="flex items-center justify-between">
+        <Link href="/recaps" className="text-white/40 hover:text-white/80 text-sm">
+          ← All Recaps
+        </Link>
+        <ShareButton
+          url={`/recaps/${recap.season}/${recap.week}`}
+          title={recap.headline}
+          text={`${recap.season} W${recap.week} recap: ${recap.headline}`}
+          variant="subtle"
+        />
+      </div>
 
       <article className="mt-6">
         <div className="text-sm uppercase tracking-[0.2em] text-white/40 mb-3">
@@ -35,9 +44,17 @@ export default async function RecapPage({
         <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-4">
           {recap.headline}
         </h1>
-        <p className="text-xl text-white/70 mb-10 leading-relaxed">
+        <p className="text-xl text-white/70 mb-6 leading-relaxed">
           {recap.subhead}
         </p>
+        <div className="mb-10">
+          <ShareButton
+            url={`/recaps/${recap.season}/${recap.week}`}
+            title={recap.headline}
+            text={`${recap.season} W${recap.week} recap: ${recap.headline}`}
+            variant="primary"
+          />
+        </div>
 
         <section className="card-glow p-6 mb-8">
           <div className="text-xs uppercase tracking-wider text-white/60 mb-2">

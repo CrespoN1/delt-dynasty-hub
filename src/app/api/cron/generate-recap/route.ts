@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { fetchNflState, fetchSeasonByLeagueId, fetchSlimPlayers } from "@/lib/sleeper-fetch";
 import { generateRecap } from "@/lib/recap-generator";
 import { commitFile, getFileSha } from "@/lib/github";
+import { notifyRecapDropped } from "@/lib/notify";
 
 export const runtime = "nodejs";
 export const maxDuration = 300; // 5 min — recap generation can take ~30-60s
@@ -113,6 +114,21 @@ export async function GET(req: NextRequest) {
     sha: existingSha,
   });
 
+  // Send notification email (best-effort — don't fail the cron if email fails)
+  let notify: { ok: boolean; id?: string; error?: string } | null = null;
+  const resendKey = process.env.RESEND_API_KEY;
+  const notifyEmail = process.env.RECAP_NOTIFY_EMAIL;
+  const siteUrl = process.env.SITE_URL ?? "https://delt-dynasty-hub.vercel.app";
+  if (resendKey && notifyEmail) {
+    const result = await notifyRecapDropped({
+      recap,
+      toEmail: notifyEmail,
+      apiKey: resendKey,
+      siteUrl,
+    });
+    notify = result;
+  }
+
   return Response.json({
     ok: true,
     season: targetSeason,
@@ -127,5 +143,6 @@ export async function GET(req: NextRequest) {
       cacheRead: usage.cache_read_input_tokens ?? 0,
       cacheWrite: usage.cache_creation_input_tokens ?? 0,
     },
+    notify,
   });
 }
