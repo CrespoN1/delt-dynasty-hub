@@ -9,6 +9,31 @@ export function generateStaticParams() {
   return loadAllRecaps().map((r) => ({ year: r.season, week: String(r.week) }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ year: string; week: string }>;
+}) {
+  const { year, week } = await params;
+  const recap = loadRecap(year, Number(week));
+  if (!recap) return { title: "Recap not found" };
+  const title = `${recap.headline} · Delt Dynasty Week ${recap.week}`;
+  return {
+    title,
+    description: recap.subhead,
+    openGraph: {
+      title,
+      description: recap.subhead,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title,
+      description: recap.subhead,
+    },
+  };
+}
+
 export default async function RecapPage({
   params,
 }: {
