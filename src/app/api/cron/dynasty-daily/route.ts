@@ -17,6 +17,29 @@ function isAuthorized(req: NextRequest): boolean {
 export async function GET(req: NextRequest) {
   if (!isAuthorized(req)) return new Response("Unauthorized", { status: 401 });
 
+  // Lightweight health check: ?diag=1 reports what the FantasyPros key looks
+  // like AT RUNTIME (length only, never the value) and whether the ECR feed
+  // actually returns rows — without running Claude/web-search or sending email.
+  if (new URL(req.url).searchParams.get("diag") === "1") {
+    const fpKey = process.env.FANTASYPROS_API_KEY ?? "";
+    let fpEcrRows = 0;
+    let fpError = "";
+    if (fpKey) {
+      try {
+        fpEcrRows = (await fetchFpEcr(fpKey)).size;
+      } catch (e) {
+        fpError = String(e);
+      }
+    }
+    return Response.json({
+      diag: true,
+      fpKeyLen: fpKey.length,
+      fpEcrRows,
+      fpEngaged: fpEcrRows > 0,
+      fpError,
+    });
+  }
+
   const apiKey = process.env.ANTHROPIC_API_KEY;
   const resendKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.DYNASTY_NOTIFY_EMAIL ?? "berto.crespo17@gmail.com";
