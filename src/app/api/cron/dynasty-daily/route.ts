@@ -54,18 +54,23 @@ export async function GET(req: NextRequest) {
     const p0 = rank?.players?.[0] ?? {};
     const probes: any = {};
     const candidates: Record<string, string> = {
-      notes: "https://api.fantasypros.com/public/v2/json/nfl/2026/notes?position=OP",
-      playerNews: "https://api.fantasypros.com/public/v2/json/nfl/players/news?limit=3",
-      news: "https://api.fantasypros.com/public/v2/json/nfl/news?limit=3",
-      rankingsWithExperts:
-        "https://api.fantasypros.com/public/v2/json/nfl/2026/consensus-rankings?type=dynasty&position=OP&scoring=PPR&experts=show",
-      playerId: `https://api.fantasypros.com/public/v2/json/nfl/players?player_id=${p0.player_id}`,
+      news: "https://api.fantasypros.com/public/v2/json/nfl/news?limit=5",
+      newsByPlayer: `https://api.fantasypros.com/public/v2/json/nfl/news?player_id=${p0.player_id}&limit=3`,
+      newsCategoryRankings:
+        "https://api.fantasypros.com/public/v2/json/nfl/news?category=dynasty&limit=5",
     };
     for (const [k, url] of Object.entries(candidates)) {
       try {
         const res = await fetch(url, { headers: H, cache: "no-store" });
-        const txt = await res.text();
-        probes[k] = { status: res.status, sample: txt.slice(0, 220) };
+        const j: any = await res.json().catch(() => ({}));
+        const items = j?.news ?? j?.items ?? j?.data ?? [];
+        probes[k] = {
+          status: res.status,
+          topKeys: Object.keys(j || {}),
+          count: Array.isArray(items) ? items.length : 0,
+          itemKeys: items?.[0] ? Object.keys(items[0]) : [],
+          item0: items?.[0] ?? null,
+        };
       } catch (e) {
         probes[k] = { error: String(e) };
       }
