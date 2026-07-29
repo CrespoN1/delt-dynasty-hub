@@ -46,6 +46,11 @@ PLAYERS: ${list}`;
     .map((b: any) => b.text)
     .join("\n");
   const match = text.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error("No JSON in rookie-takes response");
+  if (!match) {
+    const types = resp.content.map((b: any) => b.type).join(",");
+    throw new Error(
+      `No JSON in rookie-takes response [stop=${(resp as any).stop_reason}; blocks=${types}; textLen=${text.length}; head=${text.slice(0, 200)}]`
+    );
+  }
   return JSON.parse(match[0]) as Record<string, string>;
 }
