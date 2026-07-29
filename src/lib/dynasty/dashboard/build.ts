@@ -10,7 +10,7 @@ import boardRaw from "./board.json";
 import rookiesRaw from "./rookies_deep.json";
 import moversRaw from "./movers.json";
 import fpSentimentRaw from "./fp_sentiment.json";
-import { fetchFpSuperflexBoard, type FpRow } from "../fantasypros";
+import { fetchFpSuperflexBoard, fetchFpNews, type FpRow, type FpNews } from "../fantasypros";
 
 const LEAGUE_ID = "1313673066445819904";
 const DRAFT_ID = "1313673066458390528";
@@ -130,15 +130,23 @@ export async function buildDashboardData(): Promise<Any> {
 
   // ---- live FantasyPros ECR (elite superflex board) ----
   let fp = new Map<string, FpRow>();
+  let fpNews = new Map<number, FpNews>();
   const fpKey = process.env.FANTASYPROS_API_KEY;
   if (fpKey) {
-    try {
-      fp = await fetchFpSuperflexBoard(fpKey);
-    } catch {
-      fp = new Map();
-    }
+    [fp, fpNews] = await Promise.all([
+      fetchFpSuperflexBoard(fpKey).catch(() => new Map<string, FpRow>()),
+      fetchFpNews(fpKey).catch(() => new Map<number, FpNews>()),
+    ]);
   }
   const fpEcr = (name: string): FpRow | undefined => fp.get(norm(name));
+  // latest FantasyPros analyst news for a player, joined by FP player_id
+  const newsFor = (name: string): Any | undefined => {
+    const f = fpEcr(name);
+    if (!f) return undefined;
+    const nw = fpNews.get(f.id);
+    if (!nw) return undefined;
+    return { title: nw.title, impact: nw.impact || nw.desc, date: nw.date, link: nw.link };
+  };
 
   // Sleeper name index (age/team enrichment for FP-only board entries)
   const byNorm = new Map<string, Any>();
@@ -251,8 +259,14 @@ export async function buildDashboardData(): Promise<Any> {
     boardOut = merged.map((p, i) => {
       p.rank = i + 1;
       p.owner = ownerOf(p.name);
-      p.sent = overlayFp(boardSent(p, fpSentMap, movdir), fpEcr(p.name));
+      const _f = fpEcr(p.name);
+      p.sent = overlayFp(boardSent(p, fpSentMap, movdir), _f);
       p.value = dynValue(p.fpEcr);
+      if (_f) {
+        p.ecrRange = { min: _f.rankMin, max: _f.rankMax };
+        p.owned = _f.owned;
+      }
+      p.news = newsFor(p.name);
       delete p._sort;
       return p;
     });
@@ -295,9 +309,12 @@ export async function buildDashboardData(): Promise<Any> {
     if (f) {
       r.fpEcr = f.ecr;
       r.fpDelta = f.delta;
+      r.ecrRange = { min: f.rankMin, max: f.rankMax }; // where analysts range him
+      r.owned = f.owned;
     }
     r.value = dynValue(f?.ecr);
     r.drafted = draftedNorm.has(norm(r.name));
+    r.news = newsFor(r.name); // live FantasyPros analyst take, if any
     r.sent = rookieSent(r);
   }
   // Re-rank the rookie class by LIVE FantasyPros ECR (fall back to curated order

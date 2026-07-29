@@ -16,11 +16,14 @@ export async function GET() {
     const json = JSON.stringify(data);
     // function replacement avoids `$&`/`$1` interpretation in the injected JSON
     const html = DASHBOARD_TEMPLATE.replace("/*__DATA__*/{}", () => json);
+    // During a LIVE rookie draft, refresh fast so the board keeps up with picks;
+    // otherwise cache a few hours (data changes slowly in the offseason).
+    const live = data.draftStatus === "drafting";
+    const cache = live
+      ? "public, s-maxage=20, stale-while-revalidate=40"
+      : "public, s-maxage=21600, stale-while-revalidate=86400";
     return new Response(html, {
-      headers: {
-        "content-type": "text/html; charset=utf-8",
-        "cache-control": "public, s-maxage=21600, stale-while-revalidate=86400",
-      },
+      headers: { "content-type": "text/html; charset=utf-8", "cache-control": cache },
     });
   } catch (err) {
     return new Response("Dashboard build error: " + String(err), {

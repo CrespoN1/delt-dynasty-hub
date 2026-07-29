@@ -304,6 +304,10 @@ footer b{color:var(--muted);}
   <!-- ============ ROOKIES ============ -->
   <div class="view" id="view-rookies">
     <section>
+      <div class="sechead"><h2>Best Available <span class="n" id="bpaCount"></span></h2><span class="note" id="bpaNote">Live board — updates as picks come off. Analyst take = <span class="hl">FantasyPros</span> news + consensus, plus dynasty buzz.</span></div>
+      <div id="bpaList" class="rookgrid"></div>
+    </section>
+    <section>
       <div class="sechead"><h2>Pick Planner — your picks</h2><span class="note">★ = best available · <span style="color:var(--up)">could fall</span> / <span style="color:var(--gold-ink)">value</span> / <span style="color:var(--muted)">reach</span> · blue badge = fills a roster need</span></div>
       <div class="controls" style="align-items:center;"><span class="note" id="plannerMeta"></span></div>
       <div class="planner" id="plannerCards"></div>
@@ -548,6 +552,40 @@ function renderPlanner(){
   $('#plannerCards').innerHTML=html;
 }
 
+/* ---------- analyst take (FantasyPros news + consensus + dynasty buzz) ---------- */
+function fpNewsLine(r){
+  if(!r.news || !(r.news.impact||r.news.title)) return '';
+  const link=r.news.link?` <a href="${esc(r.news.link)}" target="_blank" rel="noopener" style="color:var(--gold-ink);text-decoration:none;">↗</a>`:'';
+  return `<div class="rbuzz"><b>FantasyPros${r.news.date?' · '+esc(r.news.date):''}.</b> ${esc(r.news.title||'')}${r.news.impact?' — '+esc(r.news.impact):''}${link}</div>`;
+}
+function rangeTxt(r){ return r.ecrRange?`<span class="psub">analysts #${r.ecrRange.min}–#${r.ecrRange.max}</span>`:''; }
+
+/* ---------- best available (live draft board) ---------- */
+function renderBPA(){
+  const needs=new Set(D.myNeeds||[]);
+  const left=D.rookies.filter(r=>!r.drafted).sort((a,b)=>a.rank-b.rank);
+  $('#bpaCount').textContent=left.length+' left';
+  const myNext=(D.myPicks||[]).map(p=>p.overall).sort((a,b)=>a-b).find(o=>o>(D.draftMade||0));
+  $('#bpaNote').innerHTML = (D.draftStatus==='drafting'
+      ? `<span class="hl">● Draft live</span> — ${D.draftMade}/48 gone. `
+      : '') + (myNext?`Your next pick is overall <b>#${myNext}</b>. `:'') +
+    `Analyst take = <span class="hl">FantasyPros</span> news + consensus, plus dynasty buzz.`;
+  $('#bpaList').innerHTML = left.slice(0,8).map((r,i)=>{
+    const pc=PROF_CLS[r.profile]||'p-bal';
+    const need=needs.has(r.pos)?` <span class="fitbadge">FILLS ${r.pos}</span>`:'';
+    const yours=(myNext&&r.fpEcr)?'':''; // (reserved)
+    const ceiling=r.ceiling?`<div class="cf up"><span class="cfi">▲</span><span class="cft">${esc(r.ceiling)}</span></div>`:'';
+    const floor=r.floor?`<div class="cf dn"><span class="cfi">▼</span><span class="cft">${esc(r.floor)}</span></div>`:'';
+    const buzz=(r.buzz||r.note)?`<div class="rbuzz"><b>Dynasty buzz.</b> ${esc(r.buzz||r.note)}</div>`:'';
+    return `<div class="rcard ${pc}">
+      <div class="rtop"><div>
+        <div class="rname">${i===0?'★ ':''}${esc(r.name)}${need}</div>
+        <div class="rmeta">${posTag(r.pos)} ${esc(r.team)}${r.college?' · '+esc(r.college):''} · <span class="hl">ECR #${r.fpEcr??'—'}</span> ${rangeTxt(r)} ${sigPill(r.sent)}</div>
+      </div><div class="rpick"><div class="rr">${esc(r.rookieRound)}</div>${r.tier?`<div class="rt">${esc(r.tier)}</div>`:''}</div></div>
+      ${fpNewsLine(r)}${buzz}${ceiling}${floor}${yours}</div>`;
+  }).join('') || '<div class="empty">Draft complete — the board is empty.</div>';
+}
+
 /* ---------- rookies (draft war room) ---------- */
 function renderRookies(){
   let rows=D.rookies.slice();
@@ -573,7 +611,7 @@ function renderRookies(){
       </div>
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">${prof}${sent}</div>
       ${ceiling}${floor}
-      ${buzz}${comp}
+      ${fpNewsLine(r)}${buzz}${comp}
     </div>`;
   }).join('');
 }
@@ -732,6 +770,6 @@ $$('#tabs .tab').forEach(tb=>tb.onclick=()=>{
   $$('.view').forEach(v=>v.classList.remove('active'));$('#view-'+tb.dataset.view).classList.add('active');
 });
 
-function renderAll(){renderMovers();renderBoard();renderPlanner();renderRookies();renderTrades();renderWeek();renderRoster();}
+function renderAll(){renderMovers();renderBoard();renderBPA();renderPlanner();renderRookies();renderTrades();renderWeek();renderRoster();}
 renderAll();
 </script>

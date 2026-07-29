@@ -6,6 +6,7 @@
 const BASE = "https://api.fantasypros.com/public/v2/json/nfl";
 
 export interface FpRow {
+  id: number; // FantasyPros player_id — joins to the news feed
   name: string;
   team: string;
   pos: string;
@@ -14,6 +15,53 @@ export interface FpRow {
   tier: number;
   delta: number; // ECR movement (analyst momentum)
   std: number; // consensus spread — low = agreement, high = divided
+  rankMin: number; // most-bullish expert rank
+  rankMax: number; // most-bearish expert rank
+  owned: number; // avg % rostered across platforms (market signal)
+}
+
+export interface FpNews {
+  playerId: number;
+  title: string;
+  desc: string;
+  impact: string; // analyst take on fantasy impact
+  date: string;
+  link: string;
+}
+
+// Latest FantasyPros player-news item per player_id (analyst commentary).
+// The public feed returns recent items across all players; we keep the newest
+// per player. Coverage skews to players with recent news.
+export async function fetchFpNews(
+  apiKey: string,
+  limit = 200
+): Promise<Map<number, FpNews>> {
+  const map = new Map<number, FpNews>();
+  try {
+    const res = await fetch(`${BASE}/news?limit=${limit}`, {
+      headers: { "x-api-key": apiKey },
+      cache: "no-store",
+    });
+    if (!res.ok) return map;
+    const j = (await res.json()) as any;
+    const items: any[] = j?.items ?? j?.news ?? [];
+    for (const it of items) {
+      const pid = Number(it.player_id);
+      if (!pid) continue;
+      if (map.has(pid)) continue; // newest-first: keep the first (latest)
+      map.set(pid, {
+        playerId: pid,
+        title: it.title ?? "",
+        desc: it.desc ?? "",
+        impact: it.impact ?? "",
+        date: it.created_formated ?? it.created ?? "",
+        link: it.link ?? "",
+      });
+    }
+  } catch {
+    /* graceful: no news layer */
+  }
+  return map;
 }
 
 const SUFFIX = /\b(jr|sr|ii|iii|iv|v)\b\.?/gi;
@@ -41,6 +89,7 @@ async function fetchOne(
   const data = (await res.json()) as any;
   const rows: any[] = data.players ?? [];
   return rows.map((p) => ({
+    id: Number(p.player_id),
     name: p.player_name,
     team: p.player_team_id,
     pos: p.player_position_id,
@@ -49,6 +98,9 @@ async function fetchOne(
     tier: Number(p.tier),
     delta: Number(p.player_ecr_delta ?? 0),
     std: Number(p.rank_std ?? 0),
+    rankMin: Number(p.rank_min ?? p.rank_ecr),
+    rankMax: Number(p.rank_max ?? p.rank_ecr),
+    owned: Number(p.player_owned_avg ?? 0),
   }));
 }
 
