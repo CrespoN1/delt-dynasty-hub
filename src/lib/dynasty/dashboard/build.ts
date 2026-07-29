@@ -132,6 +132,26 @@ export async function buildDashboardData(): Promise<Any> {
   }
   const fpEcr = (name: string): FpRow | undefined => fp.get(norm(name));
 
+  // Sleeper name index (age/team enrichment for FP-only board entries)
+  const byNorm = new Map<string, Any>();
+  for (const p of Object.values(players)) {
+    const nm = p.full_name || `${p.first_name ?? ""} ${p.last_name ?? ""}`.trim();
+    if (nm) byNorm.set(norm(nm), p);
+  }
+
+  // Live Sleeper trending adds/drops (last 48h, league-wide) for the Movers feed
+  let addTrend: Any[] = [];
+  let dropTrend: Any[] = [];
+  try {
+    [addTrend, dropTrend] = await Promise.all([
+      get<Any[]>(`${API}/players/nfl/trending/add?lookback_hours=48&limit=20`),
+      get<Any[]>(`${API}/players/nfl/trending/drop?lookback_hours=48&limit=20`),
+    ]);
+  } catch {
+    addTrend = [];
+    dropTrend = [];
+  }
+
   const umap = new Map(users.map((u) => [u.user_id, u]));
   const pname = (pid: string) => {
     const p = players[pid] || {};
@@ -170,19 +190,57 @@ export async function buildDashboardData(): Promise<Any> {
 
   const myteam = teams.find((t) => t.id === MY_ROSTER_ID)!;
 
-  // ---- board: rank + owner + FP ECR + sentiment ----
+  // ---- board: FP-native (live), left-joined with curated notes ----
+  // When FantasyPros is live the board is built from the real overall ECR (top
+  // ~130), so risers auto-appear and the order never goes stale; curated notes/
+  // tiers attach by name. Falls back to the curated hand-order if FP is down.
   const fpSentMap = new Map(fpSentiment.map((x) => [norm(x.name), x]));
   const movdir = new Map(movers.map((m) => [norm(m.name), m.direction as string]));
-  board.forEach((p, i) => {
-    p.rank = i + 1;
-    p.owner = ownerOf(p.name);
-    const f = fpEcr(p.name);
-    if (f) {
-      p.fpEcr = f.ecr;
-      p.fpDelta = f.delta;
-    }
-    p.sent = overlayFp(boardSent(p, fpSentMap, movdir), f);
-  });
+  const curatedBoard = new Map(board.map((p) => [norm(p.name), p]));
+  const tierLabel = (ecr: number, curated?: string): string =>
+    curated || (ecr <= 12 ? "Elite" : ecr <= 36 ? "Tier 1" : ecr <= 72 ? "Tier 2" : ecr <= 120 ? "Tier 3" : "Depth");
+
+  let boardOut: Any[];
+  if (fp.size > 0) {
+    const fpRows = [...fp.values()]
+      .filter((r) => ["QB", "RB", "WR", "TE"].includes(r.pos))
+      .sort((a, b) => a.ecr - b.ecr)
+      .slice(0, 130);
+    const inFp = new Set(fpRows.map((r) => norm(r.name)));
+    const merged: Any[] = fpRows.map((r) => {
+      const c = curatedBoard.get(norm(r.name));
+      const sl = byNorm.get(norm(r.name));
+      return {
+        name: r.name,
+        pos: r.pos,
+        team: r.team || c?.team || sl?.team || "FA",
+        age: c?.age ?? sl?.age ?? null,
+        tier: tierLabel(r.ecr, c?.tier),
+        note: c?.note || "",
+        fpEcr: r.ecr,
+        fpDelta: r.delta,
+        _sort: r.ecr,
+      };
+    });
+    // keep any curated player who fell outside the live top-130 (with their note)
+    for (const c of board)
+      if (!inFp.has(norm(c.name))) merged.push({ ...c, _sort: 9999 });
+    merged.sort((a, b) => a._sort - b._sort);
+    boardOut = merged.map((p, i) => {
+      p.rank = i + 1;
+      p.owner = ownerOf(p.name);
+      p.sent = overlayFp(boardSent(p, fpSentMap, movdir), fpEcr(p.name));
+      delete p._sort;
+      return p;
+    });
+  } else {
+    boardOut = board.map((p, i) => {
+      p.rank = i + 1;
+      p.owner = ownerOf(p.name);
+      p.sent = boardSent(p, fpSentMap, movdir);
+      return p;
+    });
+  }
 
   // ---- rookies: owner + FP ECR + sentiment + live consensus rank/slot ----
   for (const r of rookies) {
@@ -206,8 +264,53 @@ export async function buildDashboardData(): Promise<Any> {
     delete r._ord;
   });
 
-  // ---- movers: owner ----
-  for (const m of movers) m.owner = ownerOf(m.name);
+  // ---- movers: LIVE Sleeper trending adds/drops + your injury watch ----
+  // Rising = most-added across Sleeper (48h), Falling = most-dropped, Watch =
+  // YOUR rostered players carrying an injury designation. Falls back to the
+  // curated movers.json if the trending feed is unavailable.
+  const trendItem = (pid: string, count: number, direction: "up" | "down"): Any | null => {
+    const p = players[pid];
+    if (!p || !["QB", "RB", "WR", "TE"].includes(p.position)) return null;
+    const nm = p.full_name || `${p.first_name ?? ""} ${p.last_name ?? ""}`.trim();
+    if (!nm) return null;
+    const f = fpEcr(nm);
+    const ecrTxt = f ? `dynasty ECR #${f.ecr}` : "outside the top ~540 dynasty";
+    const n = count.toLocaleString();
+    const note =
+      direction === "up"
+        ? `Most-added across Sleeper (48h) — ${n} adds. ${f ? `Real dynasty value (${ecrTxt}).` : `Deeper/speculative (${ecrTxt}).`}`
+        : `Most-dropped across Sleeper (48h) — ${n} drops. ${ecrTxt}.`;
+    return { name: nm, pos: p.position, team: p.team || "FA", direction, note, owner: ownerOf(nm), fpEcr: f?.ecr };
+  };
+  let moversOut: Any[] = [];
+  if (addTrend.length || dropTrend.length) {
+    for (const t of addTrend) {
+      const it = trendItem(t.player_id, t.count, "up");
+      if (it) moversOut.push(it);
+      if (moversOut.filter((m) => m.direction === "up").length >= 10) break;
+    }
+    for (const t of dropTrend) {
+      const it = trendItem(t.player_id, t.count, "down");
+      if (it) moversOut.push(it);
+      if (moversOut.filter((m) => m.direction === "down").length >= 10) break;
+    }
+    for (const pid of myteam._pids) {
+      const p = players[pid];
+      if (!p || !p.injury_status) continue;
+      const nm = p.full_name || `${p.first_name ?? ""} ${p.last_name ?? ""}`.trim();
+      moversOut.push({
+        name: nm,
+        pos: p.position,
+        team: p.team || "FA",
+        direction: "watch",
+        note: `Injury watch — Sleeper lists him ${p.injury_status}${p.injury_body_part ? ` (${p.injury_body_part})` : ""}.`,
+        owner: MY_ROSTER_ID,
+        fpEcr: fpEcr(nm)?.ecr,
+      });
+    }
+  } else {
+    moversOut = movers.map((m) => ({ ...m, owner: ownerOf(m.name) }));
+  }
 
   // ---- waiver vets: unrostered skill players, ranked by FP dynasty value ----
   const rostered = new Set<string>();
@@ -256,7 +359,7 @@ export async function buildDashboardData(): Promise<Any> {
   myPicks.sort((a, b) => a.overall - b.overall);
 
   // ---- roster needs / positional depth ----
-  const boardNames = new Set(board.map((p) => norm(p.name)));
+  const boardNames = new Set(boardOut.map((p) => norm(p.name)));
   const byPos: Record<string, Any[]> = { QB: [], RB: [], WR: [], TE: [] };
   for (const p of myteam.players) if (byPos[p.pos]) byPos[p.pos].push(p);
   const posDepth: Any = {};
@@ -298,9 +401,9 @@ export async function buildDashboardData(): Promise<Any> {
       status: "Pre-draft (4-round rookie draft)",
     },
     teams: [shipTeam], // only MY roster ships — rival identities are stripped
-    board,
+    board: boardOut,
     rookies,
-    movers,
+    movers: moversOut,
     vets,
     fpEngaged: fp.size > 0,
   };
