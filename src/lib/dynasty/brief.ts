@@ -62,11 +62,14 @@ Return ONLY a JSON object (no prose, no markdown fences) with this exact shape:
 Anchor sentiment to FantasyPros consensus. Do NOT invent injuries or transactions. Keep each note under 22 words. 6-10 movers, 4-6 roster items, 4-6 waivers, one rookies entry per recipient pick.
 ${fpBlock ? "\n" + fpBlock : ""}`;
 
+  // Tuned to finish inside Vercel Hobby's hard 60s function cap: fewer web
+  // searches + low effort. Raise max_uses/effort and maxDuration to 300 if the
+  // account moves to Vercel Pro.
   const resp = await client.messages.create({
     model: DYNASTY_MODEL,
-    max_tokens: 8000,
-    output_config: { effort: "medium" } as any,
-    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 8 } as any],
+    max_tokens: 6000,
+    output_config: { effort: "low" } as any,
+    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 4 } as any],
     messages: [{ role: "user", content: prompt }],
   });
 
