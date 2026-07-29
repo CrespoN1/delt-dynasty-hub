@@ -47,7 +47,10 @@ export async function GET(req: NextRequest) {
   if (new URL(req.url).searchParams.get("explore") === "1") {
     const fpKey = process.env.FANTASYPROS_API_KEY ?? "";
     const BASE = "https://api.fantasypros.com/public/v2/json/nfl";
-    const candidates = [
+    // ?try=<path> probes a single arbitrary FP path (relative to BASE) so we can
+    // iterate on params without redeploying.
+    const tryPath = new URL(req.url).searchParams.get("try");
+    const candidates = tryPath ? [tryPath] : [
       `2026/consensus-rankings?type=dynasty&position=OP&scoring=PPR`,
       `2026/consensus-rankings?type=dynasty&position=ALL&scoring=PPR`,
       `2026/consensus-rankings?type=rookie&position=ALL&scoring=PPR`,
