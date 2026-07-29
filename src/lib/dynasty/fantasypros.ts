@@ -83,7 +83,7 @@ export function fpPromptBlock(
   // This feed can return the full board (~600+ rows). Keep the prompt lean and
   // fast under the 60s cap: top ~60 overall PLUS every recipient-roster player
   // (so the user's guys always carry their exact ECR, even if outside the top).
-  const TOP = 60;
+  const TOP = 40;
   const rows = all.filter(
     (r, i) => i < TOP || rosterSet.has(norm(r.name))
   );

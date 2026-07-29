@@ -73,7 +73,7 @@ ${fpBlock ? "\n" + fpBlock : ""}`;
     model: DYNASTY_MODEL,
     max_tokens: 5000,
     output_config: { effort: "low" } as any,
-    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 3 } as any],
+    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 2 } as any],
     messages: [{ role: "user", content: prompt }],
   });
 
