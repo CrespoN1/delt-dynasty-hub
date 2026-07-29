@@ -42,6 +42,53 @@ export async function GET(req: NextRequest) {
     });
   }
 
+  // ?explore=1 — discover which FantasyPros endpoints/params return data (esp.
+  // ROOKIE rankings) and their JSON shape, so we can wire the dashboard.
+  if (new URL(req.url).searchParams.get("explore") === "1") {
+    const fpKey = process.env.FANTASYPROS_API_KEY ?? "";
+    const BASE = "https://api.fantasypros.com/public/v2/json/nfl";
+    const candidates = [
+      `2026/consensus-rankings?type=dynasty&position=OP&scoring=PPR`,
+      `2026/consensus-rankings?type=dynasty&position=ALL&scoring=PPR`,
+      `2026/consensus-rankings?type=rookie&position=ALL&scoring=PPR`,
+      `2026/consensus-rankings?type=dynasty-rookie&position=ALL&scoring=PPR`,
+      `2026/consensus-rankings?type=draft&position=ALL&scoring=PPR`,
+      `2026/consensus-rankings?type=ros&position=ALL&scoring=PPR`,
+    ];
+    const results = await Promise.all(
+      candidates.map(async (path) => {
+        try {
+          const res = await fetch(`${BASE}/${path}`, {
+            headers: { "x-api-key": fpKey },
+            cache: "no-store",
+          });
+          const body = res.ok ? await res.json() : await res.text();
+          const players = (body as any)?.players ?? [];
+          return {
+            path,
+            status: res.status,
+            count: Array.isArray(players) ? players.length : 0,
+            topKeys: players[0] ? Object.keys(players[0]) : [],
+            sample: players
+              .slice(0, 5)
+              .map((p: any) => ({
+                name: p.player_name,
+                pos: p.player_position_id,
+                team: p.player_team_id,
+                ecr: p.rank_ecr,
+                posRank: p.pos_rank,
+                tier: p.tier,
+              })),
+            note: res.ok ? undefined : String(body).slice(0, 120),
+          };
+        } catch (e) {
+          return { path, status: 0, count: 0, error: String(e) };
+        }
+      })
+    );
+    return Response.json({ explore: true, results });
+  }
+
   const apiKey = process.env.ANTHROPIC_API_KEY;
   const resendKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.DYNASTY_NOTIFY_EMAIL ?? "berto.crespo17@gmail.com";
