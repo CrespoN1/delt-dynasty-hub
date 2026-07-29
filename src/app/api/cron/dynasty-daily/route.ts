@@ -24,6 +24,7 @@ export async function GET(req: NextRequest) {
     const fpKey = process.env.FANTASYPROS_API_KEY ?? "";
     let fpEcrRows = 0;
     let fpError = "";
+    const tf = Date.now();
     if (fpKey) {
       try {
         fpEcrRows = (await fetchFpEcr(fpKey)).size;
@@ -36,6 +37,7 @@ export async function GET(req: NextRequest) {
       fpKeyLen: fpKey.length,
       fpEcrRows,
       fpEngaged: fpEcrRows > 0,
+      fpFetchMs: Date.now() - tf,
       fpError,
     });
   }
@@ -50,23 +52,46 @@ export async function GET(req: NextRequest) {
     );
   }
 
+  const params = new URL(req.url).searchParams;
+  const probe = params.get("probe") === "1"; // time stages, don't send email
+  const useFp = params.get("fp") !== "0"; // ?fp=0 disables the FantasyPros layer
+
   const t0 = Date.now();
   try {
     const data = await fetchDynastyData();
+    const tData = Date.now() - t0;
 
-    // Optional FantasyPros ECR layer (elite tier) — only if a key is configured.
+    // Optional FantasyPros ECR layer — only if a key is configured (and not ?fp=0).
     let fpBlock = "";
+    let tFp = 0;
     const fpKey = process.env.FANTASYPROS_API_KEY;
-    if (fpKey) {
+    if (fpKey && useFp) {
+      const tf = Date.now();
       try {
         const fp = await fetchFpEcr(fpKey);
         fpBlock = fpPromptBlock(fp, data.roster.map((p) => p.name));
       } catch {
         fpBlock = "";
       }
+      tFp = Date.now() - tf;
     }
 
+    const tr = Date.now();
     const content = await researchBrief(data, apiKey, fpBlock);
+    const tResearch = Date.now() - tr;
+
+    if (probe) {
+      return Response.json({
+        probe: true,
+        useFp,
+        fpBlockChars: fpBlock.length,
+        tDataMs: tData,
+        tFpMs: tFp,
+        tResearchMs: tResearch,
+        totalMs: Date.now() - t0,
+        tldrCount: content.tldr?.length ?? 0,
+      });
+    }
     const dateLabel = new Date().toLocaleDateString("en-US", {
       weekday: "long",
       month: "short",
