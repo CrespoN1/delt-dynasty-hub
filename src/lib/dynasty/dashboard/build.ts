@@ -10,6 +10,7 @@ import boardRaw from "./board.json";
 import rookiesRaw from "./rookies_deep.json";
 import moversRaw from "./movers.json";
 import fpSentimentRaw from "./fp_sentiment.json";
+import rookieTakesRaw from "./rookie_takes.json";
 import { fetchFpSuperflexBoard, fetchFpNews, type FpRow, type FpNews } from "../fantasypros";
 
 const LEAGUE_ID = "1313673066445819904";
@@ -39,6 +40,8 @@ const board = boardRaw as Any[];
 const rookies = rookiesRaw as Any[];
 const movers = moversRaw as Any[];
 const fpSentiment = fpSentimentRaw as Any[];
+const rookieTakes = ((rookieTakesRaw as Any).takes ?? {}) as Record<string, string>;
+const rookieTakesUpdated = (rookieTakesRaw as Any).updated as string | null;
 
 // ---- analyst sentiment helpers (ported from build.py) ----
 function boardSent(p: Any, fpmap: Map<string, Any>, movdir: Map<string, string>): Any {
@@ -315,6 +318,7 @@ export async function buildDashboardData(): Promise<Any> {
     r.value = dynValue(f?.ecr);
     r.drafted = draftedNorm.has(norm(r.name));
     r.news = newsFor(r.name); // live FantasyPros analyst take, if any
+    r.freshTake = rookieTakes[norm(r.name)]; // daily LLM-researched current take
     r.sent = rookieSent(r);
   }
   // Re-rank the rookie class by LIVE FantasyPros ECR (fall back to curated order
@@ -489,5 +493,6 @@ export async function buildDashboardData(): Promise<Any> {
     movers: moversOut,
     vets,
     fpEngaged: fp.size > 0,
+    rookieTakesUpdated,
   };
 }

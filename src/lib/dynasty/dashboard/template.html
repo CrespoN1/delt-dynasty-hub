@@ -559,6 +559,8 @@ function fpNewsLine(r){
   return `<div class="rbuzz"><b>FantasyPros${r.news.date?' · '+esc(r.news.date):''}.</b> ${esc(r.news.title||'')}${r.news.impact?' — '+esc(r.news.impact):''}${link}</div>`;
 }
 function rangeTxt(r){ return r.ecrRange?`<span class="psub">analysts #${r.ecrRange.min}–#${r.ecrRange.max}</span>`:''; }
+/* daily LLM-researched current analyst read (freshest voice) */
+function freshTakeLine(r){ return r.freshTake?`<div class="rbuzz" style="border-left:2px solid var(--gold-line);padding-left:8px;"><b class="hl">Analyst read.</b> ${esc(r.freshTake)}</div>`:''; }
 
 /* ---------- best available (live draft board) ---------- */
 function renderBPA(){
@@ -582,7 +584,7 @@ function renderBPA(){
         <div class="rname">${i===0?'★ ':''}${esc(r.name)}${need}</div>
         <div class="rmeta">${posTag(r.pos)} ${esc(r.team)}${r.college?' · '+esc(r.college):''} · <span class="hl">ECR #${r.fpEcr??'—'}</span> ${rangeTxt(r)} ${sigPill(r.sent)}</div>
       </div><div class="rpick"><div class="rr">${esc(r.rookieRound)}</div>${r.tier?`<div class="rt">${esc(r.tier)}</div>`:''}</div></div>
-      ${fpNewsLine(r)}${buzz}${ceiling}${floor}${yours}</div>`;
+      ${freshTakeLine(r)}${fpNewsLine(r)}${buzz}${ceiling}${floor}${yours}</div>`;
   }).join('') || '<div class="empty">Draft complete — the board is empty.</div>';
 }
 
@@ -611,7 +613,7 @@ function renderRookies(){
       </div>
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">${prof}${sent}</div>
       ${ceiling}${floor}
-      ${fpNewsLine(r)}${buzz}${comp}
+      ${freshTakeLine(r)}${fpNewsLine(r)}${buzz}${comp}
     </div>`;
   }).join('');
 }
