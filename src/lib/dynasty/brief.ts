@@ -5,7 +5,11 @@
 import Anthropic from "@anthropic-ai/sdk";
 import type { DynastyData, Player, Pick } from "./data";
 
-const DYNASTY_MODEL = "claude-opus-4-7"; // matches the recap generator
+// Sonnet (not Opus) for the daily brief: this endpoint does live web-search
+// research under Vercel Hobby's hard 60s function cap, and Sonnet's faster
+// inference across search round-trips is what makes it fit. The recap generator
+// stays on Opus because it does no web search and isn't time-boxed the same way.
+const DYNASTY_MODEL = "claude-sonnet-5";
 
 export interface BriefContent {
   tldr: string[];
@@ -62,14 +66,14 @@ Return ONLY a JSON object (no prose, no markdown fences) with this exact shape:
 Anchor sentiment to FantasyPros consensus. Do NOT invent injuries or transactions. Keep each note under 22 words. 6-10 movers, 4-6 roster items, 4-6 waivers, one rookies entry per recipient pick.
 ${fpBlock ? "\n" + fpBlock : ""}`;
 
-  // Tuned to finish inside Vercel Hobby's hard 60s function cap: fewer web
-  // searches + low effort. Raise max_uses/effort and maxDuration to 300 if the
-  // account moves to Vercel Pro.
+  // Tuned to finish inside Vercel Hobby's hard 60s function cap: Sonnet + few
+  // searches + low effort. Raise max_uses/effort/max_tokens (and maxDuration to
+  // 300) if the account moves to Vercel Pro.
   const resp = await client.messages.create({
     model: DYNASTY_MODEL,
-    max_tokens: 6000,
+    max_tokens: 5000,
     output_config: { effort: "low" } as any,
-    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 4 } as any],
+    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 3 } as any],
     messages: [{ role: "user", content: prompt }],
   });
 
