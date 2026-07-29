@@ -260,6 +260,7 @@ footer b{color:var(--muted);}
   <nav class="tabs" id="tabs">
     <button class="tab active" data-view="war">War Room<span class="n" id="nBoard"></span></button>
     <button class="tab" data-view="rookies">Rookie Draft<span class="n" id="nRook"></span></button>
+    <button class="tab" data-view="trades">Trades</button>
     <button class="tab" data-view="week">This Week</button>
     <button class="tab" data-view="roster">My Roster</button>
   </nav>
@@ -325,6 +326,29 @@ footer b{color:var(--muted);}
     </section>
   </div>
 
+  <!-- ============ TRADES ============ -->
+  <div class="view" id="view-trades">
+    <section>
+      <div class="sechead"><h2>Trade Calculator</h2><span class="note">Values from <span class="hl">FantasyPros superflex dynasty ECR</span>. Add players &amp; your rookie picks to each side — <b style="color:var(--up)">green</b> means you win value.</span></div>
+      <div class="two">
+        <div class="card" id="tside_give"><div class="lab" style="display:flex;justify-content:space-between;">You give <span class="mono tsum" style="color:var(--ink);font-size:14px;">0</span></div>
+          <input list="assetList" class="tadd" data-side="give" placeholder="Add player or pick…" style="width:100%;margin:8px 0;">
+          <div class="tlist"></div></div>
+        <div class="card" id="tside_get"><div class="lab" style="display:flex;justify-content:space-between;">You get <span class="mono tsum" style="color:var(--ink);font-size:14px;">0</span></div>
+          <input list="assetList" class="tadd" data-side="get" placeholder="Add player or pick…" style="width:100%;margin:8px 0;">
+          <div class="tlist"></div></div>
+      </div>
+      <datalist id="assetList"></datalist>
+      <div id="tradeVerdict" class="banner" style="margin-top:14px;"><p>Add assets to both sides to see the verdict.</p></div>
+    </section>
+    <section>
+      <div class="sechead"><h2>Trade Targets</h2><span class="note">Players on <b>other rosters</b> that fill your needs, by dynasty value — and who to ask. Buy-window angle for your build.</span></div>
+      <div class="controls"><span class="clab">Position</span><div class="chips" id="ttPosChips"></div>
+        <div class="grow"><input type="search" id="ttSearch" placeholder="Search targets…"></div></div>
+      <div class="tablewrap"><table style="min-width:560px;"><thead><tr><th>Value</th><th>Player</th><th>Pos</th><th>NFL</th><th>Held by</th></tr></thead><tbody id="ttBody"></tbody></table></div>
+    </section>
+  </div>
+
   <!-- ============ THIS WEEK ============ -->
   <div class="view" id="view-week">
     <section>
@@ -369,6 +393,7 @@ const MY = D.myTeam;   // locked to the owner's roster
 let state = {
   pos:'ALL', rpos:'ALL', rprof:'ALL', sent:'ALL', search:'', rsearch:'',
   avail:false, scout:false, sortK:'rank', sortDir:1,
+  ttPos:'ALL', ttSearch:'',
   slot: (D.draft&&D.draft.slot)||1, dtype: (D.draft&&D.draft.type)||'linear'
 };
 const PROF_CLS = {'Boom':'p-boom','High-variance':'p-var','Balanced':'p-bal','Safe floor':'p-safe','Bust risk':'p-bust'};
@@ -611,6 +636,65 @@ function renderRoster(){
     </div>`;
 }
 
+/* ---------- trades ---------- */
+let trade = { give: [], get: [] };
+function assetPool(){
+  const pool=[], seen=new Set();
+  (D.allTeams||[]).forEach(t=>t.players.forEach(p=>{
+    const id='pl:'+norm(p.name); if(seen.has(id))return; seen.add(id);
+    pool.push({id,name:p.name,pos:p.pos,team:p.team,value:p.value||0,fpEcr:p.fpEcr,ownerId:t.id,ownerName:t.name});
+  }));
+  (D.myPicks||[]).forEach(pk=>pool.push({id:'pk:'+pk.label,name:'Pick '+pk.label,pos:'PICK',team:'—',value:pk.value||0,ownerId:D.myTeam,ownerName:'You'}));
+  return pool;
+}
+const POOL = assetPool(); const POOL_BY_LABEL = {};
+function assetLabel(a){ return a.pos==='PICK'? a.name+' (rookie pick)' : `${a.name} — ${a.pos} · ${a.ownerName}`; }
+function buildDatalist(){
+  POOL.forEach(a=>POOL_BY_LABEL[assetLabel(a)]=a);
+  $('#assetList').innerHTML = POOL.slice().sort((x,y)=>y.value-x.value).map(a=>`<option value="${esc(assetLabel(a))}"></option>`).join('');
+}
+function renderTradeSide(side){
+  const el=$('#tside_'+side), items=trade[side];
+  el.querySelector('.tsum').textContent=items.reduce((s,a)=>s+a.value,0).toLocaleString();
+  el.querySelector('.tlist').innerHTML = items.length? items.map((a,i)=>
+    `<div class="mitem" style="display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--border2);">
+      <span><span class="pname">${esc(a.name)}</span> ${a.pos!=='PICK'?posTag(a.pos):'<span class="pill t1">PICK</span>'} <span class="psub">${esc(a.ownerName)}</span></span>
+      <span style="display:flex;gap:8px;align-items:center;"><b class="mono">${a.value.toLocaleString()}</b>
+      <button class="chip tdel" data-side="${side}" data-i="${i}" style="padding:2px 8px;">✕</button></span></div>`).join('')
+    : '<div class="empty" style="padding:12px">Add players or picks…</div>';
+  el.querySelectorAll('.tdel').forEach(b=>b.onclick=()=>{trade[b.dataset.side].splice(+b.dataset.i,1);renderTradeVerdict();});
+}
+function renderTradeVerdict(){
+  renderTradeSide('give'); renderTradeSide('get');
+  const g=trade.give.reduce((s,a)=>s+a.value,0), r=trade.get.reduce((s,a)=>s+a.value,0), v=$('#tradeVerdict');
+  if(!trade.give.length && !trade.get.length){ v.innerHTML='<p>Add assets to both sides to see the verdict.</p>'; v.style.borderLeftColor='var(--gold)'; return; }
+  const diff=r-g, tot=Math.max(g,r,1), pct=Math.round(Math.abs(diff)/tot*100);
+  let col,txt;
+  if(pct<=5){col='var(--gold)';txt=`<b>Fair trade.</b> Within ${pct}% — ${g.toLocaleString()} given vs ${r.toLocaleString()} received.`;}
+  else if(diff>0){col='var(--up)';txt=`<b style="color:var(--up)">You win this by ${pct}%.</b> Receive ${r.toLocaleString()} for ${g.toLocaleString()} — net +${diff.toLocaleString()}.`;}
+  else {col='var(--down)';txt=`<b style="color:var(--down)">You lose ${pct}% of value.</b> Give ${g.toLocaleString()} for ${r.toLocaleString()} — net ${diff.toLocaleString()}.`;}
+  v.innerHTML=`<p>${txt}</p>`; v.style.borderLeftColor=col;
+}
+function wireTradeAdds(){
+  $$('.tadd').forEach(inp=>inp.onchange=()=>{ const a=POOL_BY_LABEL[inp.value]; if(a){ trade[inp.dataset.side].push(a); inp.value=''; renderTradeVerdict(); } });
+}
+function renderTargets(){
+  const needs=new Set(D.myNeeds||[]); let rows=[];
+  (D.allTeams||[]).forEach(t=>{ if(t.id===D.myTeam)return; t.players.forEach(p=>rows.push({...p,ownerName:t.name})); });
+  const pf=state.ttPos||'ALL';
+  rows = pf!=='ALL'? rows.filter(r=>r.pos===pf) : rows.filter(r=>['QB','RB','WR','TE'].includes(r.pos));
+  if(state.ttSearch){const q=state.ttSearch.toLowerCase();rows=rows.filter(r=>(r.name+' '+r.team+' '+r.ownerName).toLowerCase().includes(q));}
+  rows.sort((a,b)=>(b.value||0)-(a.value||0)); rows=rows.slice(0,40);
+  $('#ttBody').innerHTML = rows.length? rows.map(r=>{
+    const need=needs.has(r.pos)?' <span class="fitbadge">NEED</span>':'';
+    return `<tr><td class="rk">${(r.value||0).toLocaleString()}</td>
+      <td><span class="pname">${esc(r.name)}</span>${need}${r.fpEcr!=null?`<div class="psub">ECR #${r.fpEcr}</div>`:''}</td>
+      <td>${posTag(r.pos)}</td><td class="psub">${esc(r.team)}</td><td class="ownfull">${esc(r.ownerName)}</td></tr>`;
+  }).join('') : `<tr><td colspan="5" class="empty">No targets match.</td></tr>`;
+}
+function renderTTChips(){ posChips('#ttPosChips', state.ttPos||'ALL', p=>{state.ttPos=p;renderTTChips();renderTargets();}); }
+function renderTrades(){ buildDatalist(); wireTradeAdds(); renderTradeVerdict(); renderTTChips(); renderTargets(); }
+
 /* ---------- name normalize (mirror of python) ---------- */
 function norm(n){return n.toLowerCase().replace(/[.'’]/g,'').replace(/\b(jr|sr|ii|iii|iv|v)\b\.?/g,'').replace(/[^a-z ]/g,'').replace(/\s+/g,' ').trim();}
 
@@ -623,6 +707,7 @@ function renderProfChips(){chipRow('#rprofChips',['ALL','Boom','High-variance','
 renderBoardChips(); renderSentChips(); renderRookChips(); renderProfChips();
 $('#search').oninput=e=>{state.search=e.target.value;renderBoard();};
 $('#rsearch').oninput=e=>{state.rsearch=e.target.value;renderRookies();};
+$('#ttSearch').oninput=e=>{state.ttSearch=e.target.value;renderTargets();};
 $('#tAvail').onchange=e=>{state.avail=e.target.checked;renderBoard();};
 $('#tScout').onchange=e=>{state.scout=e.target.checked;renderBoard();};
 $$('#boardTbl thead th.sortable').forEach(th=>th.onclick=()=>{
@@ -635,6 +720,6 @@ $$('#tabs .tab').forEach(tb=>tb.onclick=()=>{
   $$('.view').forEach(v=>v.classList.remove('active'));$('#view-'+tb.dataset.view).classList.add('active');
 });
 
-function renderAll(){renderMovers();renderBoard();renderPlanner();renderRookies();renderWeek();renderRoster();}
+function renderAll(){renderMovers();renderBoard();renderPlanner();renderRookies();renderTrades();renderWeek();renderRoster();}
 renderAll();
 </script>

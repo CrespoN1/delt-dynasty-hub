@@ -111,6 +111,14 @@ function rookieSent(r: Any): Any {
 
 const TARGETS: Record<string, number> = { QB: 3, RB: 5, WR: 6, TE: 2 };
 
+// Dynasty trade value from the superflex overall ECR — a smooth decay so the
+// top tier is worth a lot and value falls off with rank. Unranked (outside the
+// ~540 board) gets a small floor. Relative values are what matter for fairness.
+function dynValue(ecr?: number | null): number {
+  if (ecr == null) return 20;
+  return Math.round(10000 * Math.exp(-(ecr - 1) / 60));
+}
+
 export async function buildDashboardData(): Promise<Any> {
   const [rosters, users, players, traded, draft] = await Promise.all([
     get<Any[]>(`${API}/league/${LEAGUE_ID}/rosters`),
@@ -162,6 +170,7 @@ export async function buildDashboardData(): Promise<Any> {
       out.fpEcr = f.ecr;
       out.fpDelta = f.delta;
     }
+    out.value = dynValue(f?.ecr);
     return out;
   };
 
@@ -230,6 +239,7 @@ export async function buildDashboardData(): Promise<Any> {
       p.rank = i + 1;
       p.owner = ownerOf(p.name);
       p.sent = overlayFp(boardSent(p, fpSentMap, movdir), fpEcr(p.name));
+      p.value = dynValue(p.fpEcr);
       delete p._sort;
       return p;
     });
@@ -238,6 +248,7 @@ export async function buildDashboardData(): Promise<Any> {
       p.rank = i + 1;
       p.owner = ownerOf(p.name);
       p.sent = boardSent(p, fpSentMap, movdir);
+      p.value = dynValue(p.fpEcr);
       return p;
     });
   }
@@ -250,6 +261,7 @@ export async function buildDashboardData(): Promise<Any> {
       r.fpEcr = f.ecr;
       r.fpDelta = f.delta;
     }
+    r.value = dynValue(f?.ecr);
     r.sent = rookieSent(r);
   }
   // Re-rank the rookie class by LIVE FantasyPros ECR (fall back to curated order
@@ -326,7 +338,7 @@ export async function buildDashboardData(): Promise<Any> {
     const nm = (p.full_name || "").trim();
     if (!nm) continue;
     const f = fpEcr(nm);
-    va.push({ name: nm, pos: p.position, team: p.team, age: p.age ?? null, sr, fpEcr: f?.ecr, fpDelta: f?.delta });
+    va.push({ name: nm, pos: p.position, team: p.team, age: p.age ?? null, sr, fpEcr: f?.ecr, fpDelta: f?.delta, value: dynValue(f?.ecr) });
   }
   // FP value first (lower ECR = better), then Sleeper search_rank for the rest.
   va.sort((a, b) => (a.fpEcr ?? 100000) - (b.fpEcr ?? 100000) || a.sr - b.sr);
@@ -357,6 +369,14 @@ export async function buildDashboardData(): Promise<Any> {
     }
   }
   myPicks.sort((a, b) => a.overall - b.overall);
+
+  // value each owned rookie pick by the consensus rookie expected at that slot
+  const rookiesByRank = [...rookies].sort((a, b) => a.rank - b.rank);
+  for (const pk of myPicks) {
+    const r = rookiesByRank[pk.overall - 1];
+    pk.value = r ? dynValue(r.fpEcr) : 40;
+    pk.target = r?.name ?? null;
+  }
 
   // ---- roster needs / positional depth ----
   const boardNames = new Set(boardOut.map((p) => norm(p.name)));
@@ -400,7 +420,9 @@ export async function buildDashboardData(): Promise<Any> {
       lineup: "QB / RB·RB / WR·WR·WR / TE / FLEX·FLEX / SUPERFLEX",
       status: "Pre-draft (4-round rookie draft)",
     },
-    teams: [shipTeam], // only MY roster ships — rival identities are stripped
+    teams: [shipTeam], // only MY roster ships to the team-locked views
+    // all rosters (with names) power the Trades tab: analyzer + target finder
+    allTeams: teams.map((t) => ({ id: t.id, name: t.name, owner: t.owner, players: t.players })),
     board: boardOut,
     rookies,
     movers: moversOut,
