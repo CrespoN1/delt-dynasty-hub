@@ -42,56 +42,6 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  // ?explore=1 — discover which FantasyPros endpoints/params return data (esp.
-  // ROOKIE rankings) and their JSON shape, so we can wire the dashboard.
-  if (new URL(req.url).searchParams.get("explore") === "1") {
-    const fpKey = process.env.FANTASYPROS_API_KEY ?? "";
-    const BASE = "https://api.fantasypros.com/public/v2/json/nfl";
-    // ?try=<path> probes a single arbitrary FP path (relative to BASE) so we can
-    // iterate on params without redeploying.
-    const tryPath = new URL(req.url).searchParams.get("try");
-    const candidates = tryPath ? [tryPath] : [
-      `2026/consensus-rankings?type=dynasty&position=OP&scoring=PPR`,
-      `2026/consensus-rankings?type=dynasty&position=ALL&scoring=PPR`,
-      `2026/consensus-rankings?type=rookie&position=ALL&scoring=PPR`,
-      `2026/consensus-rankings?type=dynasty-rookie&position=ALL&scoring=PPR`,
-      `2026/consensus-rankings?type=draft&position=ALL&scoring=PPR`,
-      `2026/consensus-rankings?type=ros&position=ALL&scoring=PPR`,
-    ];
-    const results = await Promise.all(
-      candidates.map(async (path) => {
-        try {
-          const res = await fetch(`${BASE}/${path}`, {
-            headers: { "x-api-key": fpKey },
-            cache: "no-store",
-          });
-          const body = res.ok ? await res.json() : await res.text();
-          const players = (body as any)?.players ?? [];
-          return {
-            path,
-            status: res.status,
-            count: Array.isArray(players) ? players.length : 0,
-            topKeys: players[0] ? Object.keys(players[0]) : [],
-            sample: players
-              .slice(0, 5)
-              .map((p: any) => ({
-                name: p.player_name,
-                pos: p.player_position_id,
-                team: p.player_team_id,
-                ecr: p.rank_ecr,
-                posRank: p.pos_rank,
-                tier: p.tier,
-              })),
-            note: res.ok ? undefined : String(body).slice(0, 120),
-          };
-        } catch (e) {
-          return { path, status: 0, count: 0, error: String(e) };
-        }
-      })
-    );
-    return Response.json({ explore: true, results });
-  }
-
   const apiKey = process.env.ANTHROPIC_API_KEY;
   const resendKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.DYNASTY_NOTIFY_EMAIL ?? "berto.crespo17@gmail.com";
@@ -102,46 +52,23 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  const params = new URL(req.url).searchParams;
-  const probe = params.get("probe") === "1"; // time stages, don't send email
-  const useFp = params.get("fp") !== "0"; // ?fp=0 disables the FantasyPros layer
-
   const t0 = Date.now();
   try {
     const data = await fetchDynastyData();
-    const tData = Date.now() - t0;
 
-    // Optional FantasyPros ECR layer — only if a key is configured (and not ?fp=0).
+    // Optional FantasyPros ECR layer — only if a key is configured.
     let fpBlock = "";
-    let tFp = 0;
     const fpKey = process.env.FANTASYPROS_API_KEY;
-    if (fpKey && useFp) {
-      const tf = Date.now();
+    if (fpKey) {
       try {
         const fp = await fetchFpEcr(fpKey);
         fpBlock = fpPromptBlock(fp, data.roster.map((p) => p.name));
       } catch {
         fpBlock = "";
       }
-      tFp = Date.now() - tf;
     }
 
-    const tr = Date.now();
     const content = await researchBrief(data, apiKey, fpBlock);
-    const tResearch = Date.now() - tr;
-
-    if (probe) {
-      return Response.json({
-        probe: true,
-        useFp,
-        fpBlockChars: fpBlock.length,
-        tDataMs: tData,
-        tFpMs: tFp,
-        tResearchMs: tResearch,
-        totalMs: Date.now() - t0,
-        tldrCount: content.tldr?.length ?? 0,
-      });
-    }
     const dateLabel = new Date().toLocaleDateString("en-US", {
       weekday: "long",
       month: "short",
