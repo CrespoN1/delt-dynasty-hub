@@ -42,6 +42,42 @@ export async function GET(req: NextRequest) {
     });
   }
 
+  // ?fpfull=1 — dump the full FP player object + probe candidate analyst/notes
+  // endpoints to see whether written commentary is available on this key.
+  if (new URL(req.url).searchParams.get("fpfull") === "1") {
+    const fpKey = process.env.FANTASYPROS_API_KEY ?? "";
+    const H = { "x-api-key": fpKey };
+    const rank = await fetch(
+      "https://api.fantasypros.com/public/v2/json/nfl/2026/consensus-rankings?type=dynasty&position=OP&scoring=PPR",
+      { headers: H, cache: "no-store" }
+    ).then((r) => r.json() as any).catch((e) => ({ error: String(e) }));
+    const p0 = rank?.players?.[0] ?? {};
+    const probes: any = {};
+    const candidates: Record<string, string> = {
+      notes: "https://api.fantasypros.com/public/v2/json/nfl/2026/notes?position=OP",
+      playerNews: "https://api.fantasypros.com/public/v2/json/nfl/players/news?limit=3",
+      news: "https://api.fantasypros.com/public/v2/json/nfl/news?limit=3",
+      rankingsWithExperts:
+        "https://api.fantasypros.com/public/v2/json/nfl/2026/consensus-rankings?type=dynasty&position=OP&scoring=PPR&experts=show",
+      playerId: `https://api.fantasypros.com/public/v2/json/nfl/players?player_id=${p0.player_id}`,
+    };
+    for (const [k, url] of Object.entries(candidates)) {
+      try {
+        const res = await fetch(url, { headers: H, cache: "no-store" });
+        const txt = await res.text();
+        probes[k] = { status: res.status, sample: txt.slice(0, 220) };
+      } catch (e) {
+        probes[k] = { error: String(e) };
+      }
+    }
+    return Response.json({
+      fpfull: true,
+      playerKeys: Object.keys(p0),
+      player0: p0,
+      probes,
+    });
+  }
+
   const apiKey = process.env.ANTHROPIC_API_KEY;
   const resendKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.DYNASTY_NOTIFY_EMAIL ?? "berto.crespo17@gmail.com";
