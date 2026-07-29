@@ -10,7 +10,7 @@ import boardRaw from "./board.json";
 import rookiesRaw from "./rookies_deep.json";
 import moversRaw from "./movers.json";
 import fpSentimentRaw from "./fp_sentiment.json";
-import { fetchFpEcr, type FpRow } from "../fantasypros";
+import { fetchFpSuperflexBoard, type FpRow } from "../fantasypros";
 
 const LEAGUE_ID = "1313673066445819904";
 const DRAFT_ID = "1313673066458390528";
@@ -125,7 +125,7 @@ export async function buildDashboardData(): Promise<Any> {
   const fpKey = process.env.FANTASYPROS_API_KEY;
   if (fpKey) {
     try {
-      fp = await fetchFpEcr(fpKey);
+      fp = await fetchFpSuperflexBoard(fpKey);
     } catch {
       fp = new Map();
     }

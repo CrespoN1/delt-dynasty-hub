@@ -52,6 +52,24 @@ async function fetchOne(
   }));
 }
 
+// The TRUE overall Superflex dynasty board: the `OP` query alone returns the
+// real overall ECR (Josh Allen #1, Drake Maye #2 …) AND each player's pos-rank.
+// Use this — NOT fetchFpEcr — anywhere you need a correct overall rank, because
+// position-filtered queries return rank_ecr as the WITHIN-POSITION rank (TE9's
+// "9"), which corrupts a lowest-wins merge.
+export async function fetchFpSuperflexBoard(
+  apiKey: string,
+  season = "2026"
+): Promise<Map<string, FpRow>> {
+  const rows = await fetchOne(season, "OP", apiKey);
+  const map = new Map<string, FpRow>();
+  for (const r of rows) {
+    const k = norm(r.name);
+    if (!map.has(k)) map.set(k, r); // OP is already overall-ordered — first wins
+  }
+  return map;
+}
+
 // Returns a name-normalized map of the elite dynasty tier (OP + each position).
 export async function fetchFpEcr(
   apiKey: string,
