@@ -511,12 +511,15 @@ function renderBoard(){
 
 /* ---------- rookie PICK PLANNER (driven by actual owned picks, post-trade) ---------- */
 function renderPlanner(){
-  const sorted=D.rookies.slice().sort((a,b)=>a.rank-b.rank);
+  const sorted=D.rookies.filter(r=>!r.drafted).slice().sort((a,b)=>a.rank-b.rank); // drop already-drafted
   const needs=new Set(D.myNeeds||[]);
   const picks=(D.myPicks||[]).slice().sort((a,b)=>a.overall-b.overall);
   const needTxt = needs.size?`<b style="color:var(--down)">roster needs: ${[...needs].join(', ')}</b> (blue badges flag fits) · `:'';
   const acquired = picks.filter(p=>p.fromRoster!==D.myTeam).length;
-  $('#plannerMeta').innerHTML=`${needTxt}${picks.length} pick${picks.length!==1?'s':''} from Sleeper (post-trade): <b>${picks.map(p=>p.label).join(', ')||'none'}</b>${acquired?` · ${acquired} acquired via trade`:''}`;
+  const dstat = D.draftStatus==='complete'?'<span class="tag">Draft complete</span>'
+    : D.draftStatus==='drafting'?`<span class="tag live" style="color:var(--down);border-color:var(--down);">● DRAFT LIVE — ${D.draftMade}/48 in</span>`
+    : '<span class="tag">Pre-draft</span>';
+  $('#plannerMeta').innerHTML=`${dstat} &nbsp; ${needTxt}${picks.length} pick${picks.length!==1?'s':''} from Sleeper (post-trade): <b>${picks.map(p=>p.label).join(', ')||'none'}</b>${acquired?` · ${acquired} acquired via trade`:''}${D.draftMade?` · <b>${D.draftMade}</b> off the board`:''}`;
   let html='';
   if(!picks.length){ $('#plannerCards').innerHTML='<div class="empty" style="padding:24px">You currently hold no rookie picks in this draft (all traded away).</div>'; return; }
   for(const pk of picks){
@@ -562,9 +565,9 @@ function renderRookies(){
     const prof=r.profile?`<span class="prof ${pc}">${esc(r.profile)}</span>`:'';
     const tier=r.tier?`<div class="rt">${esc(r.tier)}</div>`:'';
     const sent=r.sent?`<div class="rsent"><span class="lab">Analyst</span>${sigPill(r.sent)}</div>`:'';
-    return `<div class="rcard ${pc}">
+    return `<div class="rcard ${pc}" style="${r.drafted?'opacity:.5;':''}">
       <div class="rtop">
-        <div><div class="rname">${esc(r.name)}</div>
+        <div><div class="rname">${esc(r.name)}${r.drafted?' <span class="flag">DRAFTED</span>':''}</div>
           <div class="rmeta">${posTag(r.pos)} &nbsp;${esc(r.team)} · ${esc(r.college)}${r.fpEcr!=null?` · <span class="hl">FP ECR #${r.fpEcr}</span> ${fpMove(r.fpDelta)}`:''}</div></div>
         <div class="rpick"><div class="rr">${esc(r.rookieRound)}</div>${tier}</div>
       </div>
@@ -583,6 +586,11 @@ function renderWeek(){
     return;
   }
   const roster=new Set(teamsById[id].players.map(p=>norm(p.name)));
+  // phase-aware banner
+  const inSeason = D.nfl && D.nfl.inSeason;
+  $('#weekBanner').innerHTML = inSeason
+    ? `<h3>Week ${D.nfl.week} — in season</h3><p>Your rostered players trending in the league feed (left) and the best <b>available adds</b> by dynasty value + who the league is grabbing (right). Start/sit projections layer in as the week develops.</p>`
+    : `<h3>Offseason mode — season starts soon</h3><p>Once Week 1 kicks off this becomes your weekly brain: start/sit + waivers. For now: who on your roster is trending, and the hottest <b>available</b> adds across Sleeper you can still stash.</p>`;
   // trending: movers that are on my roster
   const mine=D.movers.filter(m=>roster.has(norm(m.name)));
   $('#weekStart').innerHTML = mine.length? mine.map(m=>{
@@ -595,7 +603,11 @@ function renderWeek(){
   // waivers: available vets + top available board players
   const availBoard=D.board.filter(b=>b.owner==null).slice(0,6);
   const vets=D.vets.slice(0,10);
-  $('#weekWaiver').innerHTML =
+  // trending league-wide AND unrostered in your league = grab-now waiver adds
+  const hotAvail=D.movers.filter(m=>m.direction==='up' && m.owner==null).slice(0,6);
+  const hotBlock = hotAvail.length? `<div style="margin-bottom:12px;"><div class="clab" style="margin-bottom:6px;">🔥 Trending &amp; available in your league</div>`+
+    hotAvail.map(m=>`<div class="mitem up" style="border-left:2px solid var(--up);border-top:1px solid var(--border2);"><div class="pl"><span class="nm">${esc(m.name)} <span class="psub">${m.pos}·${esc(m.team)}</span></span><span class="own fa">FA${m.fpEcr!=null?' · ECR #'+m.fpEcr:''}</span></div><div class="txt">${esc(m.note)}</div></div>`).join('')+`</div>`:'';
+  $('#weekWaiver').innerHTML = hotBlock +
     `<div class="banner" style="margin-bottom:10px;"><p><b>Available now</b>, ranked by <span class="hl">FantasyPros dynasty ECR</span> — the best unrostered players by real analyst consensus (lower # = higher value). In-season this folds in weekly projections + trending adds.</p></div>`+
     `<div class="tablewrap"><table style="min-width:auto;"><thead><tr><th>FP ECR</th><th>Player</th><th>Pos</th><th>NFL</th><th>Age</th></tr></thead><tbody>`+
     vets.map(v=>`<tr><td class="rk">${v.fpEcr!=null?'#'+v.fpEcr:'—'}</td><td class="pname">${esc(v.name)}${v.fpDelta!=null?' '+fpMove(v.fpDelta):''}</td><td>${posTag(v.pos)}</td><td class="psub">${esc(v.team)}</td><td class="age">${v.age??'—'}</td></tr>`).join('')+

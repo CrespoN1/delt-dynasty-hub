@@ -160,6 +160,19 @@ export async function buildDashboardData(): Promise<Any> {
     dropTrend = [];
   }
 
+  // Live rookie-draft picks (empty until the draft starts) + NFL season phase.
+  let draftPicks: Any[] = [];
+  let nflState: Any = {};
+  try {
+    [draftPicks, nflState] = await Promise.all([
+      get<Any[]>(`${API}/draft/${DRAFT_ID}/picks`).catch(() => []),
+      get<Any>(`${API}/state/nfl`).catch(() => ({})),
+    ]);
+  } catch {
+    draftPicks = [];
+    nflState = {};
+  }
+
   const umap = new Map(users.map((u) => [u.user_id, u]));
   const pname = (pid: string) => {
     const p = players[pid] || {};
@@ -253,6 +266,28 @@ export async function buildDashboardData(): Promise<Any> {
     });
   }
 
+  // ---- live rookie draft: who's already been picked ----
+  const draftedNorm = new Set<string>();
+  const draftLog: Any[] = [];
+  for (const dp of draftPicks) {
+    const meta = dp.metadata || {};
+    const nm =
+      meta.first_name || meta.last_name
+        ? `${meta.first_name ?? ""} ${meta.last_name ?? ""}`.trim()
+        : players[dp.player_id]?.full_name || "";
+    if (!nm) continue;
+    draftedNorm.add(norm(nm));
+    draftLog.push({
+      pick: dp.pick_no,
+      round: dp.round,
+      name: nm,
+      pos: meta.position || players[dp.player_id]?.position || "?",
+      team: meta.team || players[dp.player_id]?.team || "FA",
+      byMe: dp.roster_id === MY_ROSTER_ID,
+    });
+  }
+  draftLog.sort((a, b) => a.pick - b.pick);
+
   // ---- rookies: owner + FP ECR + sentiment + live consensus rank/slot ----
   for (const r of rookies) {
     r.owner = ownerOf(r.name);
@@ -262,6 +297,7 @@ export async function buildDashboardData(): Promise<Any> {
       r.fpDelta = f.delta;
     }
     r.value = dynValue(f?.ecr);
+    r.drafted = draftedNorm.has(norm(r.name));
     r.sent = rookieSent(r);
   }
   // Re-rank the rookie class by LIVE FantasyPros ECR (fall back to curated order
@@ -410,6 +446,14 @@ export async function buildDashboardData(): Promise<Any> {
     myTeamName: myteam.name,
     myOwner: myteam.owner,
     draft: { slot: 2, teams: 12, rounds: 4, type: "linear" },
+    draftStatus: draft.status ?? "pre_draft", // pre_draft | drafting | complete
+    draftMade: draftLog.length,
+    draftLog,
+    nfl: {
+      week: nflState.week ?? nflState.display_week ?? null,
+      seasonType: nflState.season_type ?? "off",
+      inSeason: ["regular", "post"].includes(nflState.season_type),
+    },
     myPicks,
     myNeeds,
     posDepth,
