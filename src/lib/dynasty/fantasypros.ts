@@ -79,13 +79,20 @@ export function fpPromptBlock(
 ): string {
   if (map.size === 0) return "";
   const rosterSet = new Set(rosterNames.map(norm));
-  const rows = [...map.values()].sort((a, b) => a.ecr - b.ecr);
+  const all = [...map.values()].sort((a, b) => a.ecr - b.ecr);
+  // This feed can return the full board (~600+ rows). Keep the prompt lean and
+  // fast under the 60s cap: top ~60 overall PLUS every recipient-roster player
+  // (so the user's guys always carry their exact ECR, even if outside the top).
+  const TOP = 60;
+  const rows = all.filter(
+    (r, i) => i < TOP || rosterSet.has(norm(r.name))
+  );
   const line = (r: FpRow) =>
     `${r.name} — ECR #${r.ecr} (${r.posRank}), tier ${r.tier}, 30d move ${
       r.delta > 0 ? "+" : ""
     }${r.delta}, consensus spread ${r.std.toFixed(1)}${
       rosterSet.has(norm(r.name)) ? "  [ON RECIPIENT ROSTER]" : ""
     }`;
-  return `FANTASYPROS DYNASTY SUPERFLEX ECR (authoritative — use these EXACT numbers for any player listed; this feed covers only the elite tier, ~top 10 per position, so use web search for everyone else). Lower ECR = better; a negative "30d move" means the player is rising in consensus; a low "consensus spread" means analysts agree, a high one means they're divided:
+  return `FANTASYPROS DYNASTY SUPERFLEX ECR (authoritative — use these EXACT numbers for any player listed: the top ~60 overall plus every player on the recipient's roster; use web search for anyone not listed). Lower ECR = better; a negative "30d move" means the player is rising in consensus; a low "consensus spread" means analysts agree, a high one means they're divided:
 ${rows.map(line).join("\n")}`;
 }
