@@ -31,11 +31,13 @@ Return ONLY a JSON object (no prose, no markdown fences) mapping the EXACT playe
 
 PLAYERS: ${list}`;
 
+  // Tuned to finish inside the 60s Vercel Hobby cap: 2 broad current-news
+  // searches feed one pass that writes all the takes. Raise on Vercel Pro.
   const resp = await client.messages.create({
     model: MODEL,
-    max_tokens: 4500,
+    max_tokens: 3500,
     output_config: { effort: "low" } as any,
-    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 4 } as any],
+    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 2 } as any],
     messages: [{ role: "user", content: prompt }],
   });
 
