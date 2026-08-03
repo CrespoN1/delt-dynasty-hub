@@ -11,10 +11,6 @@
     {
       "path": "/api/cron/dynasty-daily",
       "schedule": "0 11 * * *"
-    },
-    {
-      "path": "/api/cron/rookie-takes",
-      "schedule": "0 9 * * *"
     }
   ]
 }
